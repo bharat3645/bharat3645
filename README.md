@@ -157,6 +157,7 @@
 | 🎯 **Skills** | Detailed skill breakdown & expertise | [View](./SKILLS.md) |
 | 🏆 **Achievements** | Awards, certifications & milestones | [View](./ACHIEVEMENTS.md) |
 | 🤝 **Contributing** | How to collaborate & contribute | [View](./CONTRIBUTING.md) |
+| 🗺️ **Roadmap** | Career goals & project roadmap | [View](./ROADMAP.md) |
 
 </div>
 
