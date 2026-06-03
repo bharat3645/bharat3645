@@ -158,6 +158,8 @@
 | 🏆 **Achievements** | Awards, certifications & milestones | [View](./ACHIEVEMENTS.md) |
 | 🤝 **Contributing** | How to collaborate & contribute | [View](./CONTRIBUTING.md) |
 | 🗺️ **Roadmap** | Career goals & project roadmap | [View](./ROADMAP.md) |
+| ❓ **FAQ** | Frequently asked questions | [View](./FAQ.md) |
+| 📞 **Contact** | How to reach me & collaborate | [View](./CONTACT.md) |
 
 </div>
 
