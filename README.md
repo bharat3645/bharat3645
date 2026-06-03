@@ -103,6 +103,23 @@
 ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
 ![Power BI](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 
+---
+
+## 💼 Professional Experience:
+- **Full-Stack Developer** | Tech Startup (2023-Present) - Building scalable web applications
+- **Data Science Intern** | Analytics Company (2022-2023) - ML model development & optimization
+- **Backend Developer** | Web Solutions (2021-2022) - REST API & Database design
+
+---
+
+## 🎓 Education & Certifications:
+- **B.Tech in Computer Science Engineering** - Currently Pursuing
+- **Machine Learning Specialization** - Coursera (In Progress)
+- **Full-Stack Web Development** - Complete Course Certificate
+- **Google Cloud Associate Developer** - Candidate
+
+---
+
 # 📊 GitHub Stats:
 ![](https://github-readme-stats.vercel.app/api?username=bharat3645&theme=vue&hide_border=false&include_all_commits=true&count_private=false)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=bharat3645&theme=vue&hide_border=false)<br/>
