@@ -128,6 +128,25 @@
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=bharat3645&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
+---
+
+## 🎯 Current Focus Areas:
+- 🚀 Building AI-powered web applications with modern stack
+- 📊 Deep dive into Large Language Models & Generative AI
+- 🔄 Contributing to open-source ML libraries
+- ☁️ Cloud architecture optimization & scaling
+- 🧠 Advanced machine learning algorithms
+
+---
+
+## 🤝 Open Source Contributions:
+- Active contributor to machine learning projects
+- Regular participation in hackathons and coding competitions
+- Mentoring junior developers on full-stack development
+- Writing technical blogs on AI/ML topics
+
+---
+
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=merko)
 ---
