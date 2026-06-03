@@ -26,9 +26,17 @@
 
 ---
 
-## 🌐 Socials:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/bh.arat_parihar) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/bharat-singh-parihar) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:bharat3645@gmail.com) 
+## 🌐 Connect With Me:
+<div align="center">
+
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/bh.arat_parihar) 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/bharat-singh-parihar) 
+[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:bharat3645@gmail.com) 
 [![Linktree](https://img.shields.io/badge/Linktree-00C300?logo=Linktree&logoColor=white)](https://linktr.ee/bharat_singh_parihar)
+[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/bharat3645)
+[![Portfolio](https://img.shields.io/badge/Portfolio-%23FF6B6B.svg?logo=about-dot-me&logoColor=white)](https://bharat3645.dev)
+
+</div>
 
 
 # 💻 Tech Stack:
