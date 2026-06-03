@@ -147,6 +147,21 @@
 
 ---
 
+## 📖 Documentation & Resources:
+
+<div align="center">
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| 📂 **Projects** | Featured projects & case studies | [View](./PROJECTS.md) |
+| 🎯 **Skills** | Detailed skill breakdown & expertise | [View](./SKILLS.md) |
+| 🏆 **Achievements** | Awards, certifications & milestones | [View](./ACHIEVEMENTS.md) |
+| 🤝 **Contributing** | How to collaborate & contribute | [View](./CONTRIBUTING.md) |
+
+</div>
+
+---
+
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=merko)
 ---
