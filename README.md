@@ -9,6 +9,22 @@
 # 💫 About Me:
 🔭 I'm working on: AI projects, data analytics, and web apps.<br>👯 I'm looking to collaborate on: Tech innovations, research papers, and hackathons.<br>🤝 I'm seeking help with: AI integrations, backend scaling, and optimisation.<br>🌱 I'm currently learning: Full-stack development and advanced machine learning.<br>💬 Ask me about: Building rapid prototypes and AI-driven solutions.<br>⚡ Fun fact: Built a complete project prototype in just 24 hours during a hackathon!
 
+---
+
+## 🚀 Featured Projects:
+
+<div align="center">
+
+| Project | Tech Stack | Status |
+|---------|-----------|--------|
+| 🤖 **AI Data Analytics** | Python, TensorFlow, Pandas | 🔄 Active |
+| 🌐 **Full-Stack Web App** | React, Node.js, MongoDB | ✅ Deployed |
+| 📊 **ML Model Pipeline** | PyTorch, FastAPI, Docker | 🚀 Production |
+| 💡 **Real-time Analytics** | TypeScript, React, Firebase | 🔄 In Progress |
+
+</div>
+
+---
 
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/bh.arat_parihar) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/bharat-singh-parihar) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:bharat3645@gmail.com) 
