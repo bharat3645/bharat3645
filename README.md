@@ -1,5 +1,10 @@
-<h1 align="center">Hey 👋, I'm Bharat Singh Parihar</h1>
-<h3 align="center">A passionate CSE major programmer with experience in Data Science.</h3>
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=00BFFF&width=435&lines=Hey+%F0%9F%91%8B+I'm+Bharat+Singh+Parihar;Full-Stack+Developer+%F0%9F%92%BB;AI%2FML+Enthusiast+%F0%9F%A4%96;Problem+Solver+%F0%9F%8E%AF" alt="Typing SVG" />
+</div>
+
+<h3 align="center">🚀 Passionate CSE Developer | AI/ML Explorer | Full-Stack Architect</h3>
+
+---
 
 # 💫 About Me:
 🔭 I'm working on: AI projects, data analytics, and web apps.<br>👯 I'm looking to collaborate on: Tech innovations, research papers, and hackathons.<br>🤝 I'm seeking help with: AI integrations, backend scaling, and optimisation.<br>🌱 I'm currently learning: Full-stack development and advanced machine learning.<br>💬 Ask me about: Building rapid prototypes and AI-driven solutions.<br>⚡ Fun fact: Built a complete project prototype in just 24 hours during a hackathon!
