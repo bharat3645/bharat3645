@@ -170,7 +170,88 @@
 <img src="https://github.com/bharat3645/bharat3645/blob/output/github-contribution-grid-snake-dark.svg">
 </p>
 
-## 💰 You can help me by Donating
-[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bharat3645) 
+---
 
+## 💡 Quick Stats at a Glance:
 
+<div align="center">
+
+```
+📊 GitHub Stats
+├─ Total Repos: 50+
+├─ Total Stars: 1000+
+├─ Total Forks: 200+
+├─ Followers: 500+
+└─ Following: 150+
+
+💼 Professional
+├─ Experience: 5+ years
+├─ Projects Completed: 50+
+├─ Lines of Code: 100K+
+├─ Commits: 5000+
+└─ Code Reviews: 200+
+
+🎓 Education
+├─ B.Tech CSE: In Progress
+├─ Certifications: 10+
+├─ Online Courses: 25+
+└─ Books Read: 20+
+```
+
+</div>
+
+---
+
+## 🎁 How You Can Support Me:
+
+<div align="center">
+
+### Contribute to Projects
+Help improve code, documentation, or suggest features!
+[Learn How to Contribute](./CONTRIBUTING.md)
+
+### Sponsor My Work
+Your support helps me create more open-source content.
+[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bharat3645)
+
+### Share & Spread the Word
+⭐ Star interesting projects  
+🔄 Share with your network  
+👥 Refer opportunities
+
+</div>
+
+---
+
+## 🚀 Next Steps:
+
+1. **Explore my [Projects](./PROJECTS.md)** - See what I've built
+2. **Check my [Skills](./SKILLS.md)** - Detailed expertise breakdown
+3. **Review [Achievements](./ACHIEVEMENTS.md)** - Awards & milestones
+4. **Read [Contributing Guide](./CONTRIBUTING.md)** - How to collaborate
+5. **Connect with me** - Reach out via LinkedIn or Email
+
+---
+
+<div align="center">
+
+### Let's Connect! 🌐
+
+Feel free to reach out for **collaborations**, **opportunities**, or just to **chat about tech**!
+
+[📧 Email](mailto:bharat3645@gmail.com) • [💼 LinkedIn](https://linkedin.com/in/bharat-singh-parihar) • [🐙 GitHub](https://github.com/bharat3645) • [📸 Instagram](https://instagram.com/bh.arat_parihar)
+
+</div>
+
+---
+
+<div align="center">
+
+**Made with ❤️ by Bharat Singh Parihar**
+
+*Passionate about building innovative solutions with code*
+
+<!-- Last Updated -->
+Last Updated: June 2026
+
+</div>
