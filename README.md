@@ -47,6 +47,34 @@ Shipped a complete MVP in 24 hours during a hackathon with a team of 3!
 </table>
 
 
+## 💼 Experience & Expertise
+
+### Backend Development
+- RESTful API Design & Implementation
+- Microservices Architecture
+- Database Design & Optimization
+- Real-time Applications (WebSockets, GraphQL)
+
+### Frontend Development  
+- Responsive Web Design
+- Performance Optimization
+- Component Architecture
+- State Management (Redux, Context API)
+
+### AI/ML Engineering
+- Machine Learning Pipelines
+- Natural Language Processing
+- Computer Vision Applications
+- Model Deployment & MLOps
+
+### DevOps & Cloud
+- Container Orchestration
+- CI/CD Pipeline Design
+- Infrastructure as Code
+- Monitoring & Observability
+
+---
+
 ## 🌐 Connect With Me
 
 <div align="center">
