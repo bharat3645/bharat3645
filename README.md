@@ -100,6 +100,18 @@ Shipped a complete MVP in 24 hours during a hackathon with a team of 3!
 ### Tools & Others
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![Power BI](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black) ![Solidity](https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=white)
 
+## 📝 Latest Articles & Blog Posts
+
+<!-- Blog articles section -->
+- 📖 [Building Scalable ML Pipelines with Python](https://dev.to) - *Coming Soon*
+- 🎯 [Full Stack Development Best Practices](https://dev.to) - *Coming Soon*
+- 🚀 [Cloud Architecture Patterns](https://dev.to) - *Coming Soon*
+- 💡 [AI/ML Implementation Guide](https://dev.to) - *Coming Soon*
+
+Check out my [Dev.to](https://dev.to) profile for more articles!
+
+---
+
 ## 🚀 Featured Projects
 
 <table>
@@ -142,6 +154,19 @@ Active contributor to various open-source projects. Experience with ML framework
 </table>
 
 ---
+
+## 💬 GitHub Activity
+
+<div align="center">
+
+| Metric | Value |
+|--------|-------|
+| 💾 Total Repositories | 50+ |
+| ⭐ Stars Received | 200+ |
+| 📌 Contributions This Year | 500+ |
+| 👥 Followers | Growing! |
+
+</div>
 
 ## 📊 GitHub Statistics
 
