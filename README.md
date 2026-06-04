@@ -285,6 +285,16 @@ Active contributor to various open-source projects. Experience with ML framework
 
 ---
 
+## 🤖 How I Work
+
+- **Agile Methodology** - Scrum sprints, iterative development, continuous feedback
+- **Clean Code Philosophy** - SOLID principles, design patterns, maintainability first
+- **Collaborative Approach** - Pair programming, code reviews, knowledge sharing
+- **Problem Solving** - Data-driven decisions, analytical thinking, creative solutions
+- **Continuous Learning** - Always exploring new tech, frameworks, and best practices
+
+---
+
 ## 🎯 What's Next?
 
 I'm excited to explore:
