@@ -61,6 +61,22 @@ Shipped a complete MVP in 24 hours during a hackathon with a team of 3!
 </div>
 
 
+## 🎓 Education & Certifications
+
+- 🎓 **Computer Science & Engineering** - Pursuing B.Tech CSE
+- 📜 **AI/ML Certifications** - Deep Learning Specialization, Machine Learning Andrew Ng
+- 🏅 **Cloud Certifications** - AWS Certified Cloud Practitioner
+- 🎯 **Online Courses** - Full Stack Web Development, Advanced Python, Data Science Specialization
+
+## 📚 Currently Learning
+
+- 🔬 **Advanced ML Techniques** - Transformers, LLMs, Fine-tuning
+- 🏗️ **System Design** - Distributed systems, Microservices architecture
+- ☁️ **Cloud Infrastructure** - Kubernetes, Infrastructure as Code
+- 📱 **Mobile Development** - Native Android/iOS development
+
+---
+
 ## 💻 Tech Stack
 
 ### Languages
