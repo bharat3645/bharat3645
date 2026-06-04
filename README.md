@@ -352,13 +352,45 @@ If you find my work valuable and would like to support my journey:
 
 <div align="center">
 
-### 📈 Let's Connect & Collaborate!
+---
 
-Feel free to reach out for opportunities, collaborations, or just to chat about tech.
+## 📈 Let's Connect & Collaborate!
 
-**[Get in Touch](#-connect-with-me)** • **[Portfolio](https://bharat3645.vercel.app)** • **[Resume](#)**
+Feel free to reach out for opportunities, collaborations, or just to chat about tech and innovation.
 
-Made with ❤️ by [Bharat Singh Parihar](https://github.com/bharat3645)
+<table>
+<tr>
+<td align="center">
+
+**[📧 Get in Touch](#-connect-with-me)**
+
+</td>
+<td align="center">
+
+**[🌐 My Portfolio](https://bharat3645.vercel.app)**
+
+</td>
+<td align="center">
+
+**[📄 My Resume](#)**
+
+</td>
+<td align="center">
+
+**[🐙 GitHub Profile](https://github.com/bharat3645)**
+
+</td>
+</tr>
+</table>
+
+### 📊 Engagement Metrics
+
+![GitHub followers](https://img.shields.io/github/followers/bharat3645?style=social)
+![GitHub User's stars](https://img.shields.io/github/stars/bharat3645?style=social)
+
+---
+
+Made with ❤️ by [Bharat Singh Parihar](https://github.com/bharat3645) | Last Updated: 2024 | Always Learning 🚀
 
 </div> 
 
