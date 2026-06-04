@@ -84,23 +84,117 @@ Shipped a complete MVP in 24 hours during a hackathon with a team of 3!
 ### Tools & Others
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![Power BI](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black) ![Solidity](https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=white)
 
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=bharat3645&theme=vue&hide_border=false&include_all_commits=true&count_private=false)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=bharat3645&theme=vue&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=bharat3645&theme=vue&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+## 🚀 Featured Projects
 
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=bharat3645&theme=radical&no-frame=false&no-bg=true&margin-w=4)
+<table>
+<tr>
+<td width="50%">
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=merko)
+### 🤖 AI Solutions Hub
+Building intelligent automation systems with cutting-edge ML models. Featured projects include NLP pipelines, computer vision applications, and predictive analytics systems.
+- **Tech:** Python, TensorFlow, FastAPI
+- **Focus:** Production-ready AI applications
+
+</td>
+<td width="50%">
+
+### 💻 Full Stack Web Apps
+Creating scalable web applications from frontend to database. Emphasis on clean architecture, performance optimization, and user experience.
+- **Tech:** React, Next.js, Node.js, PostgreSQL
+- **Focus:** User-centric design & scalability
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📊 Data Analytics Platform
+Advanced analytics dashboard for real-time data visualization and insights. Custom dashboards and predictive analytics.
+- **Tech:** Python, Power BI, SQL
+- **Focus:** Data-driven decision making
+
+</td>
+<td width="50%">
+
+### 🔧 Open Source Contributions
+Active contributor to various open-source projects. Experience with ML frameworks, web frameworks, and dev tools.
+- **Tech:** Various (JavaScript, Python, Go)
+- **Focus:** Community-driven development
+
+</td>
+</tr>
+</table>
+
 ---
 
-<p align="center">
-<img src="https://github.com/bharat3645/bharat3645/blob/output/github-contribution-grid-snake-dark.svg">
-</p>
+## 📊 GitHub Statistics
 
-## 💰 You can help me by Donating
-[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bharat3645) 
+<div align="center">
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=bharat3645&theme=vue&hide_border=false&include_all_commits=true&count_private=false)
+
+![GitHub Streak](https://nirzak-streak-stats.vercel.app/?user=bharat3645&theme=vue&hide_border=false)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=bharat3645&theme=vue&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+
+</div>
+
+## 🏆 Achievements & Trophies
+
+<div align="center">
+
+![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=bharat3645&theme=radical&no-frame=false&no-bg=true&margin-w=4)
+
+</div>
+
+## 🔥 Contribution Streak
+
+<div align="center">
+
+![](https://github.com/bharat3645/bharat3645/blob/output/github-contribution-grid-snake-dark.svg)
+
+</div>
+
+### ✍️ Random Dev Quote
+
+<div align="center">
+
+![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=merko)
+
+</div>
+
+---
+
+## 🤝 Let's Work Together
+
+I'm always interested in:
+- 💡 **Collaborating** on innovative projects
+- 📚 **Sharing** knowledge through open-source
+- 🎯 **Solving** complex technical challenges
+- 🚀 **Building** products that make an impact
+
+### 💰 Support My Work
+
+If you find my work valuable and would like to support my journey:
+
+<div align="center">
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bharat3645)
+
+</div>
+
+---
+
+<div align="center">
+
+### 📈 Let's Connect & Collaborate!
+
+Feel free to reach out for opportunities, collaborations, or just to chat about tech.
+
+**[Get in Touch](#-connect-with-me)** • **[Portfolio](https://bharat3645.vercel.app)** • **[Resume](#)**
+
+Made with ❤️ by [Bharat Singh Parihar](https://github.com/bharat3645)
+
+</div> 
 
 
