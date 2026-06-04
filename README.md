@@ -309,10 +309,21 @@ I'm excited to explore:
 ## 🤝 Let's Work Together
 
 I'm always interested in:
-- 💡 **Collaborating** on innovative projects
-- 📚 **Sharing** knowledge through open-source
-- 🎯 **Solving** complex technical challenges
-- 🚀 **Building** products that make an impact
+
+### 🔍 Open Collaboration Opportunities
+
+- 💼 **Full-time/Part-time Roles** - Backend, Full Stack, AI/ML positions
+- 🤝 **Freelance Projects** - Short-term contracts, hourly projects
+- 📚 **Open Source** - Contributing to impactful projects, starting new ones
+- 🎓 **Mentorship** - Teaching, knowledge sharing, community building
+- 🚀 **Startups** - Early-stage companies, innovative ideas, equity opportunities
+- 📊 **Research** - Collaborative research papers, technical writing
+
+### 🎯 Interested In:
+- 💡 **Collaborating** on innovative projects and products
+- 📚 **Sharing** knowledge through open-source contributions
+- 🎯 **Solving** complex technical challenges and real-world problems
+- 🚀 **Building** scalable products that make a positive impact
 
 ### 💰 Support My Work
 
