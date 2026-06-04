@@ -155,16 +155,28 @@ Active contributor to various open-source projects. Experience with ML framework
 
 ---
 
-## 💬 GitHub Activity
+## 💬 GitHub Activity & Quick Facts
 
 <div align="center">
 
-| Metric | Value |
-|--------|-------|
-| 💾 Total Repositories | 50+ |
-| ⭐ Stars Received | 200+ |
-| 📌 Contributions This Year | 500+ |
-| 👥 Followers | Growing! |
+| 💾 | 📊 | ⭐ | 👥 |
+|:-:|:-:|:-:|:-:|
+| **50+** Repos | **500+** Contributions | **200+** Stars | **Growing!** Followers |
+
+</div>
+
+---
+
+## 🏅 Badges & Achievements
+
+<div align="center">
+
+![](https://img.shields.io/badge/Open%20Source-Enthusiast-green?style=flat-square)
+![](https://img.shields.io/badge/Full%20Stack-Developer-blue?style=flat-square)
+![](https://img.shields.io/badge/AI%2FML-Specialist-yellow?style=flat-square)
+![](https://img.shields.io/badge/Cloud-Computing-orange?style=flat-square)
+![](https://img.shields.io/badge/Linux-Expert-red?style=flat-square)
+![](https://img.shields.io/badge/Problem%20Solving-Advanced-brightgreen?style=flat-square)
 
 </div>
 
@@ -203,6 +215,17 @@ Active contributor to various open-source projects. Experience with ML framework
 ![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=merko)
 
 </div>
+
+---
+
+## 🎯 What's Next?
+
+I'm excited to explore:
+- 🤖 **Generative AI** - Building with LLMs and prompt engineering
+- 🔐 **Web3 & Blockchain** - Smart contracts and decentralized applications
+- 📊 **Data Engineering** - Big data pipelines and analytics infrastructure
+- 🎮 **Game Development** - Unity/Unreal with C#/C++
+- 🌐 **Full Stack Innovations** - Emerging frameworks and technologies
 
 ---
 
