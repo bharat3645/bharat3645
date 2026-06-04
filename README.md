@@ -285,6 +285,19 @@ Active contributor to various open-source projects. Experience with ML framework
 
 ---
 
+## 🎯 Fun Facts & Interesting Stats
+
+- ☕ Average cups of coffee per coding session: **3-4**
+- 🌙 Favorite coding time: **Late night** (11 PM - 3 AM)
+- 📱 Most used IDE: **VS Code** with extensive customization
+- 🎮 Hobby: **Gaming** and building game mods
+- 🎵 Music while coding: **Lo-fi beats** or **Metal**
+- 🧠 Problem-solving approach: **First think, then code**
+- 💻 Keyboard: **Mechanical** (Obviously! 🛠️)
+- 🌍 Open to: **Remote**, **Hybrid**, or **On-site** roles
+
+---
+
 ## 🤖 How I Work
 
 - **Agile Methodology** - Scrum sprints, iterative development, continuous feedback
