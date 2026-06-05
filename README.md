@@ -59,6 +59,16 @@
 ![](https://nirzak-streak-stats.vercel.app/?user=bharat3645&theme=vue&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=bharat3645&theme=vue&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
+---
+
+## 🌟 Open Source Contributions:
+- Active contributor to ML & AI frameworks
+- Maintainer of developer tools and utilities
+- Regular participant in Hacktoberfest and community events
+- Published technical articles on Medium and Dev.to
+
+---
+
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=bharat3645&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
