@@ -107,7 +107,21 @@
 <img src="https://github.com/bharat3645/bharat3645/blob/output/github-contribution-grid-snake-dark.svg">
 </p>
 
-## 💰 You can help me by Donating
+---
+
+## 🎓 Expertise Areas:
+| Category | Skills |
+|----------|--------|
+| **Backend Development** | Python, Node.js, FastAPI, Django, Express.js |
+| **Frontend Development** | React, Next.js, TypeScript, TailwindCSS, React Native |
+| **Machine Learning** | TensorFlow, PyTorch, Scikit-learn, LLMs, NLP |
+| **Data Engineering** | SQL, MongoDB, PostgreSQL, Data Pipelines |
+| **DevOps & Cloud** | Docker, Kubernetes, AWS, GCP, Azure, CI/CD |
+| **AI/Generative AI** | LangChain, RAG, Prompt Engineering, Fine-tuning |
+
+---
+
+## 💰 Support My Work
 [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bharat3645) 
 
 
