@@ -16,7 +16,18 @@
 ⚡ **Fun Fact:** Developed a complete AI project prototype in 24 hours during a hackathon with 90%+ accuracy!
 
 
-## 🌐 Socials:
+---
+
+## 🚀 Current Focus:
+- **AI/LLM Development:** Building intelligent agents with RAG architecture
+- **Full-Stack Web:** Next.js + Python backend with real-time capabilities
+- **Data Science:** ML model optimization and production deployment
+- **Cloud & DevOps:** Containerization and microservices architecture
+- **Open Source:** Contributing to ML frameworks and developer tools
+
+---
+
+## 🌐 Connect With Me:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/bh.arat_parihar) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/bharat-singh-parihar) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:bharat3645@gmail.com) 
 [![Linktree](https://img.shields.io/badge/Linktree-00C300?logo=Linktree&logoColor=white)](https://linktr.ee/bharat_singh_parihar)
 
