@@ -72,6 +72,24 @@
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=bharat3645&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
+---
+
+## 📈 Key Metrics:
+- **Languages:** Proficient in 15+ programming languages
+- **Frameworks:** Expertise in 25+ frameworks and libraries
+- **Projects:** 50+ completed projects with varying complexity
+- **Contributions:** 1000+ commits across multiple repositories
+- **Community:** Active in hackathons, tech communities, and open source
+
+---
+
+### 💡 Latest Insights:
+- **Focus:** Building production-grade AI systems
+- **Learning:** Advanced system design and distributed architecture
+- **Exploring:** Quantum computing applications and edge AI
+
+---
+
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=merko)
 ---
