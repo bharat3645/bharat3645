@@ -1,8 +1,19 @@
-<h1 align="center">Hey 👋, I'm Bharat Singh Parihar</h1>
-<h3 align="center">A passionate CSE major programmer with experience in Data Science.</h3>
+<div align="center">
+  <h1>Hey 👋, I'm Bharat Singh Parihar</h1>
+  <p><strong>Full Stack Developer | AI/ML Enthusiast | Open Source Contributor</strong></p>
+  <p>Building innovative solutions with cutting-edge technologies | Passionate about Data Science & Web3</p>
+  <img src="https://komarev.com/ghpvc/?username=bharat3645&label=Profile+Views&color=0e75b6&style=flat" alt="Profile Views" />
+</div>
+
+---
 
 # 💫 About Me:
-🔭 I'm working on: AI projects, data analytics, and web apps.<br>👯 I'm looking to collaborate on: Tech innovations, research papers, and hackathons.<br>🤝 I'm seeking help with: AI integrations, backend scaling, and optimisation.<br>🌱 I'm currently learning: Full-stack development and advanced machine learning.<br>💬 Ask me about: Building rapid prototypes and AI-driven solutions.<br>⚡ Fun fact: Built a complete project prototype in just 24 hours during a hackathon!
+🔭 **Currently Building:** GenAI applications, real-time data pipelines, and scalable web systems<br>
+👯 **Collaborating On:** AI integrations, open-source ML frameworks, and innovative hackathon projects<br>
+🤝 **Seeking Help With:** Advanced LLM implementations, distributed systems architecture, and cloud optimization<br>
+🌱 **Learning:** LangChain/LlamaIndex, Kubernetes orchestration, and advanced system design<br>
+💬 **Ask Me About:** Rapid prototyping, AI-driven solutions, full-stack development, and problem-solving strategies<br>
+⚡ **Fun Fact:** Developed a complete AI project prototype in 24 hours during a hackathon with 90%+ accuracy!
 
 
 ## 🌐 Socials:
