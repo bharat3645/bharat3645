@@ -122,6 +122,21 @@
 ---
 
 ## 💰 Support My Work
-[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bharat3645) 
+<div align="center">
 
+If you find my work helpful, consider supporting me:
 
+[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bharat3645)
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/bharat3645)
+
+</div>
+
+---
+
+<div align="center">
+  
+**Thanks for visiting! Let's build something amazing together! 🚀**
+
+*Last Updated: 2026* | *Contributions Welcome* | *Open to Collaboration*
+
+</div>
