@@ -21,9 +21,14 @@
 - ⚡ **Fun fact**: Built a complete project prototype in 24 hours during hackathon!
 
 
-## 🌐 Socials:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/bh.arat_parihar) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/bharat-singh-parihar) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:bharat3645@gmail.com) 
-[![Linktree](https://img.shields.io/badge/Linktree-00C300?logo=Linktree&logoColor=white)](https://linktr.ee/bharat_singh_parihar)
+## 📚 What I Do
+
+**Backend & Full-Stack:** Architecting scalable systems with Node.js, Python, and cloud technologies  
+**AI/ML:** Building intelligent solutions with TensorFlow, PyTorch, and advanced data science techniques  
+**Cloud & DevOps:** Deploying and managing applications on AWS, Google Cloud, and Azure  
+**Data Science:** Transforming data into actionable insights with analytics and visualization  
+
+---
 
 
 # 💻 Tech Stack:
