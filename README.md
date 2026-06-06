@@ -68,11 +68,38 @@
   <img src="https://nirzak-streak-stats.vercel.app/?user=bharat3645&theme=radical&hide_border=false" />
 </div>
 
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=bharat3645&theme=radical&no-frame=false&no-bg=true&margin-w=4)
+---
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=merko)
+## 🏆 Achievements & Trophies
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=bharat3645&theme=radical&no-frame=true&no-bg=true&row=1&column=6" />
+</div>
+
+---
+
+## 📚 Featured Repositories
+
+<!-- You can update these with your actual projects -->
+- 🚀 **Full-Stack Web Applications** - Building modern, scalable web solutions
+- 🤖 **AI/ML Projects** - Leveraging machine learning for real-world problems
+- 📊 **Data Analytics** - Transforming data into insights
+- 🔧 **Open Source Contributions** - Contributing to the developer community
+
+---
+
+## 💡 Quick Stats
+
+![Total Commits](https://img.shields.io/badge/Total%20Commits-1K+-brightgreen?style=flat-square)
+![Repositories](https://img.shields.io/badge/Public%20Repos-25+-blue?style=flat-square)
+![Years Active](https://img.shields.io/badge/Years%20Active-3%2B-orange?style=flat-square)
+![Followers](https://img.shields.io/badge/Followers-Growing-important?style=flat-square)
+
+---
+
+### ✨ Random Dev Quote
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&hide_border=true)
+
 ---
 
 <p align="center">
