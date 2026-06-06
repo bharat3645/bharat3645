@@ -102,11 +102,69 @@
 
 ---
 
+---
+
+## 🎓 Education & Certifications
+
+- 🎓 **Bachelor of Technology** - Computer Science Engineering
+- 📜 **Cloud Certifications** - AWS, Google Cloud, Azure Fundamentals
+- 🏅 **Full-Stack Web Development** - Specialized Training
+- 🤖 **Machine Learning & AI** - Advanced Courses
+
+---
+
+## 🌟 Key Strengths
+
+```
+✅ Full-Stack Development        ████████████████████ 100%
+✅ Python Programming             ████████████████████ 100%
+✅ AI/ML Engineering              ███████████████████░  95%
+✅ Cloud Architecture              ███████████████████░  95%
+✅ System Design                   ██████████████████░░  90%
+✅ Problem Solving                 ██████████████████░░  90%
+✅ Team Collaboration              █████████████████░░░  85%
+```
+
+---
+
+## 🎯 Current Focus
+
+- 🚀 Building **production-grade AI applications**
+- 📚 Contributing to **open-source projects**
+- 🔍 Exploring **advanced system design patterns**
+- 🌐 Expanding expertise in **cloud-native technologies**
+
+---
+
+## 📈 Contribution Activity
+
 <p align="center">
-<img src="https://github.com/bharat3645/bharat3645/blob/output/github-contribution-grid-snake-dark.svg">
+  <img src="https://github.com/bharat3645/bharat3645/blob/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
 </p>
 
-## 💰 You can help me by Donating
-[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bharat3645) 
+---
+
+## 🤝 Let's Connect!
+
+<p align="center">
+  <a href="mailto:bharat3645@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://linkedin.com/in/bharat-singh-parihar">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://instagram.com/bh.arat_parihar">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
+  </a>
+  <a href="https://buymeacoffee.com/bharat3645">
+    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" />
+  </a>
+</p>
+
+---
+
+<p align="center">
+  <i>⭐ If you find my work interesting, consider giving it a star!</i>
+</p> 
 
 
