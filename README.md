@@ -54,10 +54,19 @@
 ### Tools & Platforms
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=bharat3645&theme=vue&hide_border=false&include_all_commits=true&count_private=false)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=bharat3645&theme=vue&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=bharat3645&theme=vue&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+---
+
+## 📊 GitHub Analytics
+
+<div align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=bharat3645&theme=radical&hide_border=false&include_all_commits=true&count_private=true&show_icons=true" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=bharat3645&theme=radical&hide_border=false&layout=compact&include_all_commits=true&count_private=true" />
+</div>
+
+### 🔥 Contribution Streak
+<div align="center">
+  <img src="https://nirzak-streak-stats.vercel.app/?user=bharat3645&theme=radical&hide_border=false" />
+</div>
 
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=bharat3645&theme=radical&no-frame=false&no-bg=true&margin-w=4)
