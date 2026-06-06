@@ -1,8 +1,24 @@
-<h1 align="center">Hey 👋, I'm Bharat Singh Parihar</h1>
-<h3 align="center">A passionate CSE major programmer with experience in Data Science.</h3>
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=00D4FF&center=true&vCenter=true&width=600&lines=Hey+👋,+I'm+Bharat+Singh+Parihar;Full-Stack+Developer+%7C+AI+%2F+ML+Enthusiast;Building+Tomorrow's+Solutions+Today" alt="Typing SVG" />
+</div>
 
-# 💫 About Me:
-🔭 I'm working on: AI projects, data analytics, and web apps.<br>👯 I'm looking to collaborate on: Tech innovations, research papers, and hackathons.<br>🤝 I'm seeking help with: AI integrations, backend scaling, and optimisation.<br>🌱 I'm currently learning: Full-stack development and advanced machine learning.<br>💬 Ask me about: Building rapid prototypes and AI-driven solutions.<br>⚡ Fun fact: Built a complete project prototype in just 24 hours during a hackathon!
+<p align="center">
+  <a href="mailto:bharat3645@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
+  <a href="https://linkedin.com/in/bharat-singh-parihar"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" /></a>
+  <a href="https://instagram.com/bh.arat_parihar"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white" /></a>
+  <a href="https://linktr.ee/bharat_singh_parihar"><img src="https://img.shields.io/badge/Linktree-00C300?style=flat-square&logo=linktree&logoColor=white" /></a>
+</p>
+
+---
+
+## 💫 About Me
+
+- 🎓 CSE Major with passion for **Full-Stack Development** & **AI/ML Engineering**
+- 🚀 Currently working on **AI-driven applications**, **Data Analytics**, and **Scalable Web Solutions**
+- 🤝 Open to collaborations on **innovative tech projects**, **research papers**, and **hackathons**
+- 🌱 Continuously learning **Cloud Architecture**, **Advanced ML**, and **System Design**
+- 💡 Specialized in **building rapid prototypes** and **production-ready applications**
+- ⚡ **Fun fact**: Built a complete project prototype in 24 hours during hackathon!
 
 
 ## 🌐 Socials:
