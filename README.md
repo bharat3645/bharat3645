@@ -13,9 +13,14 @@
 # 🤖 LLM & AI Expertise:
 ![ChatGPT](https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white) ![Claude](https://img.shields.io/badge/Claude-AI-black?style=for-the-badge&logo=anthropic&logoColor=white) ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white) ![RAG](https://img.shields.io/badge/RAG%20Systems-3776AB?style=for-the-badge&logoColor=white) ![Prompt%20Engineering](https://img.shields.io/badge/Prompt%20Engineering-FF6B6B?style=for-the-badge&logoColor=white) ![Vector%20DB](https://img.shields.io/badge/Vector%20DB-Pinecone-012677?style=for-the-badge&logoColor=white)
 
-## 🌐 Socials:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/bh.arat_parihar) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/bharat-singh-parihar) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:bharat3645@gmail.com) 
-[![Linktree](https://img.shields.io/badge/Linktree-00C300?logo=Linktree&logoColor=white)](https://linktr.ee/bharat_singh_parihar)
+## 🌐 Connect With Me:
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/bh.arat_parihar) 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/bharat-singh-parihar) 
+[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/bharat_3645)
+[![Dev.to](https://img.shields.io/badge/Dev.to-0A0A0A?style=flat&logo=dev.to&logoColor=white)](https://dev.to/bharat3645)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?logo=gmail&logoColor=white)](mailto:bharat3645@gmail.com) 
+[![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?logo=firefox&logoColor=white)](https://bharat3645.com)
+[![Linktree](https://img.shields.io/badge/Linktree-39E09B?logo=Linktree&logoColor=white)](https://linktr.ee/bharat_singh_parihar)
 
 
 # 💻 Tech Stack:
