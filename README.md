@@ -56,6 +56,12 @@
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=bharat3645&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
+## 📝 Latest Articles & Content:
+- **Building RAG Systems with LangChain** - Guide to production-grade retrieval augmented generation
+- **ML Ops Best Practices** - Scaling machine learning models in production environments
+- **AI Ethics in Modern Applications** - Responsible and ethical AI development approaches
+- 📖 Check out my [Dev.to blog](https://dev.to/bharat3645) for more technical content!
+
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=merko)
 ---
