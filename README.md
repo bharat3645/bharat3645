@@ -74,7 +74,21 @@
 <img src="https://github.com/bharat3645/bharat3645/blob/output/github-contribution-grid-snake-dark.svg">
 </p>
 
-## 💰 You can help me by Donating
-[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bharat3645) 
+## 💰 Support My Work
+If you find my projects or content helpful, consider supporting me!
+
+[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bharat3645)
+[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/bharat3645)
+[![GitHub%20Sponsor](https://img.shields.io/badge/GitHub%20Sponsor-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/bharat3645)
+
+---
+
+<div align="center">
+  
+**Made with ❤️ by [Bharat Singh Parihar](https://github.com/bharat3645)**
+
+*Last updated: June 2026 | Always learning & building*
+
+</div> 
 
 
