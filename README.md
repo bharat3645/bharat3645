@@ -41,10 +41,14 @@
 [![HackerEarth](https://img.shields.io/badge/HackerEarth-323754?style=for-the-badge&logo=hackerearth&logoColor=white)](https://hackerearth.com/bharat3645)
 [![CodeChef](https://img.shields.io/badge/CodeChef-5B4B8A?style=for-the-badge&logo=codechef&logoColor=white)](https://codechef.com/users/bharat3645)
 
-# 📊 GitHub Stats:
+# 📊 GitHub Stats & Activity:
+<div align="center">
+  
 ![](https://github-readme-stats.vercel.app/api?username=bharat3645&theme=vue&hide_border=false&include_all_commits=true&count_private=false)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=bharat3645&theme=vue&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=bharat3645&theme=vue&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+
+</div>
 
 ## 📚 2026 Learning Roadmap:
 - 🎯 Master **LLM fine-tuning & deployment** at scale
