@@ -2,7 +2,12 @@
 <h3 align="center">A passionate CSE major programmer with experience in Data Science.</h3>
 
 # 💫 About Me:
-🔭 I'm working on: AI projects, data analytics, and web apps.<br>👯 I'm looking to collaborate on: Tech innovations, research papers, and hackathons.<br>🤝 I'm seeking help with: AI integrations, backend scaling, and optimisation.<br>🌱 I'm currently learning: Full-stack development and advanced machine learning.<br>💬 Ask me about: Building rapid prototypes and AI-driven solutions.<br>⚡ Fun fact: Built a complete project prototype in just 24 hours during a hackathon!
+🔭 Currently working on: **LLM applications, generative AI, and scalable web architecture**<br>
+👯 Collaborating on: **Open-source AI tools, research, and hackathons**<br>
+🤝 Seeking: **LLM expertise, cloud optimization, and AI deployment knowledge**<br>
+🌱 Learning: **LangChain, RAG systems, and advanced MLOps**<br>
+💬 Ask me about: **Rapid prototyping, AI-driven solutions, and data pipelines**<br>
+⚡ Achievement: Built complete production-ready project in **24 hours** 🚀
 
 
 ## 🌐 Socials:
