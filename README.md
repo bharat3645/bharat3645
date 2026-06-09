@@ -80,15 +80,19 @@
 
 ## 🎯 Featured Projects
 
+### 🛡️ Security & AI Agents
+- **[Voraxx](https://github.com/bharat3645)** ⭐ — AI-powered VAPT platform with **Shannon** as its intelligent reasoning engine; automates vulnerability scanning, report generation, and exploit chaining using LLM agents
+- **Shannon AI Engine** — Multi-agent reasoning core powering Voraxx; orchestrates recon, enumeration, and exploitation workflows via LangGraph and Claude API
+
 ### 🤖 AI & Machine Learning
-- **RAG Application** - Building Retrieval-Augmented Generation systems with LangChain and OpenAI
-- **ML Pipeline** - End-to-end machine learning pipeline with data preprocessing and model optimization
-- **Data Analytics Dashboard** - Interactive analytics platform with real-time data visualization
+- **RAG Application** — Retrieval-Augmented Generation system with LangChain, OpenAI, and vector store retrieval for domain-specific Q&A
+- **Agentic ML Pipeline** — End-to-end ML pipeline with LangGraph orchestration, data preprocessing, and automated model evaluation
+- **Data Analytics Dashboard** — Interactive real-time analytics platform with Plotly and FastAPI backend
 
 ### 🌐 Web & Cloud
-- **Full-Stack Web App** - Modern web application with React, Node.js, and cloud deployment
-- **Microservices Architecture** - Scalable backend with Docker, Kubernetes, and cloud infrastructure
-- **API Development** - RESTful and GraphQL APIs with FastAPI and Express.js
+- **Full-Stack Web App** — Modern application with React, Next.js, Node.js, and cloud deployment on AWS
+- **Microservices Architecture** — Scalable backend with Docker, Kubernetes, and Temporal.io for durable workflow orchestration
+- **API Development** — RESTful and GraphQL APIs with FastAPI and Express.js, documented with OpenAPI
 
 > 📂 Check out my [repositories](https://github.com/bharat3645?tab=repositories) for more projects!
 
