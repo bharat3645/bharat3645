@@ -132,13 +132,16 @@
 
 ## 📈 Development Metrics
 
-- **Total Repositories:** 50+
-- **Open Source Contributions:** 150+
-- **Issues Resolved:** 200+
-- **Code Review Participated:** 100+
-- **Active Streaks:** Consistent contributor
-- **Primary Language:** Python
-- **Contribution Focus:** AI/ML, Backend, DevOps
+| Metric | Value |
+|--------|-------|
+| 📦 Total Repositories | 50+ |
+| 🌍 Open Source Contributions | 200+ |
+| 🐛 Issues Resolved | 250+ |
+| 👀 Code Reviews Participated | 120+ |
+| 🔥 Active Since | 2021 |
+| 🥇 Primary Language | Python |
+| 🎯 Contribution Focus | AI Agents · Security · Full-Stack |
+| 🛡️ Current Project | Voraxx (AI-VAPT) |
 
 ---
 
@@ -198,11 +201,15 @@
 <div align="center">
 
 ```
-Contributions in last year:
-████████████████████████░░░░░░░░░░░ 1,250+
+2026 Contributions (Jan–Jun):
+AI & Security  ████████████████████████████░░░ 60%
+Full-Stack     ████████████████░░░░░░░░░░░░░░░ 25%
+DevOps/Cloud   ██████░░░░░░░░░░░░░░░░░░░░░░░░░ 15%
+
+Total: 1,400+ contributions | Streak: 🔥 Consistent daily commits
 ```
 
-Streaks: 🔥 Consistent | Code: 💻 Daily | Learning: 📚 Weekly
+Streaks: 🔥 Consistent | Code: 💻 Daily | Learning: 📚 AI Security
 
 </div>
 
