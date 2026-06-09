@@ -16,14 +16,14 @@
 
 ## 💫 About Me
 
-- 🔭 **Currently Building:** AI-powered applications, ML pipelines, and cloud-native solutions
-- 🤖 **AI/LLM Focus:** Prompt engineering, RAG systems, fine-tuning, and AI integrations
-- 💡 **Expertise:** Full-stack development, microservices, DevOps, and system design
-- 👯 **Collaborate With Me On:** Open-source projects, research papers, hackathons, and tech innovations
-- 🤝 **Help With:** AI integrations, backend optimization, scalability challenges, ML model deployment
-- 🌱 **Currently Learning:** Advanced LLM architectures, distributed systems, and cloud certifications
-- 💬 **Ask Me About:** Building rapid prototypes, AI-driven solutions, architecture decisions, and best practices
-- 🎯 **2026 Goals:** Contribute to top-tier open-source projects, publish research papers, and mentor junior developers
+- 🔭 **Currently Building:** [Voraxx](https://github.com/bharat3645) — an AI-powered VAPT (Vulnerability Assessment & Penetration Testing) tool with Shannon AI engine
+- 🤖 **AI/LLM Focus:** Agentic AI systems, RAG pipelines, prompt engineering, and LLM-powered security tooling
+- 💡 **Expertise:** Full-stack development, AI agents, security research, microservices, and cloud-native systems
+- 👯 **Collaborate With Me On:** AI security tools, open-source projects, research papers, and hackathons
+- 🤝 **Help With:** AI integrations, agentic pipelines, backend optimization, and ML model deployment
+- 🌱 **Currently Learning:** AI agents with LangGraph & CrewAI, Temporal.io for durable workflows, offensive security with AI
+- 💬 **Ask Me About:** AI-driven security tooling, agentic systems, rapid prototyping, and architecture decisions
+- 🎯 **2026 Goals:** Ship Voraxx v1.0, contribute to top-tier open-source AI/security projects, and publish security research
 - ⚡ **Fun Fact:** Built a complete AI project prototype in 24 hours during a hackathon that got featured!
 
 ---
