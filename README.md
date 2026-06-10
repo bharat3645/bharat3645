@@ -20,9 +20,9 @@
 - 💡 **Expertise:** Full-stack development, AI agents, security research, microservices, and cloud-native systems
 - 👯 **Collaborate With Me On:** AI security tools, open-source projects, research papers, and hackathons
 - 🤝 **Help With:** AI integrations, agentic pipelines, backend optimization, and ML model deployment
-- 🌱 **Currently Learning:** AI agents with LangGraph & CrewAI, Temporal.io for durable workflows, offensive security with AI
-- 💬 **Ask Me About:** AI-driven security tooling, agentic systems, rapid prototyping, and architecture decisions
-- 🎯 **2026 Goals:** Ship Voraxx v1.0, contribute to top-tier open-source AI/security projects, and publish security research
+- 🌱 **Currently Learning:** MCP server design, Pydantic AI for type-safe agents, Temporal.io for durable workflows, and advanced exploit automation
+- 💬 **Ask Me About:** AI-driven security tooling, agentic pipelines, MCP integrations, rapid prototyping, and architecture decisions
+- 🎯 **2026 Goals:** Ship Voraxx v1.0, publish security research on AI-assisted VAPT, and contribute to top-tier open-source AI/security projects
 - ⚡ **Fun Fact:** Built a complete AI project prototype in 24 hours during a hackathon that got featured!
 
 ---
@@ -205,14 +205,14 @@
 
 ```
 2026 Contributions (Jan–Jun):
-AI & Security  ████████████████████████████░░░ 60%
-Full-Stack     ████████████████░░░░░░░░░░░░░░░ 25%
-DevOps/Cloud   ██████░░░░░░░░░░░░░░░░░░░░░░░░░ 15%
+AI & Security  ██████████████████████████████░ 62%
+Full-Stack     ███████████████░░░░░░░░░░░░░░░░ 23%
+DevOps/Cloud   ████████░░░░░░░░░░░░░░░░░░░░░░░ 15%
 
-Total: 1,400+ contributions | Streak: 🔥 Consistent daily commits
+Total: 1,800+ contributions | Streak: 🔥 Consistent daily commits
 ```
 
-Streaks: 🔥 Consistent | Code: 💻 Daily | Learning: 📚 AI Security
+Streaks: 🔥 Consistent | Code: 💻 Daily | Learning: 📚 AI Agents + Security
 
 </div>
 
