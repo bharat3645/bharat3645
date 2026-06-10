@@ -136,14 +136,15 @@
 
 | Metric | Value |
 |--------|-------|
-| 📦 Total Repositories | 50+ |
-| 🌍 Open Source Contributions | 200+ |
-| 🐛 Issues Resolved | 250+ |
-| 👀 Code Reviews Participated | 120+ |
+| 📦 Total Repositories | 60+ |
+| 🌍 Open Source Contributions | 300+ |
+| 🐛 Issues Resolved | 300+ |
+| 👀 Code Reviews Participated | 150+ |
 | 🔥 Active Since | 2021 |
 | 🥇 Primary Language | Python |
 | 🎯 Contribution Focus | AI Agents · Security · Full-Stack |
-| 🛡️ Current Project | Voraxx (AI-VAPT) |
+| 🛡️ Current Project | Voraxx v1.0 (AI-VAPT) |
+| 🤖 AI Frameworks Used | LangGraph · CrewAI · MCP · Pydantic AI |
 
 ---
 
