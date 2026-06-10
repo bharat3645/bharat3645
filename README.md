@@ -78,7 +78,7 @@
 
 ![](https://github-readme-stats.vercel.app/api?username=bharat3645&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true)
 
-![](https://github-readme-streak-stats.herokuapp.com/?user=bharat3645&theme=tokyonight&hide_border=true)
+![](https://streak-stats.demolab.com?user=bharat3645&theme=tokyonight&hide_border=true)
 
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=bharat3645&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
 
