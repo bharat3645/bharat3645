@@ -98,11 +98,12 @@
 ## 🎯 Featured Projects
 
 ### 🛡️ Security & AI Agents
-- **[Voraxx](https://github.com/bharat3645)** ⭐ — AI-powered VAPT platform with **Shannon** as its intelligent reasoning engine; automates vulnerability scanning, report generation, and exploit chaining using LLM agents
+- **[Voraxx](https://github.com/bharat3645)** ⭐ — AI-powered VAPT platform with **Shannon** as its intelligent reasoning engine; automates vulnerability scanning, report generation, and exploit chaining using LLM agents · *Python · LangGraph · Claude API · FastAPI · PostgreSQL*
 - **Shannon AI Engine** — Multi-agent reasoning core powering Voraxx; orchestrates recon, enumeration, and exploitation workflows via LangGraph and Claude API
 
 ### 🤖 AI & Machine Learning
-- **RAG Application** — Retrieval-Augmented Generation system with LangChain, OpenAI, and vector store retrieval for domain-specific Q&A
+- **RAG Application** — Retrieval-Augmented Generation with LangChain, Pinecone, and OpenAI for domain-specific Q&A over private knowledge bases
+- **MCP Server** — Custom Model Context Protocol server extending Claude with domain-specific security and recon tools
 - **Agentic ML Pipeline** — End-to-end ML pipeline with LangGraph orchestration, data preprocessing, and automated model evaluation
 - **Data Analytics Dashboard** — Interactive real-time analytics platform with Plotly and FastAPI backend
 
