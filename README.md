@@ -243,12 +243,14 @@ Streaks: 🔥 Consistent | Code: 💻 Daily | Learning: 📚 AI Agents + Securit
 
 ## 💬 Let's Connect & Collaborate!
 
+> 🟢 **Open to:** AI agent projects · Security research · Hackathons · Consulting
+
 I'm always interested in:
-- 🤝 Collaborating on innovative projects
-- 📝 Contributing to open-source
-- 💼 Exploring new opportunities
-- 🎓 Sharing knowledge and learning together
-- 🚀 Building impactful solutions
+- 🤝 Collaborating on AI agents, security tooling, and open-source projects
+- 🔬 Co-authoring research on LLM-assisted VAPT and agentic systems
+- 💼 Freelance & consulting: AI integrations, RAG pipelines, MCP server design
+- 🎓 Sharing knowledge — reach out for mentorship, talks, or pair programming
+- 🚀 Building impactful solutions that ship fast
 
 ---
 
@@ -269,7 +271,11 @@ If you find my projects helpful, consider supporting me:
 
 **Made with ❤️ by [Bharat Singh Parihar](https://github.com/bharat3645)**
 
-*Last updated: June 2026 · Building [Voraxx](https://github.com/bharat3645) — AI-Powered VAPT*
+![Last Updated](https://img.shields.io/badge/Last%20Updated-June%202026-58A6FF?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Building%20Voraxx%20v1.0-brightgreen?style=flat-square)
+![Open To](https://img.shields.io/badge/Open%20To-Collaboration-orange?style=flat-square)
+
+*Building [Voraxx](https://github.com/bharat3645) — AI-Powered VAPT · Shipping 2026*
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" alt="footer" width="100%"/>
 
