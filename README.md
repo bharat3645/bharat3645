@@ -101,19 +101,19 @@
 ## 🎯 Featured Projects
 
 ### 🛡️ Security & AI Agents
-- **[Voraxx](https://github.com/bharat3645)** ⭐ — AI-powered VAPT platform with **Shannon** as its intelligent reasoning engine; automates vulnerability scanning, report generation, and exploit chaining using LLM agents · *Python · LangGraph · Claude API · FastAPI · PostgreSQL*
-- **Shannon AI Engine** — Multi-agent reasoning core powering Voraxx; orchestrates recon, enumeration, and exploitation workflows via LangGraph and Claude API
+- **[Voraxx](https://github.com/bharat3645)** `🚧 v1.0 in progress` ⭐ — AI-powered VAPT platform with **Shannon** as its multi-agent reasoning engine; automates recon, vulnerability scanning, exploit chaining, and report generation using LLM agents · *Python · LangGraph · Claude 4 API · FastAPI · PostgreSQL*
+- **Shannon AI Engine** `🔬 Core R&D` — Orchestrates recon, enumeration, and exploitation workflows via LangGraph, MCP tools, and Claude 4; features tool-use chains, memory, and durable Temporal.io workflows
 
 ### 🤖 AI & Machine Learning
-- **RAG Application** — Retrieval-Augmented Generation with LangChain, Pinecone, and OpenAI for domain-specific Q&A over private knowledge bases
-- **MCP Server** — Custom Model Context Protocol server extending Claude with domain-specific security and recon tools
-- **Agentic ML Pipeline** — End-to-end ML pipeline with LangGraph orchestration, data preprocessing, and automated model evaluation
-- **Data Analytics Dashboard** — Interactive real-time analytics platform with Plotly and FastAPI backend
+- **MCP Security Server** `✅ Live` — Custom Model Context Protocol server extending Claude with domain-specific security and recon tools (port scanning, CVE lookup, payload generation)
+- **RAG Knowledge Base** — Production-grade Retrieval-Augmented Generation with LangChain, Pinecone vector DB, and OpenAI/Claude for domain-specific Q&A over private corpora
+- **Multi-Agent Pipeline** — End-to-end agentic ML workflow with LangGraph + CrewAI orchestration, automated evaluation, and Groq-accelerated inference
+- **Data Analytics Dashboard** — Interactive real-time analytics with Plotly, FastAPI, and Supabase streaming backend
 
 ### 🌐 Web & Cloud
-- **Full-Stack Web App** — Modern application with React, Next.js, Node.js, and cloud deployment on AWS
-- **Microservices Architecture** — Scalable backend with Docker, Kubernetes, and Temporal.io for durable workflow orchestration
-- **API Development** — RESTful and GraphQL APIs with FastAPI and Express.js, documented with OpenAPI
+- **Full-Stack SaaS** — Modern application with React + TypeScript, Next.js, Node.js/FastAPI, PostgreSQL, and AWS/Vercel deployment
+- **Microservices Backbone** — Scalable backend with Docker, Kubernetes, Redis caching, and Temporal.io for durable workflow orchestration
+- **GraphQL + REST Gateway** — Unified API layer with FastAPI, Express.js, and OpenAPI docs; deployed on Cloudflare Workers
 
 > 📂 Check out my [repositories](https://github.com/bharat3645?tab=repositories) for more projects!
 
