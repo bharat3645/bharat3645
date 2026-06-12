@@ -213,7 +213,7 @@ AI & Security  █████████████████████�
 Full-Stack     ███████████████░░░░░░░░░░░░░░░░ 23%
 DevOps/Cloud   ████████░░░░░░░░░░░░░░░░░░░░░░░ 15%
 
-Total: 1,800+ contributions | Streak: 🔥 Consistent daily commits
+Total: 2,400+ contributions | Streak: 🔥 Consistent daily commits
 ```
 
 Streaks: 🔥 Consistent | Code: 💻 Daily | Learning: 📚 AI Agents + Security
