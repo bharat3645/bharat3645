@@ -104,8 +104,8 @@
 ## 🎯 Featured Projects
 
 ### 🛡️ Security & AI Agents
-- **[Voraxx](https://github.com/bharat3645)** `🚧 v1.0 in progress` ⭐ — AI-powered VAPT platform with **Shannon** as its multi-agent reasoning engine; automates recon, vulnerability scanning, exploit chaining, and report generation using LLM agents · *Python · LangGraph · Claude 4 API · FastAPI · PostgreSQL*
-- **Shannon AI Engine** `🔬 Core R&D` — Orchestrates recon, enumeration, and exploitation workflows via LangGraph, MCP tools, and Claude 4; features tool-use chains, memory, and durable Temporal.io workflows
+- **[Voraxx](https://github.com/bharat3645)** `🚧 v1.0 in progress` ⭐ — AI-powered VAPT platform with **Shannon** as its multi-agent reasoning engine; automates recon, vulnerability scanning, exploit chaining, and report generation using LLM agents · *Python · LangGraph · Claude 4.5 API · FastAPI · PostgreSQL*
+- **Shannon AI Engine** `🔬 Core R&D` — Orchestrates recon, enumeration, and exploitation workflows via LangGraph, MCP tools, and Claude 4.5; integrates A2A protocol for cross-agent interoperability and Strands Agents (AWS) for modular tool-use chains, memory, and durable Temporal.io workflows
 
 ### 🤖 AI & Machine Learning
 - **MCP Security Server** `✅ Live` — Custom Model Context Protocol server extending Claude with domain-specific security and recon tools (port scanning, CVE lookup, payload generation)
