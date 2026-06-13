@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Bharat%20Singh%20Parihar&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=AI%20Agent%20Builder%20%7C%20Security%20Researcher%20%7C%20Full-Stack%20Dev&descAlignY=55&descSize=18" alt="header" width="100%"/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Building+Voraxx+%E2%80%94+AI-Powered+VAPT+Platform;Agentic+AI+%7C+LangGraph+%7C+Claude+4+API;Security+Research+%7C+LLM+Agents+%7C+MCP+Servers;Multi-Agent+Systems+%7C+Groq+%7C+Gemini;Open+Source+%7C+Hackathons+%7C+Research)](https://github.com/bharat3645)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=750&lines=Building+Voraxx+%E2%80%94+AI-Powered+VAPT+Platform;Agentic+AI+%7C+LangGraph+%7C+Claude+4.5+API;A2A+Protocol+%7C+Strands+Agents+%7C+MCP+Servers;Multi-Agent+Systems+%7C+Groq+%7C+Gemini+%7C+Claude+Code;Open+Source+%7C+Security+Research+%7C+Hackathons)](https://github.com/bharat3645)
 
 [![GitHub followers](https://img.shields.io/github/followers/bharat3645?style=social)](https://github.com/bharat3645)
 [![Twitter/X](https://img.shields.io/twitter/follow/bharat3645?style=social)](https://twitter.com/bharat3645)
