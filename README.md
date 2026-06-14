@@ -240,7 +240,7 @@ Streaks: 🔥 Consistent | Code: 💻 Daily | Learning: 📚 AI Agents + Securit
 
 <div align="center">
 
-![](https://github.com/bharat3645/bharat3645/blob/output/github-contribution-grid-snake-dark.svg)
+![](https://raw.githubusercontent.com/bharat3645/bharat3645/output/github-contribution-grid-snake-dark.svg)
 
 </div>
 
