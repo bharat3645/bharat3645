@@ -20,7 +20,7 @@
 - 💡 **Expertise:** Full-stack development, AI agents, security research, microservices, and cloud-native systems
 - 👯 **Collaborate With Me On:** AI security tools, open-source projects, research papers, and hackathons
 - 🤝 **Help With:** AI integrations, agentic pipelines, backend optimization, and ML model deployment
-- 🌱 **Currently Learning:** A2A Protocol (Google), Strands Agents (AWS), Claude Code SDK, Pydantic AI for type-safe agents, Temporal.io for durable workflows, and advanced exploit automation
+- 🌱 **Currently Learning:** A2A Protocol (Google), Strands Agents (AWS), Claude Code SDK, Claude Fable 5 capabilities, Pydantic AI for type-safe agents, Temporal.io for durable workflows, and advanced exploit automation
 - 💬 **Ask Me About:** AI-driven security tooling, agentic pipelines, A2A/MCP integrations, rapid prototyping, and multi-agent architecture decisions
 - 🎯 **2026 Goals:** Ship Voraxx v1.0, publish security research on AI-assisted VAPT, build A2A-compatible agent networks, and contribute to top-tier open-source AI/security projects
 - ⚡ **Fun Fact:** Built a complete AI project prototype in 24 hours during a hackathon that got featured!
@@ -47,6 +47,7 @@
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Anthropic](https://img.shields.io/badge/Anthropic%20Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
+![Claude Fable 5](https://img.shields.io/badge/Claude_Fable_5-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=chainlink&logoColor=white)
 ![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge&logo=graphql&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
