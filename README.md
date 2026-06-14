@@ -143,10 +143,14 @@
 ## 🎓 Certifications & Learning
 
 - 🏅 AWS Cloud Practitioner
-- 🏅 Google Cloud Associate Cloud Engineer (in progress)
+- 🏅 Google Cloud Associate Cloud Engineer *(in progress)*
+- 🏅 Anthropic Claude API Developer *(in progress)*
 - 📖 Advanced Machine Learning Specialization
 - 📖 Kubernetes Administration
 - 📖 LLM & Prompt Engineering Mastery
+- 📖 Offensive Security & AI-Assisted VAPT *(self-directed, via Voraxx R&D)*
+
+> 📜 Full list in [CERTIFICATIONS.md](./CERTIFICATIONS.md)
 
 ---
 
