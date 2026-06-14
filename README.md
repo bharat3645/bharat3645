@@ -130,10 +130,13 @@
 
 ## 📚 Recent Articles & Blog Posts
 
-- 🤖 **AI/ML Integration Patterns** - Building production-ready AI systems
-- ☁️ **Cloud Architecture Best Practices** - Scaling applications efficiently
-- 🔧 **DevOps & CI/CD Pipelines** - Automating deployments and testing
-- 💡 **Full-Stack Development Tips** - Building modern web applications
+- 🛡️ **Building Voraxx** — Designing a multi-agent AI system for automated VAPT with LangGraph + Claude Sonnet 4.6
+- 🤖 **A2A Protocol Deep Dive** — Cross-agent interoperability patterns using Google's Agent-to-Agent protocol
+- 🔗 **MCP Server Architecture** — Extending Claude with custom security and recon tools via Model Context Protocol
+- 🧠 **Claude Fable 5 for Security Research** — Leveraging the latest Anthropic models in agentic exploit chains
+- ⚡ **Temporal.io + AI Agents** — Durable workflow patterns for long-running recon and enumeration pipelines
+
+> 📖 See all posts in [BLOG.md](./BLOG.md)
 
 ---
 
