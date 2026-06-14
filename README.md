@@ -22,7 +22,7 @@
 - 🤝 **Help With:** AI integrations, agentic pipelines, backend optimization, and ML model deployment
 - 🌱 **Currently Learning:** A2A Protocol (Google), Strands Agents (AWS), Claude Code SDK, Claude Fable 5 capabilities, Pydantic AI for type-safe agents, Temporal.io for durable workflows, and advanced exploit automation
 - 💬 **Ask Me About:** AI-driven security tooling, agentic pipelines, A2A/MCP integrations, rapid prototyping, and multi-agent architecture decisions
-- 🎯 **2026 Goals:** Ship Voraxx v1.0, publish security research on AI-assisted VAPT, build A2A-compatible agent networks, and contribute to top-tier open-source AI/security projects
+- 🎯 **2026 Goals:** Ship Voraxx v1.0 *(mid-2026 target)*, publish security research on AI-assisted VAPT, build A2A-compatible agent networks with Fable 5 backbone, and contribute to top-tier open-source AI/security projects
 - ⚡ **Fun Fact:** Built a complete AI project prototype in 24 hours during a hackathon that got featured!
 
 ---
@@ -168,10 +168,10 @@
 
 ### 🤖 AI Agents & LLMs
 - LangGraph & CrewAI Orchestration
-- Anthropic Claude API
-- RAG & Vector Search
-- Prompt Engineering
-- Multi-Agent Systems
+- Claude Sonnet 4.6 · Fable 5 APIs
+- RAG & Vector Search (Qdrant)
+- Prompt Engineering & Tool Use
+- Multi-Agent Systems · Claude Code SDK
 
 </td>
 <td>
