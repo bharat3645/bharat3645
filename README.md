@@ -155,7 +155,7 @@
 | 🥇 Primary Language | Python |
 | 🎯 Contribution Focus | AI Agents · Security · Full-Stack |
 | 🛡️ Current Project | Voraxx v1.0 (AI-VAPT) |
-| 🤖 AI Frameworks Used | LangGraph · CrewAI · MCP · Pydantic AI |
+| 🤖 AI Frameworks Used | LangGraph · CrewAI · MCP · Pydantic AI · Strands · A2A |
 | 📅 2026 Contributions (YTD) | 2,870+ |
 
 ---
