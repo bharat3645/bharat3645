@@ -20,9 +20,9 @@
 - 💡 **Expertise:** Full-stack development, AI agents, security research, microservices, and cloud-native systems
 - 👯 **Collaborate With Me On:** AI security tools, open-source projects, research papers, and hackathons
 - 🤝 **Help With:** AI integrations, agentic pipelines, backend optimization, and ML model deployment
-- 🌱 **Currently Learning:** A2A Protocol (Google), Strands Agents (AWS), Claude Code SDK, Claude Fable 5 capabilities, Pydantic AI for type-safe agents, Temporal.io for durable workflows, and advanced exploit automation
+- 🌱 **Currently Learning:** Mastra (TypeScript agents), Agno framework, smolagents (HuggingFace), OpenAI Agents SDK, Claude Fable 5 multi-agent capabilities, Temporal.io durable workflows, and advanced exploit automation
 - 💬 **Ask Me About:** AI-driven security tooling, agentic pipelines, A2A/MCP integrations, rapid prototyping, and multi-agent architecture decisions
-- 🎯 **2026 Goals:** Ship Voraxx v1.0 *(mid-2026 target)*, publish security research on AI-assisted VAPT, build A2A-compatible agent networks with Fable 5 backbone, and contribute to top-tier open-source AI/security projects
+- 🎯 **2026 Goals:** Ship Voraxx v1.0 *(on track — H1 2026)*, publish security research on AI-assisted VAPT, build A2A-compatible agent networks with Fable 5 backbone, and contribute to top-tier open-source AI/security projects
 - ⚡ **Fun Fact:** Built a complete AI project prototype in 24 hours during a hackathon that got featured!
 
 ---
