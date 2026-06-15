@@ -70,6 +70,10 @@
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Mastra](https://img.shields.io/badge/Mastra-000000?style=for-the-badge&logo=typescript&logoColor=white)
+![smolagents](https://img.shields.io/badge/smolagents-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![Agno](https://img.shields.io/badge/Agno-6B73FF?style=for-the-badge&logo=python&logoColor=white)
+![OpenAI Agents SDK](https://img.shields.io/badge/OpenAI_Agents_SDK-412991?style=for-the-badge&logo=openai&logoColor=white)
 
 ## 🔐 Security Tooling
 
