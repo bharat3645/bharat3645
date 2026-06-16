@@ -121,6 +121,15 @@
 
 ## 🎯 Featured Projects
 
+<div align="center">
+
+[![Voraxx](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=Voraxx&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/Voraxx)
+[![3D-Portfolio-Website](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=3D-Portfolio-Website&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/3D-Portfolio-Website)
+[![GhostSync](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=GhostSync&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/GhostSync)
+[![mazex-agency](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=mazex-agency&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/mazex-agency)
+
+</div>
+
 ### 🛡️ Security & AI Agents
 - **[Voraxx](https://github.com/bharat3645/Voraxx)** `🚧 v1.0 in progress` ⭐ — AI-powered VAPT platform with **Shannon** as its multi-agent reasoning engine; automates recon, vulnerability scanning, exploit chaining, and report generation using LLM agents · *Python · LangGraph · Claude Sonnet 4.6 · FastAPI · PostgreSQL*
 - **Shannon AI Engine** `🔬 Core R&D` — Orchestrates recon, enumeration, and exploitation workflows via LangGraph, MCP tools, and Claude Sonnet 4.6; integrates A2A protocol for cross-agent interoperability and Strands Agents (AWS) for modular tool-use chains, memory, and durable Temporal.io workflows
