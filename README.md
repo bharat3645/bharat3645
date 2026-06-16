@@ -266,6 +266,14 @@ Streaks: 🔥 Consistent | Code: 💻 Daily | Learning: 📚 AI Agents + Securit
 
 </div>
 
+## 📈 Activity Graph
+
+<div align="center">
+
+[![Bharat's Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=bharat3645&theme=tokyo-night&hide_border=true&area=true&area_color=58A6FF)](https://github.com/ashutosh00710/github-readme-activity-graph)
+
+</div>
+
 ---
 
 ## 💬 Let's Connect & Collaborate!
