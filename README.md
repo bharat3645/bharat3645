@@ -122,7 +122,7 @@
 ## 🎯 Featured Projects
 
 ### 🛡️ Security & AI Agents
-- **[Voraxx](https://github.com/bharat3645)** `🚧 v1.0 in progress` ⭐ — AI-powered VAPT platform with **Shannon** as its multi-agent reasoning engine; automates recon, vulnerability scanning, exploit chaining, and report generation using LLM agents · *Python · LangGraph · Claude Sonnet 4.6 · FastAPI · PostgreSQL*
+- **[Voraxx](https://github.com/bharat3645/Voraxx)** `🚧 v1.0 in progress` ⭐ — AI-powered VAPT platform with **Shannon** as its multi-agent reasoning engine; automates recon, vulnerability scanning, exploit chaining, and report generation using LLM agents · *Python · LangGraph · Claude Sonnet 4.6 · FastAPI · PostgreSQL*
 - **Shannon AI Engine** `🔬 Core R&D` — Orchestrates recon, enumeration, and exploitation workflows via LangGraph, MCP tools, and Claude Sonnet 4.6; integrates A2A protocol for cross-agent interoperability and Strands Agents (AWS) for modular tool-use chains, memory, and durable Temporal.io workflows
 
 ### 🤖 AI & Machine Learning
@@ -173,7 +173,7 @@ I write about what I'm building and learning:
 | 🌍 Open Source Contributions | 550+ |
 | 🐛 Issues Resolved | 420+ |
 | 👀 Code Reviews Participated | 220+ |
-| 🔥 Active Since | 2021 |
+| 🔥 Active Since | 2023 |
 | 🥇 Primary Language | Python |
 | 🎯 Contribution Focus | AI Agents · Security · Full-Stack |
 | 🛡️ Current Project | Voraxx v1.0 (AI-VAPT) |
