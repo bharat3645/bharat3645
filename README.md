@@ -9,6 +9,9 @@
 [![GitHub stars](https://img.shields.io/github/stars/bharat3645?style=social)](https://github.com/bharat3645)
 ![Profile Views](https://komarev.com/ghpvc/?username=bharat3645&style=flat-square&color=58A6FF)
 
+[![GirlScript SoC '24](https://img.shields.io/badge/GirlScript_SoC-2024_Contributor-FF6B35?style=flat-square&logo=girlscript&logoColor=white)](https://gssoc.girlscript.tech)
+[![Perplexity Campus Partner](https://img.shields.io/badge/Perplexity-Campus_Partner-20808A?style=flat-square&logoColor=white)](https://perplexity.ai)
+
 </div>
 
 ---
