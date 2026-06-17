@@ -77,6 +77,10 @@
 ![smolagents](https://img.shields.io/badge/smolagents-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
 ![Agno](https://img.shields.io/badge/Agno-6B73FF?style=for-the-badge&logo=python&logoColor=white)
 ![OpenAI Agents SDK](https://img.shields.io/badge/OpenAI_Agents_SDK-412991?style=for-the-badge&logo=openai&logoColor=white)
+![LlamaIndex](https://img.shields.io/badge/LlamaIndex-1C3C3C?style=for-the-badge&logo=python&logoColor=white)
+![DSPy](https://img.shields.io/badge/DSPy-412991?style=for-the-badge&logo=python&logoColor=white)
+![Vercel AI SDK](https://img.shields.io/badge/Vercel_AI_SDK-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Langfuse](https://img.shields.io/badge/Langfuse-F97316?style=for-the-badge&logo=python&logoColor=white)
 
 ## 🔐 Security Tooling
 
