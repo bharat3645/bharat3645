@@ -23,9 +23,9 @@
 - 💡 **Expertise:** Full-stack development, AI agents, security research, microservices, and cloud-native systems
 - 👯 **Collaborate With Me On:** AI security tools, open-source projects, research papers, and hackathons
 - 🤝 **Help With:** AI integrations, agentic pipelines, backend optimization, and ML model deployment
-- 🌱 **Currently Learning:** Mastra (TypeScript agents), Agno framework, smolagents (HuggingFace), OpenAI Agents SDK, Claude Fable 5 multi-agent capabilities, Temporal.io durable workflows, and advanced exploit automation
+- 🌱 **Currently Learning:** LlamaIndex & DSPy (structured LLM programming), Vercel AI SDK, Mastra (TypeScript agents), Agno framework, smolagents (HuggingFace), Claude Fable 5 multi-agent capabilities, Temporal.io durable workflows, and advanced exploit automation
 - 💬 **Ask Me About:** AI-driven security tooling, agentic pipelines, A2A/MCP integrations, rapid prototyping, and multi-agent architecture decisions
-- 🎯 **2026 Goals:** Ship Voraxx v1.0 *(on track — H1 2026)*, publish security research on AI-assisted VAPT, build A2A-compatible agent networks with Fable 5 backbone, and contribute to top-tier open-source AI/security projects
+- 🎯 **2026 Goals:** Ship Voraxx v1.0 *(on track — H1 complete, entering H2 beta)*, publish security research on AI-assisted VAPT, build A2A-compatible agent networks with Fable 5 backbone, and contribute to top-tier open-source AI/security projects
 - ⚡ **Fun Fact:** Built a complete AI project prototype in 24 hours during a hackathon that got featured!
 
 ---
@@ -325,7 +325,7 @@ If you find my projects helpful, consider supporting me:
 
 **Made with ❤️ by [Bharat Singh Parihar](https://github.com/bharat3645)**
 
-![Last Updated](https://img.shields.io/badge/Last%20Updated-June%202026-58A6FF?style=flat-square)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-June%2017%202026-58A6FF?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Building%20Voraxx%20v1.0-brightgreen?style=flat-square)
 ![Open To](https://img.shields.io/badge/Open%20To-Collaboration-orange?style=flat-square)
 
