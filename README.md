@@ -197,7 +197,7 @@ I write about what I'm building and learning:
 | 🎯 Contribution Focus | AI Agents · Security · Full-Stack |
 | 🛡️ Current Project | Voraxx v1.0 (AI-VAPT) |
 | 🤖 AI Frameworks Used | LangGraph · CrewAI · MCP · Pydantic AI · Strands · A2A |
-| 📅 2026 Contributions (YTD) | 2,960+ |
+| 📅 2026 Contributions (YTD) | 2,975+ |
 
 ---
 
@@ -257,12 +257,12 @@ I write about what I'm building and learning:
 <div align="center">
 
 ```
-2026 Contributions (Jan–Jun 17):
+2026 Contributions (Jan–Jun 18):
 AI & Security  ████████████████████████████████ 65%
 Full-Stack     ██████████████░░░░░░░░░░░░░░░░░░ 21%
 DevOps/Cloud   ███████░░░░░░░░░░░░░░░░░░░░░░░░░ 14%
 
-Total: 2,960+ contributions | Streak: 🔥 Consistent daily commits
+Total: 2,975+ contributions | Streak: 🔥 Consistent daily commits
 ```
 
 Streaks: 🔥 Consistent | Code: 💻 Daily | Learning: 📚 AI Agents + Security
@@ -325,7 +325,7 @@ If you find my projects helpful, consider supporting me:
 
 **Made with ❤️ by [Bharat Singh Parihar](https://github.com/bharat3645)**
 
-![Last Updated](https://img.shields.io/badge/Last%20Updated-June%2017%202026-58A6FF?style=flat-square)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-June%2018%202026-58A6FF?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Building%20Voraxx%20v1.0-brightgreen?style=flat-square)
 ![Open To](https://img.shields.io/badge/Open%20To-Collaboration-orange?style=flat-square)
 
