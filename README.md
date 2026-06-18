@@ -81,6 +81,9 @@
 ![DSPy](https://img.shields.io/badge/DSPy-412991?style=for-the-badge&logo=python&logoColor=white)
 ![Vercel AI SDK](https://img.shields.io/badge/Vercel_AI_SDK-000000?style=for-the-badge&logo=vercel&logoColor=white)
 ![Langfuse](https://img.shields.io/badge/Langfuse-F97316?style=for-the-badge&logo=python&logoColor=white)
+![Google ADK](https://img.shields.io/badge/Google_ADK-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![OpenRouter](https://img.shields.io/badge/OpenRouter-000000?style=for-the-badge&logo=openai&logoColor=white)
+![LiteLLM](https://img.shields.io/badge/LiteLLM-6B73FF?style=for-the-badge&logo=python&logoColor=white)
 
 ## 🔐 Security Tooling
 
