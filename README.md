@@ -154,7 +154,7 @@
 
 ### 🛡️ Security & AI Agents
 - **[Voraxx](https://github.com/bharat3645/Voraxx)** `🚧 v1.0 in progress` ⭐ — AI-powered VAPT platform with **Shannon** as its multi-agent reasoning engine; automates recon, vulnerability scanning, exploit chaining, and report generation using LLM agents · *Python · LangGraph · Claude Sonnet 4.6 · FastAPI · PostgreSQL*
-- **Shannon AI Engine** `🔬 Core R&D` — Orchestrates recon, enumeration, and exploitation workflows via LangGraph, MCP tools, and Claude Sonnet 4.6; integrates A2A protocol for cross-agent interoperability and Strands Agents (AWS) for modular tool-use chains, memory, and durable Temporal.io workflows
+- **Shannon AI Engine** `🔬 Core R&D` — Orchestrates recon, enumeration, and exploitation workflows via LangGraph, MCP tools, and Claude Sonnet 4.6; uses **Mem0** for persistent cross-session agent memory, **BrowserUse** for autonomous web interaction during OSINT, **Composio** for 100+ tool integrations, A2A protocol for cross-agent interoperability, and Strands Agents (AWS) for modular tool-use chains with durable Temporal.io workflows
 
 ### 🤖 AI & Machine Learning
 - **MCP Security Server** `✅ Live` — Custom Model Context Protocol server extending Claude with domain-specific security and recon tools (port scanning, CVE lookup, payload generation)
@@ -177,6 +177,9 @@ I write about what I'm building and learning:
 
 - 🛡️ AI-powered VAPT — multi-agent security automation with LangGraph
 - 🔗 MCP server design — extending LLMs with custom security tools
+- 🧠 Agent memory architecture — persistent cross-session memory with Mem0
+- 🌐 BrowserUse — autonomous web agents for OSINT and recon automation
+- 🔌 Composio integrations — connecting 100+ tools to agentic pipelines
 - 🤖 Agent-to-agent protocols (A2A) and cross-agent interoperability
 - ⚡ Durable AI workflows with Temporal.io
 
@@ -208,7 +211,7 @@ I write about what I'm building and learning:
 | 🥇 Primary Language | Python |
 | 🎯 Contribution Focus | AI Agents · Security · Full-Stack |
 | 🛡️ Current Project | Voraxx v1.0 (AI-VAPT) |
-| 🤖 AI Frameworks Used | LangGraph · CrewAI · MCP · Pydantic AI · Strands · A2A |
+| 🤖 AI Frameworks Used | LangGraph · CrewAI · MCP · Mem0 · BrowserUse · Composio · Strands · A2A |
 | 📅 2026 Contributions (YTD) | 3,000+ |
 
 ---
