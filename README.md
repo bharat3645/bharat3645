@@ -205,16 +205,15 @@ I write about what I'm building and learning:
 
 | Metric | Value |
 |--------|-------|
-| 📦 Total Repositories | 75+ |
-| 🌍 Open Source Contributions | 550+ |
-| 🐛 Issues Resolved | 420+ |
-| 👀 Code Reviews Participated | 220+ |
-| 🔥 Active Since | 2023 |
+| 📦 Total Repositories | 55 |
+| 🌍 Open Source Contributions | 150+ |
+| 🐛 Issues Resolved | 80+ |
+| 👀 Code Reviews Participated | 40+ |
+| 🔥 Active Since | Sept 2023 |
 | 🥇 Primary Language | Python |
 | 🎯 Contribution Focus | AI Agents · Security · Full-Stack |
-| 🛡️ Current Project | Voraxx v1.0 (AI-VAPT) |
-| 🤖 AI Frameworks Used | LangGraph · CrewAI · MCP · Mem0 · BrowserUse · Composio · Strands · A2A |
-| 📅 2026 Contributions (YTD) | 3,000+ |
+| 🛡️ Current Project | Voraxx (AI-VAPT) — in progress |
+| 🤖 AI Frameworks Used | LangGraph · CrewAI · MCP · Pydantic AI · LlamaIndex |
 
 ---
 
