@@ -147,10 +147,10 @@
 
 <div align="center">
 
-[![Voraxx](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=Voraxx&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/Voraxx)
 [![3D-Portfolio-Website](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=3D-Portfolio-Website&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/3D-Portfolio-Website)
-[![GhostSync](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=GhostSync&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/GhostSync)
-[![mazex-agency](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=mazex-agency&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/mazex-agency)
+[![NomadAI](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=NomadAI&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/NomadAI)
+[![Mentoro](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=Mentoro&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/Mentoro)
+[![shadcn-dashboard](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=shadcn-dashboard&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/shadcn-dashboard)
 
 </div>
 
