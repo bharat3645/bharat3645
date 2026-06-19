@@ -84,6 +84,10 @@
 ![Google ADK](https://img.shields.io/badge/Google_ADK-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![OpenRouter](https://img.shields.io/badge/OpenRouter-000000?style=for-the-badge&logo=openai&logoColor=white)
 ![LiteLLM](https://img.shields.io/badge/LiteLLM-6B73FF?style=for-the-badge&logo=python&logoColor=white)
+![Mem0](https://img.shields.io/badge/Mem0-7C3AED?style=for-the-badge&logo=python&logoColor=white)
+![BrowserUse](https://img.shields.io/badge/BrowserUse-0EA5E9?style=for-the-badge&logo=googlechrome&logoColor=white)
+![Composio](https://img.shields.io/badge/Composio-F59E0B?style=for-the-badge&logo=zapier&logoColor=white)
+![AgentOps](https://img.shields.io/badge/AgentOps-10B981?style=for-the-badge&logo=python&logoColor=white)
 
 ## 🔐 Security Tooling
 
