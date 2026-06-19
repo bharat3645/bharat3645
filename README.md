@@ -137,7 +137,7 @@
 
 <div align="center">
 
-![](https://github-profile-trophy.vercel.app/?username=bharat3645&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&column=4)
+![](https://github-profile-trophy.vercel.app/?username=bharat3645&theme=tokyonight&no-frame=false&margin-w=6&column=6)
 
 </div>
 
