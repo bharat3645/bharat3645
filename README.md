@@ -222,19 +222,19 @@ I write about what I'm building and learning:
 ### 🤖 AI Agents & LLMs
 - LangGraph & CrewAI Orchestration
 - Claude Sonnet 4.6 · Fable 5 APIs
-- RAG & Vector Search (Qdrant)
-- Prompt Engineering & Tool Use
+- Mem0 Agent Memory · BrowserUse · Composio
+- AgentOps Observability · Langfuse Tracing
 - Multi-Agent Systems · Claude Code SDK
 
 </td>
 <td>
 
 ### 🛡️ Security Research
-- AI-powered VAPT (Voraxx)
-- Penetration Testing
-- OWASP Top 10
-- Network Reconnaissance
-- Exploit Automation
+- AI-powered VAPT (Voraxx/Shannon)
+- Penetration Testing · OWASP Top 10
+- OSINT Automation (SpiderFoot, theHarvester)
+- Container Security (Trivy, Gitleaks, Semgrep)
+- Network Recon · Exploit Automation
 
 </td>
 </tr>
