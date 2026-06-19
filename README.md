@@ -268,23 +268,6 @@ I write about what I'm building and learning:
 
 ---
 
-## 🔄 Contribution Activity
-
-<div align="center">
-
-```
-2026 Contributions (Jan–Jun 19):
-AI & Security  ████████████████████████████████ 65%
-Full-Stack     ██████████████░░░░░░░░░░░░░░░░░░ 21%
-DevOps/Cloud   ███████░░░░░░░░░░░░░░░░░░░░░░░░░ 14%
-
-Total: 3,000+ contributions | Streak: 🔥 Consistent daily commits
-```
-
-Streaks: 🔥 Consistent | Code: 💻 Daily | Learning: 📚 AI Agents + Security
-
-</div>
-
 ---
 
 ### ✍️ Random Dev Quote
