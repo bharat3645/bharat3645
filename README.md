@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Bharat%20Singh%20Parihar&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=AI%20Agent%20Builder%20%7C%20Security%20Researcher%20%7C%20Full-Stack%20Dev&descAlignY=55&descSize=18" alt="header" width="100%"/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=750&lines=Building+Voraxx+%E2%80%94+AI-Powered+VAPT+Platform;Agentic+AI+%7C+LangGraph+%7C+Claude+Sonnet+4.6;A2A+Protocol+%7C+Strands+Agents+%7C+MCP+Servers;Agent+Memory+%7C+Mem0+%7C+BrowserUse+%7C+Composio;Google+ADK+%7C+OpenRouter+%7C+Mastra+%7C+Temporal.io;Voraxx+H2+2026+Beta+%7C+Security+Research+%7C+OSS)](https://github.com/bharat3645)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=750&lines=Building+Voraxx+%E2%80%94+AI-Powered+VAPT+Platform;Agentic+AI+%7C+LangGraph+%7C+Claude+Sonnet+4.6;MCP+Servers+%7C+RAG+Pipelines+%7C+Temporal.io;Security+Research+%7C+Full-Stack+Dev+%7C+Open+Source)](https://github.com/bharat3645)
 
 [![GitHub followers](https://img.shields.io/github/followers/bharat3645?style=social)](https://github.com/bharat3645)
 [![Twitter/X](https://img.shields.io/twitter/follow/bharat3645?style=social)](https://twitter.com/bharat3645)
@@ -23,9 +23,9 @@
 - 💡 **Expertise:** Full-stack development, AI agents, security research, microservices, and cloud-native systems
 - 👯 **Collaborate With Me On:** AI security tools, open-source projects, research papers, and hackathons
 - 🤝 **Help With:** AI integrations, agentic pipelines, backend optimization, and ML model deployment
-- 🌱 **Currently Learning:** Mem0 persistent agent memory, BrowserUse web-automation for AI agents, Composio tool-integration platform, AgentOps observability for multi-agent systems, advanced Temporal.io durable workflows, and Claude Fable 5 multi-agent capabilities for Voraxx Shannon engine
-- 💬 **Ask Me About:** AI-driven security tooling, agentic pipelines, A2A/MCP integrations, rapid prototyping, and multi-agent architecture decisions
-- 🎯 **2026 Goals:** Ship Voraxx v1.0 *(H2 beta live — targeting v1.0 GA by Q4)*, publish security research on AI-assisted VAPT, build Google ADK-powered multi-agent networks with Fable 5 backbone, and contribute to top-tier open-source AI/security projects
+- 🌱 **Currently Learning:** Advanced LangGraph multi-agent patterns, Temporal.io durable workflows, and RAG pipeline optimization
+- 💬 **Ask Me About:** AI-driven security tooling, agentic pipelines, MCP integrations, and multi-agent architecture
+- 🎯 **2026 Goals:** Ship Voraxx v1.0, publish a write-up on AI-assisted VAPT, and contribute to open-source AI/security projects
 - ⚡ **Fun Fact:** Built a complete AI project prototype in 24 hours during a hackathon that got featured!
 
 ---
@@ -134,21 +134,16 @@
 </div>
 
 ### 🛡️ Security & AI Agents
-- **[Voraxx](https://github.com/bharat3645/Voraxx)** `🚧 v1.0 in progress` ⭐ — AI-powered VAPT platform with **Shannon** as its multi-agent reasoning engine; automates recon, vulnerability scanning, exploit chaining, and report generation using LLM agents · *Python · LangGraph · Claude Sonnet 4.6 · FastAPI · PostgreSQL*
-- **Shannon AI Engine** `🔬 Core R&D` — Orchestrates recon, enumeration, and exploitation workflows via LangGraph, MCP tools, and Claude Sonnet 4.6; uses **Mem0** for persistent cross-session agent memory, **BrowserUse** for autonomous web interaction during OSINT, **Composio** for 100+ tool integrations, A2A protocol for cross-agent interoperability, and Strands Agents (AWS) for modular tool-use chains with durable Temporal.io workflows
+- **[Voraxx](https://github.com/bharat3645/Voraxx)** `🔒 Private · v1.0 in progress` — AI-powered VAPT platform; automates recon, vulnerability scanning, and exploit chaining via LLM agents · *Python · LangGraph · Claude Sonnet 4.6 · FastAPI · PostgreSQL*
+- **Shannon AI Engine** `🔬 Core R&D` — Multi-agent reasoning engine inside Voraxx; orchestrates recon, enumeration, and exploitation workflows via LangGraph and MCP tools with durable Temporal.io workflows
 
-### 🤖 AI & Machine Learning
-- **MCP Security Server** `✅ Live` — Custom Model Context Protocol server extending Claude with domain-specific security and recon tools (port scanning, CVE lookup, payload generation)
-- **RAG Knowledge Base** — Production-grade Retrieval-Augmented Generation with LangChain, Pinecone vector DB, and OpenAI/Claude for domain-specific Q&A over private corpora
-- **Multi-Agent Pipeline** — End-to-end agentic ML workflow with LangGraph + CrewAI orchestration, automated evaluation, and Groq-accelerated inference
-- **Data Analytics Dashboard** — Interactive real-time analytics with Plotly, FastAPI, and Supabase streaming backend
+### 🤖 AI & Full-Stack
+- **[The-Ideal-Harness](https://github.com/bharat3645/The-Ideal-Harness)** — Claude Code-native agent harness with MCP-portable enforcement and safety tooling · *TypeScript · MCP*
+- **[GenAI-Platform](https://github.com/bharat3645/GenAI-Platform)** — Generative AI platform experiments and integrations
+- **[Mentoro](https://github.com/bharat3645/Mentoro)** — Gamified AI learning companion · *AI · Full-Stack*
+- **[Task-Tokenizer](https://github.com/bharat3645/Task-Tokenizer)** ⭐ — Task management tool with tokenization for structured workflows
 
-### 🌐 Web & Cloud
-- **Full-Stack SaaS** — Modern application with React + TypeScript, Next.js, Node.js/FastAPI, PostgreSQL, and AWS/Vercel deployment
-- **Microservices Backbone** — Scalable backend with Docker, Kubernetes, Redis caching, and Temporal.io for durable workflow orchestration
-- **GraphQL + REST Gateway** — Unified API layer with FastAPI, Express.js, and OpenAPI docs; deployed on Cloudflare Workers
-
-> 📂 Check out my [repositories](https://github.com/bharat3645?tab=repositories) for more projects!
+> 📂 See all projects at [github.com/bharat3645](https://github.com/bharat3645?tab=repositories)
 
 ---
 
@@ -158,10 +153,7 @@ I write about what I'm building and learning:
 
 - 🛡️ AI-powered VAPT — multi-agent security automation with LangGraph
 - 🔗 MCP server design — extending LLMs with custom security tools
-- 🧠 Agent memory architecture — persistent cross-session memory with Mem0
-- 🌐 BrowserUse — autonomous web agents for OSINT and recon automation
-- 🔌 Composio integrations — connecting 100+ tools to agentic pipelines
-- 🤖 Agent-to-agent protocols (A2A) and cross-agent interoperability
+- 🤖 Multi-agent system design and orchestration patterns
 - ⚡ Durable AI workflows with Temporal.io
 
 > 📝 Notes and posts in [BLOG.md](./BLOG.md)
@@ -244,8 +236,6 @@ I write about what I'm building and learning:
 </td>
 </tr>
 </table>
-
----
 
 ---
 
