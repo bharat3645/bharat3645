@@ -168,15 +168,16 @@ I write about what I'm building and learning:
 
 | Metric | Value |
 |--------|-------|
-| 📦 Total Repositories | 55 |
-| 🌍 Open Source Contributions | 150+ |
-| 🐛 Issues Resolved | 80+ |
-| 👀 Code Reviews Participated | 40+ |
+| 📦 Total Repositories | 57 |
+| 🌍 Open Source Contributions | 200+ |
+| 🐛 Issues Resolved | 90+ |
+| 👀 Code Reviews Participated | 45+ |
 | 🔥 Active Since | Sept 2023 |
 | 🥇 Primary Language | Python |
+| 🤖 AI Models Integrated | Claude · GPT-4o · Gemini · Groq · Ollama |
 | 🎯 Contribution Focus | AI Agents · Security · Full-Stack |
-| 🛡️ Current Project | Voraxx (AI-VAPT) — in progress |
-| 🤖 AI Frameworks Used | LangGraph · CrewAI · MCP · Pydantic AI · LlamaIndex |
+| 🛡️ Current Project | Voraxx (AI-VAPT) — Shannon engine in active dev |
+| 🧰 AI Frameworks Used | LangGraph · CrewAI · MCP · Pydantic AI · LlamaIndex · LiteLLM |
 
 ---
 
