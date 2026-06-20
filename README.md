@@ -282,7 +282,7 @@ If you find my projects helpful, consider supporting me:
 
 **Made with ❤️ by [Bharat Singh Parihar](https://github.com/bharat3645)**
 
-![Last Updated](https://img.shields.io/badge/Last%20Updated-June%2019%202026-58A6FF?style=flat-square)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-June%2020%202026-58A6FF?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Building%20Voraxx%20v1.0-brightgreen?style=flat-square)
 ![Open To](https://img.shields.io/badge/Open%20To-Collaboration-orange?style=flat-square)
 
