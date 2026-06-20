@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Bharat%20Singh%20Parihar&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=AI%20Agent%20Builder%20%7C%20Security%20Researcher%20%7C%20Full-Stack%20Dev&descAlignY=55&descSize=18" alt="header" width="100%"/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=750&lines=Building+Voraxx+%E2%80%94+AI-Powered+VAPT+Platform;Agentic+AI+%7C+LangGraph+%7C+Claude+Sonnet+4.6;MCP+Servers+%7C+RAG+Pipelines+%7C+Temporal.io;Security+Research+%7C+Full-Stack+Dev+%7C+Open+Source)](https://github.com/bharat3645)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=750&lines=Building+Voraxx+%E2%80%94+AI-Powered+VAPT+Platform;Claude+Sonnet+4.6+%7C+LangGraph+%7C+CrewAI+Agents;MCP+Servers+%7C+RAG+Pipelines+%7C+Temporal.io+Workflows;AI+Security+Automation+%7C+Full-Stack+%7C+Open+Source)](https://github.com/bharat3645)
 
 [![GitHub followers](https://img.shields.io/github/followers/bharat3645?style=social)](https://github.com/bharat3645)
 [![Twitter/X](https://img.shields.io/twitter/follow/bharat3645?style=social)](https://twitter.com/bharat3645)
@@ -287,7 +287,7 @@ If you find my projects helpful, consider supporting me:
 **Made with ❤️ by [Bharat Singh Parihar](https://github.com/bharat3645)**
 
 ![Last Updated](https://img.shields.io/badge/Last%20Updated-June%2020%202026-58A6FF?style=flat-square)
-![Status](https://img.shields.io/badge/Status-Building%20Voraxx%20v1.0-brightgreen?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Shannon%20Engine%20Active%20Dev-brightgreen?style=flat-square)
 ![Open To](https://img.shields.io/badge/Open%20To-Collaboration-orange?style=flat-square)
 
 *Building [Voraxx](https://github.com/bharat3645) — AI-Powered VAPT · Shipping 2026*
