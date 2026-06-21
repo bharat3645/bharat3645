@@ -30,6 +30,17 @@
 
 ---
 
+## 🚀 Q3 2026 Build Status
+
+| Project | Status | Stack | ETA |
+|---------|--------|-------|-----|
+| **Voraxx v1.0** | 🔨 In Dev | LangGraph · Shannon · Claude Sonnet 4.6 | Q3 2026 |
+| **Shannon Engine** | 🔬 Active R&D | MCP · Temporal.io · LangGraph | Ongoing |
+| **The-Ideal-Harness** | 🏗️ Pre-release | TypeScript · MCP · Claude Code SDK | Q3 2026 |
+| **AI-VAPT Write-up** | ✍️ Drafting | Research · LLM-assisted pentest | Q3 2026 |
+
+---
+
 ## 🌐 Connect With Me
 
 <div align="center">
