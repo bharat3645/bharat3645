@@ -118,10 +118,10 @@
 
 <div align="center">
 
-[![3D-Portfolio-Website](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=3D-Portfolio-Website&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/3D-Portfolio-Website)
+[![The-Ideal-Harness](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=The-Ideal-Harness&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/The-Ideal-Harness)
 [![NomadAI](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=NomadAI&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/NomadAI)
 [![Mentoro](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=Mentoro&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/Mentoro)
-[![shadcn-dashboard](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=shadcn-dashboard&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/shadcn-dashboard)
+[![GenAI-Platform](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=GenAI-Platform&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/GenAI-Platform)
 
 </div>
 
