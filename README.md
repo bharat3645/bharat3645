@@ -187,7 +187,7 @@ I write about what I'm building and learning:
 | 👀 Code Reviews Participated | 45+ |
 | 🔥 Active Since | Sept 2023 |
 | 🥇 Primary Language | Python |
-| 🤖 AI Models Integrated | Claude · GPT-4o · Gemini · Groq · Ollama |
+| 🤖 AI Models Integrated | Claude Fable 5 · Opus 4.8 · GPT-4o · Gemini · Groq |
 | 🎯 Contribution Focus | AI Agents · Security · Full-Stack |
 | 🛡️ Current Project | Voraxx (AI-VAPT) — Shannon engine in active dev |
 | 🧰 AI Frameworks Used | LangGraph · CrewAI · MCP · Pydantic AI · LlamaIndex · LiteLLM |
@@ -202,10 +202,10 @@ I write about what I'm building and learning:
 
 ### 🤖 AI Agents & LLMs
 - LangGraph & CrewAI Orchestration
-- Claude Sonnet 4.6 (Anthropic API)
+- Claude Fable 5 & Opus 4.8 (Anthropic API)
 - RAG & Vector Search (Qdrant)
-- Prompt Engineering & Tool Use
-- MCP Servers · Multi-Agent Systems
+- A2A Protocol · MCP Servers · Multi-Agent Systems
+- Prompt Engineering & Extended Thinking
 
 </td>
 <td>
