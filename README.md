@@ -23,7 +23,7 @@
 - 💡 **Expertise:** Full-stack development, AI agents, security research, microservices, and cloud-native systems
 - 👯 **Collaborate With Me On:** AI security tools, open-source projects, research papers, and hackathons
 - 🤝 **Help With:** AI integrations, agentic pipelines, backend optimization, and ML model deployment
-- 🌱 **Currently Learning:** Mastra.ai agent workflows, Google ADK multi-agent pipelines, Claude Opus 4.8 extended thinking, and advanced Temporal.io saga patterns
+- 🌱 **Currently Learning:** Claude Fable 5 extended thinking, A2A (Agent-to-Agent) protocol, Mastra.ai agent workflows, and Google ADK multi-agent pipelines
 - 💬 **Ask Me About:** AI-driven security tooling, agentic pipelines, MCP server design, multi-agent orchestration, and RAG optimization
 - 🎯 **2026 Goals (H2):** Ship Voraxx v1.0 (Q3), publish AI-assisted VAPT write-up, release The-Ideal-Harness as open-source, and speak at a security/AI event
 - ⚡ **Fun Fact:** Built a complete AI project prototype in 24 hours during a hackathon that got featured!
