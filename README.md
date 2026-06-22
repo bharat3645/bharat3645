@@ -69,6 +69,8 @@
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
 ![MCP](https://img.shields.io/badge/Model_Context_Protocol-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
 ![Claude Code SDK](https://img.shields.io/badge/Claude_Code_SDK-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
+![Claude Fable 5](https://img.shields.io/badge/Claude_Fable_5-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
+![A2A Protocol](https://img.shields.io/badge/A2A_Protocol-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![Pydantic AI](https://img.shields.io/badge/PydanticAI-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
 ![Qdrant](https://img.shields.io/badge/Qdrant-DC244C?style=for-the-badge&logo=qdrant&logoColor=white)
