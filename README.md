@@ -203,11 +203,11 @@ I write about what I'm building and learning:
 <td>
 
 ### 🤖 AI Agents & LLMs
-- LangGraph & CrewAI Orchestration
+- LangGraph · Mastra.ai · CrewAI Orchestration
 - Claude Fable 5 & Opus 4.8 (Anthropic API)
-- RAG & Vector Search (Qdrant)
-- A2A Protocol · MCP Servers · Multi-Agent Systems
-- Prompt Engineering & Extended Thinking
+- Google ADK · A2A Protocol · Multi-Agent Systems
+- RAG & Vector Search (Qdrant, Pinecone)
+- MCP Server Design · Prompt Engineering & Extended Thinking
 
 </td>
 <td>
@@ -217,7 +217,7 @@ I write about what I'm building and learning:
 - Penetration Testing · OWASP Top 10
 - Network Recon (Nmap, Subfinder, Nuclei)
 - Web App Testing (Burp Suite, SQLMap, ffuf)
-- Static Analysis (Semgrep)
+- Static Analysis (Semgrep) · LLM-assisted exploit chaining
 
 </td>
 </tr>
@@ -227,19 +227,19 @@ I write about what I'm building and learning:
 ### 💻 Full-Stack Dev
 - React, Next.js & TypeScript
 - Node.js, FastAPI & Django
-- PostgreSQL, MongoDB, Redis
-- GraphQL & REST APIs
-- TailwindCSS
+- PostgreSQL, MongoDB, Redis, Supabase
+- GraphQL, tRPC & REST APIs
+- TailwindCSS · Prisma ORM
 
 </td>
 <td>
 
 ### ☁️ DevOps & Cloud
 - Docker & Kubernetes
-- Temporal.io Workflows
-- AWS & Google Cloud
-- CI/CD Pipelines
-- Infrastructure as Code
+- Temporal.io Durable Workflows
+- AWS & Google Cloud (GCP)
+- CI/CD Pipelines · GitHub Actions
+- Infrastructure as Code · Cloudflare Workers
 
 </td>
 </tr>
