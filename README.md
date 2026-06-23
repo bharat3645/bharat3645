@@ -181,16 +181,17 @@ I write about what I'm building and learning:
 
 | Metric | Value |
 |--------|-------|
-| 📦 Total Repositories | 57 |
-| 🌍 Open Source Contributions | 200+ |
-| 🐛 Issues Resolved | 90+ |
-| 👀 Code Reviews Participated | 45+ |
+| 📦 Total Repositories | 60+ |
+| 🌍 Open Source Contributions | 220+ |
+| 🐛 Issues Resolved | 95+ |
+| 👀 Code Reviews Participated | 50+ |
 | 🔥 Active Since | Sept 2023 |
-| 🥇 Primary Language | Python |
-| 🤖 AI Models Integrated | Claude Fable 5 · Opus 4.8 · GPT-4o · Gemini · Groq |
+| 🥇 Primary Language | Python & TypeScript |
+| 🤖 AI Models Integrated | Claude Fable 5 · Opus 4.8 · GPT-4o · Gemini · Groq · Ollama |
 | 🎯 Contribution Focus | AI Agents · Security · Full-Stack |
 | 🛡️ Current Project | Voraxx (AI-VAPT) — Shannon engine in active dev |
-| 🧰 AI Frameworks Used | LangGraph · CrewAI · MCP · Pydantic AI · LlamaIndex · LiteLLM |
+| 🧰 AI Frameworks Used | LangGraph · Mastra.ai · MCP · Google ADK · Pydantic AI · LiteLLM |
+| ⚡ Workflow Engine | Temporal.io (durable multi-agent pipelines) |
 
 ---
 
@@ -299,7 +300,7 @@ If you find my projects helpful, consider supporting me:
 
 **Made with ❤️ by [Bharat Singh Parihar](https://github.com/bharat3645)**
 
-![Last Updated](https://img.shields.io/badge/Last%20Updated-June%2022%202026-58A6FF?style=flat-square)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-June%2023%202026-58A6FF?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Shannon%20Engine%20Active%20Dev-brightgreen?style=flat-square)
 ![Open To](https://img.shields.io/badge/Open%20To-Collaboration-orange?style=flat-square)
 
