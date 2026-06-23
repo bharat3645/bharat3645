@@ -18,14 +18,14 @@
 
 ## 💫 About Me
 
-- 🔭 **Currently Building:** [Voraxx](https://github.com/bharat3645) — an AI-powered VAPT (Vulnerability Assessment & Penetration Testing) tool with Shannon AI engine
-- 🤖 **AI/LLM Focus:** Agentic AI systems, RAG pipelines, prompt engineering, and LLM-powered security tooling
-- 💡 **Expertise:** Full-stack development, AI agents, security research, microservices, and cloud-native systems
-- 👯 **Collaborate With Me On:** AI security tools, open-source projects, research papers, and hackathons
-- 🤝 **Help With:** AI integrations, agentic pipelines, backend optimization, and ML model deployment
-- 🌱 **Currently Learning:** Claude Fable 5 extended thinking, A2A (Agent-to-Agent) protocol, Mastra.ai agent workflows, and Google ADK multi-agent pipelines
-- 💬 **Ask Me About:** AI-driven security tooling, agentic pipelines, MCP server design, multi-agent orchestration, and RAG optimization
-- 🎯 **2026 Goals (H2):** Ship Voraxx v1.0 (Q3), publish AI-assisted VAPT write-up, release The-Ideal-Harness as open-source, and speak at a security/AI event
+- 🔭 **Currently Building:** [Voraxx](https://github.com/bharat3645) — AI-powered VAPT platform with Shannon multi-agent engine + a dedicated Voraxx MCP Server for security tool orchestration
+- 🤖 **AI/LLM Focus:** Agentic AI systems, durable multi-agent pipelines (Temporal.io), RAG, and LLM-powered security automation
+- 💡 **Expertise:** Full-stack development, AI agent architecture, security research, microservices, and cloud-native systems
+- 👯 **Collaborate With Me On:** AI security tools, open-source agent frameworks, research papers, and hackathons
+- 🤝 **Help With:** MCP server design, LangGraph orchestration, Mastra.ai workflows, backend optimization, and RAG pipelines
+- 🌱 **Currently Learning:** Temporal.io durable workflow patterns, A2A (Agent-to-Agent) protocol, Google ADK multi-agent pipelines, and advanced LangGraph + Mastra.ai composition
+- 💬 **Ask Me About:** AI-driven VAPT, agentic pipelines, MCP server design, multi-agent orchestration, and Shannon engine architecture
+- 🎯 **2026 Goals (H2):** Ship Voraxx v1.0 + MCP Server (Q3), publish AI-assisted VAPT research write-up, open-source The-Ideal-Harness, and speak at a security/AI event
 - ⚡ **Fun Fact:** Built a complete AI project prototype in 24 hours during a hackathon that got featured!
 
 ---
