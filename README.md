@@ -19,6 +19,7 @@
 ## 💫 About Me
 
 - 🔭 **Currently Building:** [Voraxx](https://github.com/bharat3645) — AI-powered VAPT platform with Shannon multi-agent engine + a dedicated Voraxx MCP Server for security tool orchestration
+- 🆕 **Recently Shipped:** [voraxx-mcp-server](https://github.com/bharat3645/voraxx-mcp-server) (CVE/Shodan/Nuclei tools over MCP), [mcp-registry-finder](https://github.com/bharat3645/mcp-registry-finder) (searches the official MCP registry from inside an agent session), and [FrameSage](https://github.com/bharat3645/FrameSage) (tool-calling agent for pandas DataFrames)
 - 🤖 **AI/LLM Focus:** Agentic AI systems, durable multi-agent pipelines (Temporal.io), RAG, and LLM-powered security automation
 - 💡 **Expertise:** Full-stack development, AI agent architecture, security research, microservices, and cloud-native systems
 - 👯 **Collaborate With Me On:** AI security tools, open-source agent frameworks, research papers, and hackathons
@@ -38,7 +39,7 @@
 | **Shannon Engine** | 🔬 Active R&D | `██████░░░░` 60% | MCP · Temporal.io · LangGraph · A2A | Ongoing |
 | **The-Ideal-Harness** | 🏗️ Pre-release | `█████████░` 90% | TypeScript · MCP · Claude Code SDK | Q3 2026 |
 | **AI-VAPT Write-up** | ✍️ Drafting | `████░░░░░░` 40% | Research · LLM-assisted pentest | Q3 2026 |
-| **Voraxx MCP Server** | 🆕 Started | `██░░░░░░░░` 20% | Python · MCP · Nuclei · Shodan API | Q4 2026 |
+| **[Voraxx MCP Server](https://github.com/bharat3645/voraxx-mcp-server)** | 🔧 In Dev | `████░░░░░░` 40% | Python (stdlib-only) · MCP · Nuclei · Shodan · OSV.dev | Q4 2026 |
 
 ---
 
@@ -140,14 +141,18 @@
 </div>
 
 ### 🛡️ Security & AI Agents
-- **[Voraxx](https://github.com/bharat3645/Voraxx)** `🔒 Private · v1.0 in progress` — AI-powered VAPT platform; automates recon, vulnerability scanning, and exploit chaining via LLM agents · *Python · LangGraph · Claude Sonnet 4.6 · FastAPI · PostgreSQL*
+- **[Voraxx](https://github.com/bharat3645/Voraxx)** `🔒 Private · v1.0 in progress` — AI-powered VAPT platform; automates recon, vulnerability scanning, and exploit chaining via LLM agents · *TypeScript · Temporal.io · Claude Agent SDK*
 - **Shannon AI Engine** `🔬 Core R&D` — Multi-agent reasoning engine inside Voraxx; orchestrates recon, enumeration, and exploitation workflows via LangGraph and MCP tools with durable Temporal.io workflows
+- **[voraxx-mcp-server](https://github.com/bharat3645/voraxx-mcp-server)** 🆕 — Minimal, dependency-free MCP server exposing CVE lookup (OSV.dev), Shodan host recon, and local Nuclei scan orchestration as agent tools · *Python*
 
 ### 🤖 AI & Full-Stack
-- **[The-Ideal-Harness](https://github.com/bharat3645/The-Ideal-Harness)** — Claude Code-native agent harness with MCP-portable enforcement and safety tooling · *TypeScript · MCP*
+- **[The-Ideal-Harness](https://github.com/bharat3645/The-Ideal-Harness)** — Claude Code-native agent harness with MCP-portable enforcement and safety tooling, 170+ tests · *TypeScript · MCP*
+- **[mcp-registry-finder](https://github.com/bharat3645/mcp-registry-finder)** 🆕 — Zero-dependency MCP server for searching the official Model Context Protocol registry from inside an agent session · *JavaScript*
+- **[FrameSage](https://github.com/bharat3645/FrameSage)** 🆕 — Tool-calling analysis agent for pandas DataFrames; answers plain-English questions and generates EDA reports with an explicit anti-hallucination boundary, no API key required · *Python*
+- **[Quorix](https://github.com/bharat3645/Quorix)** — Local-first reference app for agentic UI patterns: streaming replies, inline tool-call visualization, generative UI · *React · TypeScript*
 - **[GenAI-Platform](https://github.com/bharat3645/GenAI-Platform)** — Generative AI platform experiments and integrations
 - **[Mentoro](https://github.com/bharat3645/Mentoro)** — Gamified AI learning companion · *AI · Full-Stack*
-- **[Task-Tokenizer](https://github.com/bharat3645/Task-Tokenizer)** ⭐ — Task management tool with tokenization for structured workflows
+- **[Task-Tokenizer](https://github.com/bharat3645/Task-Tokenizer)** ⭐ — Web3 gig-economy platform with on-chain job listings and wallet-based freelancer matching · *Solidity · Hardhat · Next.js*
 
 > 📂 See all projects at [github.com/bharat3645](https://github.com/bharat3645?tab=repositories)
 
@@ -301,7 +306,7 @@ If you find my projects helpful, consider supporting me:
 
 **Made with ❤️ by [Bharat Singh Parihar](https://github.com/bharat3645)**
 
-![Last Updated](https://img.shields.io/badge/Last%20Updated-June%2023%202026-58A6FF?style=flat-square)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-July%2010%202026-58A6FF?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Shannon%20Engine%20Active%20Dev-brightgreen?style=flat-square)
 ![Open To](https://img.shields.io/badge/Open%20To-Collaboration-orange?style=flat-square)
 
@@ -310,5 +315,3 @@ If you find my projects helpful, consider supporting me:
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" alt="footer" width="100%"/>
 
 </div>
-
-
