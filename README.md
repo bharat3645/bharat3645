@@ -52,7 +52,7 @@
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:bharat3645@gmail.com)
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/bh.arat_parihar)
 [![Linktree](https://img.shields.io/badge/Linktree-00C300?style=for-the-badge&logo=Linktree&logoColor=white)](https://linktr.ee/bharat_singh_parihar)
-[![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=firefox&logoColor=white)](https://bharat3645.dev)
+[![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=firefox&logoColor=white)](https://bharat3645.vercel.app)
 
 </div>
 
@@ -143,7 +143,7 @@
 </div>
 
 ### 🛡️ Security & AI Agents
-- **[Voraxx](https://github.com/bharat3645/Voraxx)** `🔒 Private · v1.0 in progress` — AI-powered VAPT platform; automates recon, vulnerability scanning, and exploit chaining via LLM agents · *TypeScript · Temporal.io · Claude Agent SDK*
+- **Voraxx** `🔒 Private · v1.0 in progress` — AI-powered VAPT platform; automates recon, vulnerability scanning, and exploit chaining via LLM agents · *TypeScript · Temporal.io · Claude Agent SDK*
 - **Shannon AI Engine** `🔬 Core R&D` — Multi-agent reasoning engine inside Voraxx; orchestrates recon, enumeration, and exploitation workflows via LangGraph and MCP tools with durable Temporal.io workflows
 - **[voraxx-mcp-server](https://github.com/bharat3645/voraxx-mcp-server)** 🆕 — Minimal, dependency-free MCP server exposing CVE lookup (OSV.dev), Shodan host recon, and local Nuclei scan orchestration as agent tools · *Python*
 
@@ -190,7 +190,7 @@ I write about what I'm building and learning:
 
 | Metric | Value |
 |--------|-------|
-| 📦 Total Repositories | 60+ |
+| 📦 Total Repositories | 59 |
 | 🌍 Open Source Contributions | 220+ |
 | 🐛 Issues Resolved | 95+ |
 | 👀 Code Reviews Participated | 50+ |
@@ -309,7 +309,7 @@ If you find my projects helpful, consider supporting me:
 
 **Made with ❤️ by [Bharat Singh Parihar](https://github.com/bharat3645)**
 
-![Last Updated](https://img.shields.io/badge/Last%20Updated-July%2010%202026-58A6FF?style=flat-square)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-July%2011%202026-58A6FF?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Shannon%20Engine%20Active%20Dev-brightgreen?style=flat-square)
 ![Open To](https://img.shields.io/badge/Open%20To-Collaboration-orange?style=flat-square)
 
