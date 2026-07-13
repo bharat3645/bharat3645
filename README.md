@@ -133,12 +133,12 @@
 
 <div align="center">
 
+[![PRISM-Insfranest](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=PRISM-Insfranest&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/PRISM-Insfranest)
 [![The-Ideal-Harness](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=The-Ideal-Harness&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/The-Ideal-Harness)
 [![voraxx-mcp-server](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=voraxx-mcp-server&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/voraxx-mcp-server)
-[![mcp-registry-finder](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=mcp-registry-finder&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/mcp-registry-finder)
 [![FrameSage](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=FrameSage&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/FrameSage)
-[![Quorix](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=Quorix&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/Quorix)
-[![GenAI-Platform](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=GenAI-Platform&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/GenAI-Platform)
+[![Task-Tokenizer](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=Task-Tokenizer&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/Task-Tokenizer)
+[![mcp-registry-finder](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=mcp-registry-finder&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/mcp-registry-finder)
 
 </div>
 
@@ -148,14 +148,15 @@
 - **[voraxx-mcp-server](https://github.com/bharat3645/voraxx-mcp-server)** 🆕 — Minimal, dependency-free MCP server exposing CVE lookup (OSV.dev), Shodan host recon, and local Nuclei scan orchestration as agent tools · *Python*
 
 ### 🤖 AI & Full-Stack
+- **[PRISM-Insfranest](https://github.com/bharat3645/PRISM-Insfranest)** — AI backend-generation platform: NL prompts → YAML DSL → production-ready Django, Go Fiber, or Rails projects with Docker, tests, and docs; benchmarked across 2,664 generations · *React · TypeScript · Flask · Groq*
 - **[The-Ideal-Harness](https://github.com/bharat3645/The-Ideal-Harness)** — Claude Code-native agent harness with MCP-portable enforcement and safety tooling, 170+ tests · *TypeScript · MCP*
-- **[mcp-registry-finder](https://github.com/bharat3645/mcp-registry-finder)** 🆕 — Zero-dependency MCP server for searching the official Model Context Protocol registry from inside an agent session · *JavaScript*
 - **[FrameSage](https://github.com/bharat3645/FrameSage)** 🆕 — Tool-calling analysis agent for pandas DataFrames; answers plain-English questions and generates EDA reports with an explicit anti-hallucination boundary, no API key required · *Python*
+- **[Task-Tokenizer](https://github.com/bharat3645/Task-Tokenizer)** ⭐ — Web3 gig-economy platform with on-chain job listings and wallet-based freelancer matching · *Solidity · Hardhat · Next.js*
+- **[mcp-registry-finder](https://github.com/bharat3645/mcp-registry-finder)** 🆕 — Zero-dependency MCP server for searching the official Model Context Protocol registry from inside an agent session · *JavaScript*
 - **[Quorix](https://github.com/bharat3645/Quorix)** — Local-first reference app for agentic UI patterns: streaming replies, inline tool-call visualization, generative UI · *React · TypeScript*
 - **[GenAI-Platform](https://github.com/bharat3645/GenAI-Platform)** — Generative AI platform experiments and integrations
 - **[Mentoro](https://github.com/bharat3645/Mentoro)** — Gamified AI learning companion · *AI · Full-Stack*
 - **[NomadAI](https://github.com/bharat3645/NomadAI)** — Voice-first, multilingual AI travel companion for Delhi; Whisper + Groq LLM + Telegram · *Python · FastAPI*
-- **[Task-Tokenizer](https://github.com/bharat3645/Task-Tokenizer)** ⭐ — Web3 gig-economy platform with on-chain job listings and wallet-based freelancer matching · *Solidity · Hardhat · Next.js*
 
 > 📂 See all projects at [github.com/bharat3645](https://github.com/bharat3645?tab=repositories)
 
