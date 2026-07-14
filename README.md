@@ -20,6 +20,7 @@
 
 - 🔭 **Currently Building:** [Voraxx](https://github.com/bharat3645) — AI-powered VAPT platform with Shannon multi-agent engine + a dedicated Voraxx MCP Server for security tool orchestration
 - 🆕 **Recently Shipped:** [voraxx-mcp-server](https://github.com/bharat3645/voraxx-mcp-server) (CVE/Shodan/Nuclei tools over MCP), [mcp-registry-finder](https://github.com/bharat3645/mcp-registry-finder) (searches the official MCP registry from inside an agent session), and [FrameSage](https://github.com/bharat3645/FrameSage) (tool-calling agent for pandas DataFrames)
+- 🧪 **Latest Batch (Jul 2026):** 7 new cross-domain tools in one push — see [2026 Original Projects](#-2026-original-projects--solving-real-problems-across-domains) below, from a dependency-risk scorer to a transparent AI-authorship signal detector
 - 🤖 **AI/LLM Focus:** Agentic AI systems, durable multi-agent pipelines (Temporal.io), RAG, and LLM-powered security automation
 - 💡 **Expertise:** Full-stack development, AI agent architecture, security research, microservices, and cloud-native systems
 - 👯 **Collaborate With Me On:** AI security tools, open-source agent frameworks, research papers, and hackathons
@@ -162,6 +163,20 @@
 
 ---
 
+## 🧪 2026 Original Projects — Solving Real Problems Across Domains
+
+Seven new, independent tools shipped together — each one deliberately combines two or more of my fields (security, AI agents, dev tooling, NLP, ML, SRE) to solve a specific real-world problem, with a real tested implementation behind every README, not just a pitch.
+
+- **[dep-graveyard](https://github.com/bharat3645/dep-graveyard)** — Composite dependency-risk scorer: blends CVE severity (OSV.dev), package staleness, and license risk into one A–F grade with concrete remediation advice, instead of just another raw CVE list · *Python · Security + Dev Tooling + optional AI narrative*
+- **[citeguard](https://github.com/bharat3645/citeguard)** — Fully offline citation-claim verifier for research papers: flags citations that don't actually support the sentence next to them, using transparent TF-IDF similarity — no black-box API, nothing leaves your machine · *Python · NLP + Academic Integrity*
+- **[a11y-agent](https://github.com/bharat3645/a11y-agent)** — Context-aware accessibility scanner for the semantic smells axe-core and eslint-plugin-jsx-a11y miss: generic alt text, vague link text, color-only meaning, heading-hierarchy skips · *Python · Web A11y + Static Analysis + AI*
+- **[moodmesh](https://github.com/bharat3645/moodmesh)** — Private, ethics-first engineering-team health detector: turns git commit timing and PR review sentiment into rising-risk trend flags for managers, not individual scores · *Python · Dev Analytics + NLP*
+- **[biasscope](https://github.com/bharat3645/biasscope)** — Lightweight ML fairness report card: demographic parity, equal opportunity, and disparate-impact (four-fifths rule) computed transparently in pandas, graded A–F in plain English · *Python · ML + Compliance*
+- **[shiftsense](https://github.com/bharat3645/shiftsense)** — Turns a raw incident chat timeline into a structured blameless-postmortem draft: phase detection, time-to-mitigate/resolve stats, and deduplicated action items · *Python · SRE + AI*
+- **[ai-origin-trace](https://github.com/bharat3645/ai-origin-trace)** — Transparent, fully offline stylometric AI-vs-human authorship *signal* for text and code — explainable per-feature breakdown instead of a black-box percentage, built with explicit responsible-use framing against false accusations · *Python · Forensics + AI Ethics*
+
+---
+
 ## 📚 Writing & Interests
 
 I write about what I'm building and learning:
@@ -191,7 +206,7 @@ I write about what I'm building and learning:
 
 | Metric | Value |
 |--------|-------|
-| 📦 Total Repositories | 59 |
+| 📦 Total Repositories | 68 |
 | 🌍 Open Source Contributions | 220+ |
 | 🐛 Issues Resolved | 95+ |
 | 👀 Code Reviews Participated | 50+ |
@@ -310,7 +325,7 @@ If you find my projects helpful, consider supporting me:
 
 **Made with ❤️ by [Bharat Singh Parihar](https://github.com/bharat3645)**
 
-![Last Updated](https://img.shields.io/badge/Last%20Updated-July%2011%202026-58A6FF?style=flat-square)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-July%2014%202026-58A6FF?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Shannon%20Engine%20Active%20Dev-brightgreen?style=flat-square)
 ![Open To](https://img.shields.io/badge/Open%20To-Collaboration-orange?style=flat-square)
 
