@@ -20,7 +20,7 @@
 
 - 🔭 **Currently Building:** [Voraxx](https://github.com/bharat3645) — AI-powered VAPT platform with Shannon multi-agent engine + a dedicated Voraxx MCP Server for security tool orchestration
 - 🆕 **Recently Shipped:** [voraxx-mcp-server](https://github.com/bharat3645/voraxx-mcp-server) (CVE/Shodan/Nuclei tools over MCP), [mcp-registry-finder](https://github.com/bharat3645/mcp-registry-finder) (searches the official MCP registry from inside an agent session), and [FrameSage](https://github.com/bharat3645/FrameSage) (tool-calling agent for pandas DataFrames)
-- 🧪 **Latest Batch (Jul 2026):** 7 new cross-domain tools in one push — see [2026 Original Projects](#-2026-original-projects--solving-real-problems-across-domains) below, from a dependency-risk scorer to a transparent AI-authorship signal detector
+- 🧪 **Latest Batch (Jul 2026):** 10 new cross-domain tools — see [2026 Original Projects](#-2026-original-projects--solving-real-problems-across-domains) below; newest (Jul 16): [ollama-audit](https://github.com/bharat3645/ollama-audit), [mcp-sentinel](https://github.com/bharat3645/mcp-sentinel), and [agent-tool-audit](https://github.com/bharat3645/agent-tool-audit)
 - 🤖 **AI/LLM Focus:** Agentic AI systems, durable multi-agent pipelines (Temporal.io), RAG, and LLM-powered security automation
 - 💡 **Expertise:** Full-stack development, AI agent architecture, security research, microservices, and cloud-native systems
 - 👯 **Collaborate With Me On:** AI security tools, open-source agent frameworks, research papers, and hackathons
@@ -165,7 +165,7 @@
 
 ## 🧪 2026 Original Projects — Solving Real Problems Across Domains
 
-Seven new, independent tools shipped together — each one deliberately combines two or more of my fields (security, AI agents, dev tooling, NLP, ML, SRE) to solve a specific real-world problem, with a real tested implementation behind every README, not just a pitch.
+Ten new, independent tools shipped across July 2026 — each one deliberately combines two or more of my fields (security, AI agents, dev tooling, NLP, ML, SRE, AI infra) to solve a specific real-world problem, with a real tested implementation behind every README, not just a pitch.
 
 - **[dep-graveyard](https://github.com/bharat3645/dep-graveyard)** — Composite dependency-risk scorer: blends CVE severity (OSV.dev), package staleness, and license risk into one A–F grade with concrete remediation advice, instead of just another raw CVE list · *Python · Security + Dev Tooling + optional AI narrative*
 - **[citeguard](https://github.com/bharat3645/citeguard)** — Fully offline citation-claim verifier for research papers: flags citations that don't actually support the sentence next to them, using transparent TF-IDF similarity — no black-box API, nothing leaves your machine · *Python · NLP + Academic Integrity*
@@ -174,6 +174,9 @@ Seven new, independent tools shipped together — each one deliberately combines
 - **[biasscope](https://github.com/bharat3645/biasscope)** — Lightweight ML fairness report card: demographic parity, equal opportunity, and disparate-impact (four-fifths rule) computed transparently in pandas, graded A–F in plain English · *Python · ML + Compliance*
 - **[shiftsense](https://github.com/bharat3645/shiftsense)** — Turns a raw incident chat timeline into a structured blameless-postmortem draft: phase detection, time-to-mitigate/resolve stats, and deduplicated action items · *Python · SRE + AI*
 - **[ai-origin-trace](https://github.com/bharat3645/ai-origin-trace)** — Transparent, fully offline stylometric AI-vs-human authorship *signal* for text and code — explainable per-feature breakdown instead of a black-box percentage, built with explicit responsible-use framing against false accusations · *Python · Forensics + AI Ethics*
+- **[ollama-audit](https://github.com/bharat3645/ollama-audit)** 🆕 — Offline storage-hygiene auditor for a local Ollama model store: finds broken models (missing blobs), stale models, and orphaned reclaimable blobs by reading `manifests/` and `blobs/` directly — zero dependencies, zero network calls · *Node.js · AI Infra + Dev Tooling*
+- **[mcp-sentinel](https://github.com/bharat3645/mcp-sentinel)** 🆕 — Offline risk scanner for MCP client configs: grades each configured server A–F on inline secrets, `@latest` pins, shell indirection, and typosquat-like package names — zero network calls, zero dependencies · *Python · Security + AI Agents*
+- **[agent-tool-audit](https://github.com/bharat3645/agent-tool-audit)** 🆕 — Offline static analyzer for AI agent tool definitions (MCP `tools/list` or OpenAI function specs): flags prompt-injection-suspect descriptions, broad scope claims, and schema hygiene issues, graded A–F · *Python · Security + AI Agents*
 
 ---
 
@@ -206,7 +209,7 @@ I write about what I'm building and learning:
 
 | Metric | Value |
 |--------|-------|
-| 📦 Total Repositories | 68 |
+| 📦 Total Repositories | 80 (67 public) |
 | 🌍 Open Source Contributions | 220+ |
 | 🐛 Issues Resolved | 95+ |
 | 👀 Code Reviews Participated | 50+ |
@@ -325,7 +328,7 @@ If you find my projects helpful, consider supporting me:
 
 **Made with ❤️ by [Bharat Singh Parihar](https://github.com/bharat3645)**
 
-![Last Updated](https://img.shields.io/badge/Last%20Updated-July%2014%202026-58A6FF?style=flat-square)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-July%2016%202026-58A6FF?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Shannon%20Engine%20Active%20Dev-brightgreen?style=flat-square)
 ![Open To](https://img.shields.io/badge/Open%20To-Collaboration-orange?style=flat-square)
 
