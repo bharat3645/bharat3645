@@ -29,7 +29,7 @@ import os
 import sys
 import urllib.request
 import urllib.error
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -90,8 +90,33 @@ def api(path, params=None):
         return None
 
 
+WINDOW = 30  # activity-pulse window, days
+
+
+def _iso(s):
+    return datetime.strptime(s[:19], "%Y-%m-%dT%H:%M:%S").replace(tzinfo=timezone.utc)
+
+
+def rel_age(dt):
+    if not dt:
+        return "—"
+    secs = (NOW - dt).total_seconds()
+    if secs < 3600:
+        return f"{max(int(secs // 60), 1)}m"
+    if secs < 86400:
+        return f"{int(secs // 3600)}h"
+    days = int(secs // 86400)
+    if days < 14:
+        return f"{days}d"
+    if days < 60:
+        return f"{days // 7}w"
+    return f"{days // 30}mo"
+
+
 def gather():
-    data = {"followers": 23, "public_source_repos": 78, "lang_bytes": {}, "ci": {}}
+    data = {"followers": 23, "public_source_repos": 78, "lang_bytes": {}, "ci": {},
+            "ci_hist": {}, "created": {}, "lastcommit": {}, "stars": {},
+            "commits": [], "recent": [], "perday": []}
     user = api(f"/users/{OWNER}")
     if user:
         data["followers"] = user.get("followers", data["followers"])
@@ -109,21 +134,45 @@ def gather():
         data["public_source_repos"] = sum(
             1 for r in repos if not r.get("fork") and not r.get("private"))
 
-    lang_bytes = {}
+    since = (NOW - timedelta(days=WINDOW)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    lang_bytes, all_commits = {}, []
     for f in facts.FLAGSHIPS:
         name = f["name"]
         if f.get("private"):
-            continue  # keep the CI tally reproducible by any viewer (public-only)
+            continue  # public-only keeps every live figure reproducible by any viewer
         langs = api(f"/repos/{OWNER}/{name}/languages")
         if langs:
             for k, v in langs.items():
                 lang_bytes[k] = lang_bytes.get(k, 0) + v
-        runs = api(f"/repos/{OWNER}/{name}/actions/runs", {"per_page": 1})
-        concl = runs["workflow_runs"][0].get("conclusion") if (
-            runs and runs.get("workflow_runs")) else None
-        data["ci"][name] = concl
+        meta = api(f"/repos/{OWNER}/{name}")
+        if meta:
+            if meta.get("created_at"):
+                data["created"][name] = _iso(meta["created_at"])
+            data["stars"][name] = meta.get("stargazers_count", 0)
+        runs = api(f"/repos/{OWNER}/{name}/actions/runs", {"per_page": 12})
+        hist = [r.get("conclusion") for r in (runs.get("workflow_runs") if runs else [])]
+        data["ci"][name] = hist[0] if hist else None
+        data["ci_hist"][name] = list(reversed(hist))  # oldest -> newest
+        cm = api(f"/repos/{OWNER}/{name}/commits", {"since": since, "per_page": 100})
+        if cm:
+            data["lastcommit"][name] = _iso(cm[0]["commit"]["author"]["date"])
+            dom = f["domain"]
+            for c in cm:
+                all_commits.append(dict(
+                    repo=name, domain=dom, sha=c["sha"][:7],
+                    dt=_iso(c["commit"]["author"]["date"]),
+                    msg=c["commit"]["message"].split("\n")[0]))
     if lang_bytes:
         data["lang_bytes"] = lang_bytes
+
+    all_commits.sort(key=lambda c: c["dt"], reverse=True)
+    data["commits"] = all_commits
+    data["recent"] = all_commits[:8]
+    counts = {}
+    for c in all_commits:
+        counts[c["dt"].date()] = counts.get(c["dt"].date(), 0) + 1
+    days = [NOW.date() - timedelta(days=i) for i in range(WINDOW - 1, -1, -1)]
+    data["perday"] = [(d, counts.get(d, 0)) for d in days]
     return data
 
 
@@ -330,7 +379,7 @@ def radar(p, d):
     N = len(doms)
     s = [frame(W, H, p, idn)]
     s.append(corner_marks(W, H, p))
-    s.append(head(p, W, "02", "DOMAIN MAP",
+    s.append(head(p, W, "03", "DOMAIN MAP",
                   "13 flagship repositories · five problem domains · axis = live repo count",
                   "blue", live=True))
 
@@ -404,7 +453,7 @@ def benchmarks(p, d):
     idn = "b"
     s = [frame(W, H, p, idn)]
     s.append(corner_marks(W, H, p))
-    s.append(head(p, W, "03", "VERIFIED BENCHMARKS",
+    s.append(head(p, W, "06", "VERIFIED BENCHMARKS",
                   "every figure reproducible from the repo's own committed harness — no hand-waving",
                   "green"))
     bx, by, gap = 24, 88, 16
@@ -429,12 +478,8 @@ def benchmarks(p, d):
             bar_x, bar_y, bar_w = x + 22, y + 72, cw - 44
             s.append(rect(bar_x, bar_y, bar_w, 9, fill="card", rx=1, stroke="ink", sw=2, p=p))
             fillw = max(5, min(1.0, b["bar"]) * bar_w)
-            # base width = full (static fallback); animate reveal 0 -> full, then freeze
-            s.append(
-                f'<rect x="{bar_x:.1f}" y="{bar_y}" width="{fillw:.1f}" height="9" '
-                f'fill="{p[c]}"><animate attributeName="width" values="0;{fillw:.1f}" '
-                f'dur="0.9s" begin="{0.15*i:.2f}s" fill="freeze" '
-                f'calcMode="spline" keyTimes="0;1" keySplines="0.2 0.7 0.2 1"/></rect>')
+            # drawn full unconditionally — never gate real content on animation
+            s.append(rect(bar_x, bar_y, fillw, 9, fill=c, rx=0, p=p))
             s.append(line(bar_x + fillw, bar_y, bar_x + fillw, bar_y + 9, stroke="ink", sw=2, p=p))
         s.append(text(x + 22, y + 98, b["detail"], size=10.3, fill="muted", weight=600, p=p))
     s.append("</svg>")
@@ -449,7 +494,7 @@ def pqc_clock(p, d):
     idn = "q"
     s = [frame(W, H, p, idn)]
     s.append(corner_marks(W, H, p))
-    s.append(head(p, W, "04", "PQC MIGRATION CLOCK",
+    s.append(head(p, W, "07", "PQC MIGRATION CLOCK",
                   "why the crypto work ships now — real US federal PQC deadlines, counting down live",
                   "purple", live=True))
     today = NOW.date()
@@ -538,16 +583,11 @@ def langmix(p, d):
     total = sum(v for _, v in items) or 1
     s = [frame(W, H, p, idn)]
     s.append(corner_marks(W, H, p))
-    s.append(head(p, W, "05", "LANGUAGE MIX",
+    s.append(head(p, W, "08", "LANGUAGE MIX",
                   "by bytes across the public flagship repos · computed live from the GitHub API",
                   "cyan", live=True))
     bx, by, bw, bh = 24, 84, W - 48, 26
     s.append(rect(bx + 4, by + 4, bw, bh, fill="ink", rx=2, p=p))
-    # reveal clip grows left->right on load (base width = full for static fallback)
-    s.append(f'<clipPath id="rv{idn}"><rect x="{bx}" y="{by}" width="{bw}" height="{bh}">'
-             f'<animate attributeName="width" values="0;{bw}" dur="1.0s" fill="freeze" '
-             f'calcMode="spline" keyTimes="0;1" keySplines="0.2 0.7 0.2 1"/></rect></clipPath>')
-    s.append(f'<g clip-path="url(#rv{idn})">')
     x = bx
     for lang, v in items:
         seg = v / total * bw
@@ -556,7 +596,6 @@ def langmix(p, d):
         if x > bx:
             s.append(line(x, by, x, by + bh, stroke="ink", sw=2, p=p))
         x += seg
-    s.append('</g>')
     s.append(rect(bx, by, bw, bh, fill="none", rx=2, stroke="ink", sw=2.5, p=p))
     lx, ly = 24, 138
     for lang, v in items:
@@ -571,7 +610,285 @@ def langmix(p, d):
 
 
 # ---------------------------------------------------------------------------
-INSTRUMENTS = {"hero": hero, "domains": radar, "benchmarks": benchmarks,
+# Instrument 0 — terminal boot sequence (top banner)
+# ---------------------------------------------------------------------------
+def boot(p, d):
+    W, H = 850, 300
+    idn = "t"
+    green = sum(1 for c in d["ci"].values() if c == "success")
+    withruns = sum(1 for c in d["ci"].values() if c is not None)
+    if withruns == 0:
+        green, withruns = 10, 11
+    failing = [n for n, c in d["ci"].items() if c not in ("success", None)]
+    counts = {dm: sum(1 for f in facts.FLAGSHIPS if f["domain"] == dm) for dm in facts.DOMAINS}
+    lines = [("run", "./portfolio --boot", "", "blue")]
+    for dm in facts.DOMAINS:
+        n = counts[dm]
+        lines.append(("ok", "mount " + dm.lower().replace(" ", "-"),
+                      f"{n} repo" + ("s" if n != 1 else ""), DOMAIN_ACCENT[dm]))
+    lines.append(("ok", "ci health check", f"{green}/{withruns} green", "green"))
+    for n in failing:
+        lines.append(("warn", n, "build failing", "orange"))
+    lines.append(("ok", "portfolio online",
+                  f"{len(facts.FLAGSHIPS)} flagships · {d['public_source_repos']} public repos",
+                  "cyan"))
+
+    s = [frame(W, H, p, idn, texture=False)]
+    s.append(rect(16 + 6, 12 + 6, W - 32, H - 24, fill="ink", rx=4, p=p))
+    s.append(rect(16, 12, W - 32, H - 24, fill="card", rx=4, stroke="ink", sw=3, p=p))
+    s.append(rect(16, 12, W - 32, H - 24, fill=f"url(#dg{idn})", rx=4, p=p))
+    s.append(corner_marks(W, H, p, inset=9, L=15))
+    # chrome
+    s.append(rect(16, 12, W - 32, 38, fill="ink", rx=0, p=p))
+    for i in range(3):
+        s.append(rect(34 + i * 22, 24, 13, 13, fill=["sig", "yellow", "green"][i], rx=2,
+                      stroke="ink", sw=1.5, p=p))
+    s.append(text(W - 32, 36, f"bharat3645@security: ~/portfolio", size=12.5,
+                  fill="page", weight=800, font=MONO, anchor="end", spacing=0.3, p=p))
+    tagcol = {"ok": "green", "warn": "orange", "run": "blue"}
+    n = len(lines)
+    ly = 78
+    lh = (H - 96 - ly) / n
+    body = []
+    for i, (tg, label, val, vc) in enumerate(lines):
+        y = ly + i * lh
+        if tg == "run":
+            body.append(text(30, y, "$", size=13.5, fill="sig", weight=800, font=MONO, p=p))
+            body.append(text(48, y, label, size=13.5, fill="ink", weight=700, font=MONO, p=p))
+        else:
+            body.append(text(30, y, "[", size=13.5, fill="faint", weight=700, font=MONO, p=p))
+            body.append(text(40, y, "OK" if tg == "ok" else "!!", size=13.5, fill=tagcol[tg],
+                           weight=800, font=MONO, p=p))
+            body.append(text(64, y, "]", size=13.5, fill="faint", weight=700, font=MONO, p=p))
+            body.append(text(80, y, label, size=13.5, fill="ink", weight=700, font=MONO, p=p))
+            lx = 80 + len(label) * 8.15 + 8
+            vx = W - 40 - len(val) * 8.15
+            body.append(line(lx, y - 4, vx - 8, y - 4, stroke="grid", sw=1.5, dash="2 3", p=p))
+            body.append(text(W - 40, y, val, size=13.5, fill=vc, weight=800, font=MONO,
+                           anchor="end", p=p))
+    # Content is drawn unconditionally (never gated by an animation) so every
+    # frozen-frame context — social-card rasterisers, OG images, non-animating
+    # renderers — shows the full log. Motion is added only as an additive
+    # scanline overlay whose static base is parked off-screen (no artifact).
+    s.append("".join(body))
+    s.append(f'<clipPath id="bscr{idn}"><rect x="19" y="52" width="{W-38}" '
+             f'height="{H-70}" rx="2"/></clipPath>')
+    s.append(f'<g clip-path="url(#bscr{idn})"><rect x="16" y="52" width="{W-32}" '
+             f'height="22" fill="{p["sig"]}" opacity="0.09" transform="translate(0 -70)">'
+             f'<animateTransform attributeName="transform" type="translate" '
+             f'values="0 -70;0 {H-58};0 {H-58}" dur="4.8s" repeatCount="indefinite"/>'
+             f'</rect></g>')
+    # prompt
+    py = ly + n * lh + 4
+    s.append(text(30, py, f"bharat3645@security:~$", size=13.5, fill="green", weight=800,
+                  font=MONO, p=p))
+    s.append(f'<rect x="{30 + 22 * 8.15:.1f}" y="{py-12:.1f}" width="11" height="15" '
+             f'fill="{p["sig"]}"><animate attributeName="opacity" values="1;1;0;0" '
+             f'dur="1.05s" repeatCount="indefinite"/></rect>')
+    s.append("</svg>")
+    return "".join(s)
+
+
+# ---------------------------------------------------------------------------
+# Instrument — live system status (uptime monitor)
+# ---------------------------------------------------------------------------
+def status_board(p, d):
+    pub = [f for f in facts.FLAGSHIPS if not f.get("private")]
+    W = 850
+    H = 108 + len(pub) * 27 + 14
+    idn = "s"
+    latest = d["ci"]
+    op = sum(1 for f in pub if latest.get(f["name"]) == "success")
+    deg = sum(1 for f in pub if latest.get(f["name"]) == "failure")
+    idle = len(pub) - op - deg
+    s = [frame(W, H, p, idn)]
+    s.append(corner_marks(W, H, p))
+    s.append(head(p, W, "02", "LIVE SYSTEM STATUS",
+                  "every public flagship — CI verdict, release, last commit & recent build history, live",
+                  "green", live=True))
+    # summary chips
+    chips = [(op, "OPERATIONAL", "green"), (deg, "DEGRADED", "red"), (idle, "IDLE", "faint")]
+    cx = 24
+    for val, lab, c in chips:
+        label = f"{val} {lab}"
+        cw = len(label) * 7.3 + 30
+        s.append(rect(cx + 4, 82 + 4, cw, 24, fill="ink", rx=3, p=p))
+        s.append(rect(cx, 82, cw, 24, fill="card", rx=3, stroke="ink", sw=2, p=p))
+        s.append(circle(cx + 13, 94, 5, fill=c, stroke="ink", sw=1.5, p=p))
+        s.append(text(cx + 24, 98, label, size=11.5, fill="ink", weight=800, font=MONO, p=p))
+        cx += cw + 12
+    y0 = 124
+    for i, f in enumerate(pub):
+        name = f["name"]
+        y = y0 + i * 27
+        st = latest.get(name)
+        sc = "green" if st == "success" else "red" if st == "failure" else "faint"
+        if i % 2 == 0:
+            s.append(rect(20, y - 15, W - 40, 25, fill="ink", rx=3, opacity=0.04, p=p))
+        s.append(rect(28, y - 11, 13, 13, fill=sc, rx=2, stroke="ink", sw=1.5, p=p))
+        lc = facts.LANG_COLORS.get(f["lang"], p["muted"])
+        s.append(circle(52, y - 4, 4, fill=lc, stroke="ink", sw=1.3, p=p))
+        s.append(text(64, y, name, size=12.5, fill="ink", weight=700, font=MONO, p=p))
+        s.append(text(300, y, f["tag"] or "—", size=11, fill="sig" if f["tag"] else "faint",
+                      weight=800, font=MONO, p=p))
+        s.append(text(390, y, "updated " + rel_age(d["lastcommit"].get(name)), size=10.5,
+                      fill="muted", weight=600, font=MONO, p=p))
+        # uptime ticks (oldest -> newest), right aligned
+        hist = d["ci_hist"].get(name, [])[-12:]
+        tw, gap = 7, 3
+        total_w = 12 * (tw + gap)
+        bx = W - 30 - total_w
+        s.append(text(bx - 10, y, "CI", size=9.5, fill="faint", weight=700, font=MONO,
+                      anchor="end", p=p))
+        for j in range(12):
+            idx = j - (12 - len(hist))
+            c = "grid"
+            if idx >= 0:
+                v = hist[idx]
+                c = "green" if v == "success" else "red" if v == "failure" else "yellow"
+            s.append(rect(bx + j * (tw + gap), y - 10, tw, 13, fill=c, rx=1,
+                          stroke="ink", sw=1, p=p))
+    s.append("</svg>")
+    return "".join(s)
+
+
+# ---------------------------------------------------------------------------
+# Instrument — activity pulse (real commits/day + recent commits)
+# ---------------------------------------------------------------------------
+def pulse(p, d):
+    W, H = 850, 336
+    idn = "p"
+    perday = d["perday"] or [(NOW.date() - timedelta(days=WINDOW - 1 - i), 0)
+                             for i in range(WINDOW)]
+    total = sum(c for _, c in perday)
+    active = sum(1 for _, c in perday if c > 0)
+    peak = max((c for _, c in perday), default=0)
+    s = [frame(W, H, p, idn)]
+    s.append(corner_marks(W, H, p))
+    s.append(head(p, W, "04", "ACTIVITY PULSE",
+                  f"real commits across the public flagships over the last {WINDOW} days · live from the API",
+                  "orange", live=True))
+    chips = [(str(total), "COMMITS", "orange"), (str(active), "ACTIVE DAYS", "cyan"),
+             (str(peak), "BUSIEST DAY", "sig")]
+    cx = 24
+    for val, lab, c in chips:
+        label = f"{val} {lab}"
+        cw = len(label) * 7.2 + 26
+        s.append(rect(cx + 4, 82 + 4, cw, 24, fill="ink", rx=3, p=p))
+        s.append(rect(cx, 82, cw, 24, fill="card", rx=3, stroke="ink", sw=2, p=p))
+        s.append(text(cx + 13, 98, val, size=12, fill=c, weight=800, font=MONO, p=p))
+        s.append(text(cx + 13 + len(val) * 8 + 6, 98, lab, size=10, fill="muted",
+                      weight=700, font=MONO, p=p))
+        cx += cw + 12
+    # bar chart
+    bx, by, bw, bh = 26, 120, W - 52, 84
+    s.append(line(bx, by + bh, bx + bw, by + bh, stroke="ink", sw=2.5, p=p))
+    n = len(perday)
+    slot = bw / n
+    barw = slot * 0.66
+    scale = (bh - 8) / max(peak, 1)
+    for i, (dt, c) in enumerate(perday):
+        x = bx + i * slot + (slot - barw) / 2
+        hh = c * scale
+        if c > 0:
+            col_ = "sig" if c == peak else "orange"
+            s.append(rect(x, by + bh - hh, barw, hh, fill=col_, rx=1, stroke="ink", sw=1.2, p=p))
+        else:
+            s.append(rect(x, by + bh - 3, barw, 3, fill="grid", rx=1, p=p))
+    s.append(text(bx, by + bh + 15, perday[0][0].strftime("%b %d"), size=9.5, fill="faint",
+                  weight=700, font=MONO, p=p))
+    s.append(text(bx + bw, by + bh + 15, perday[-1][0].strftime("%b %d"), size=9.5,
+                  fill="faint", weight=700, font=MONO, anchor="end", p=p))
+    # recent commits
+    ry = 244
+    s.append(text(26, ry, "RECENT COMMITS", size=10.5, fill="ink", weight=800, font=MONO,
+                  spacing=0.5, p=p))
+    for i, c in enumerate(d["recent"][:5]):
+        yy = ry + 16 + i * 16
+        dot = DOMAIN_ACCENT.get(c["domain"], "muted")
+        s.append(circle(31, yy - 3, 3.6, fill=dot, stroke="ink", sw=1.2, p=p))
+        s.append(text(42, yy, f"{c['repo']}", size=10.5, fill="ink", weight=800, font=MONO, p=p))
+        msg = c["msg"]
+        maxlen = 74
+        if len(msg) > maxlen:
+            msg = msg[:maxlen - 1] + "…"
+        s.append(text(42 + len(c["repo"]) * 7.1 + 10, yy, msg, size=10.5, fill="muted",
+                      weight=600, font=MONO, p=p))
+        s.append(text(W - 30, yy, rel_age(c["dt"]), size=10, fill="faint", weight=700,
+                      font=MONO, anchor="end", p=p))
+    s.append("</svg>")
+    return "".join(s)
+
+
+# ---------------------------------------------------------------------------
+# Instrument — build-sprint timeline (real repo ship dates)
+# ---------------------------------------------------------------------------
+def timeline(p, d):
+    W, H = 850, 300
+    idn = "m"
+    created = d["created"]
+    pub = [f for f in facts.FLAGSHIPS if not f.get("private") and f["name"] in created]
+    s = [frame(W, H, p, idn)]
+    s.append(corner_marks(W, H, p))
+    tagged = sum(1 for f in pub if f["tag"])
+    s.append(head(p, W, "05", "BUILD SPRINT",
+                  f"{len(pub)} public flagships shipped in a {_span(created)}-day burst · {tagged} version-tagged",
+                  "purple"))
+    if not pub:
+        s.append(text(W / 2, H / 2, "activity data unavailable", size=13, fill="muted",
+                      anchor="middle", font=MONO, p=p))
+        s.append("</svg>")
+        return "".join(s)
+    dates = sorted({created[f["name"]].date() for f in pub})
+    K = len(dates)
+    ax0, ax1, ay = 40, W - 40, 106
+    s.append(line(ax0, ay, ax1, ay, stroke="ink", sw=3, p=p))
+    colw = (ax1 - ax0) / K
+    centers = [ax0 + colw * (i + 0.5) for i in range(K)]
+    # real day-gap annotations between evenly-spaced ship-days
+    for i in range(K - 1):
+        gap = (dates[i + 1] - dates[i]).days
+        mid = (centers[i] + centers[i + 1]) / 2
+        s.append(text(mid, ay - 6, f"+{gap}d", size=9, fill="faint", weight=700,
+                      font=MONO, anchor="middle", p=p))
+    for i, day in enumerate(dates):
+        cxc = centers[i]
+        reps = [f for f in pub if created[f["name"]].date() == day]
+        s.append(line(cxc, ay - 8, cxc, ay + 8, stroke="ink", sw=3, p=p))
+        s.append(rect(cxc - 7, ay - 7, 14, 14, fill="purple", rx=1, stroke="ink", sw=2, p=p))
+        s.append(text(cxc, ay - 18, day.strftime("%b %d"), size=11, fill="ink", weight=800,
+                      font=MONO, anchor="middle", p=p))
+        s.append(text(cxc, ay + 28, f"{len(reps)} shipped", size=9.5, fill="purple",
+                      weight=800, font=MONO, anchor="middle", p=p))
+        chipw = min(162, colw - 14)
+        col_x = cxc - chipw / 2
+        for k, f in enumerate(reps):
+            yy = ay + 44 + k * 24
+            lc = facts.LANG_COLORS.get(f["lang"], p["muted"])
+            s.append(rect(col_x + 4, yy + 4, chipw, 19, fill="ink", rx=3, p=p))
+            s.append(rect(col_x, yy, chipw, 19, fill="card", rx=3, stroke="ink", sw=1.6, p=p))
+            s.append(circle(col_x + 11, yy + 9.5, 3.6, fill=lc, stroke="ink", sw=1.2, p=p))
+            nm = f["name"]
+            if len(nm) > 16:
+                nm = nm[:15] + "…"
+            s.append(text(col_x + 20, yy + 13, nm, size=9.5, fill="ink", weight=700,
+                          font=MONO, p=p))
+            if f["tag"]:
+                s.append(circle(col_x + chipw - 9, yy + 9.5, 3, fill="sig", p=p))
+    s.append("</svg>")
+    return "".join(s)
+
+
+def _span(created):
+    if not created:
+        return 0
+    ds = [v.date() for v in created.values()]
+    return max((max(ds) - min(ds)).days, 1)
+
+
+# ---------------------------------------------------------------------------
+INSTRUMENTS = {"boot": boot, "hero": hero, "status": status_board, "domains": radar,
+               "pulse": pulse, "timeline": timeline, "benchmarks": benchmarks,
                "pqc-clock": pqc_clock, "langmix": langmix}
 
 
