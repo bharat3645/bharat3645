@@ -1,324 +1,164 @@
+<!--
+  Profile README — self-hosted dashboard.
+  Every visual below is a custom SVG generated from live GitHub API data by
+  assets/generate.py and committed to this repo (assets/*.svg), refreshed daily
+  by .github/workflows/profile-assets.yml. Nothing here depends on a third-party
+  image host at view time. Every number is real and reproducible from the named
+  repo's own committed harness. Dark/light variants are served via <picture>.
+-->
+
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Bharat%20Singh%20Parihar&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=AI%20Agent%20Builder%20%7C%20Security%20Researcher%20%7C%20Full-Stack%20Dev&descAlignY=55&descSize=18" alt="header" width="100%"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="./assets/hero-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg">
+  <img alt="Bharat Singh Parihar — agent-security & AI-infrastructure engineer" src="./assets/hero-dark.svg" width="850">
+</picture>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=850&lines=Building+Voraxx+%E2%80%94+AI-Powered+VAPT+Platform;Shannon+Engine+%7C+Multi-Agent+Security+Automation;Claude+Fable+5+%7C+Opus+4.8+%7C+LangGraph+%7C+Mastra.ai;Google+ADK+%7C+A2A+Protocol+%7C+MCP+Servers;Temporal.io+Workflows+%7C+Durable+AI+Pipelines;Voraxx+MCP+Server+%7C+Security+Tool+Orchestration;AI+Security+%7C+Full-Stack+%7C+Open+Source+%7C+2026)](https://github.com/bharat3645)
+</div>
 
-[![GitHub followers](https://img.shields.io/github/followers/bharat3645?style=social)](https://github.com/bharat3645)
-[![Twitter/X](https://img.shields.io/twitter/follow/bharat3645?style=social)](https://twitter.com/bharat3645)
-[![GitHub stars](https://img.shields.io/github/stars/bharat3645?style=social)](https://github.com/bharat3645)
-![Profile Views](https://komarev.com/ghpvc/?username=bharat3645&style=flat-square&color=58A6FF)
+## ▌ WHOAMI
 
-[![GirlScript SoC '24](https://img.shields.io/badge/GirlScript_SoC-2024_Contributor-FF6B35?style=flat-square&logo=girlscript&logoColor=white)](https://gssoc.girlscript.tech)
-[![Perplexity Campus Partner](https://img.shields.io/badge/Perplexity-Campus_Partner-20808A?style=flat-square&logoColor=white)](https://perplexity.ai)
+I build **small, verifiable tools for the parts of the AI stack that fail quietly** — agent sandboxes, MCP gateways, model-fit predictors, and post-quantum crypto. Each of the 13 flagship repos below ships with a real test suite, CI, and — where it makes a claim about speed or correctness — a committed benchmark you can re-run yourself.
+
+- 🔭 **Now:** hardening the flagship portfolio for launch · `pqc-scan` in private beta ahead of the **Sept 2026** FIPS 140-2 sunset
+- 🧭 **Focus:** agent security · AI infrastructure · post-quantum readiness · backend systems
+- 🧪 **How I work:** reference-validated implementations, adversarial tests, reproducible benchmarks — no unverified claims
+- 💬 **Ask me about:** MCP security & sandboxing · LLM gateways · PQC migration · idempotent backends
+- 📫 **Reach me:** [LinkedIn](https://linkedin.com/in/bharat-singh-parihar) · [Portfolio](https://bharat3645.vercel.app) · [Email](mailto:404ghost.2@gmail.com)
+
+---
+
+## ▌ PORTFOLIO MAP
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="./assets/domains-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/domains-light.svg">
+  <img alt="Domain map — 13 flagship repositories across five problem domains" src="./assets/domains-dark.svg" width="850">
+</picture>
+
+</div>
+
+### 🛡️ Agent Security
+
+| Repo | Stack | Release | What it does |
+|------|-------|:-------:|--------------|
+| **[agent-rules-audit](https://github.com/bharat3645/agent-rules-audit)** | JavaScript | — | Static linter for AI-agent rule files (Cursor / Claude / Copilot) — flags over-broad tool grants and injection-prone instructions. |
+| **[mcp-sentinel](https://github.com/bharat3645/mcp-sentinel)** | Rust | — | Offline risk scanner for MCP client configs — grades each server **A–F** on inline secrets, `@latest` pins, shell indirection, typosquats. |
+| **[toolcage](https://github.com/bharat3645/toolcage)** | Rust | `v0.1.0` | WASM sandbox for MCP tool calls — a fresh `wasmtime` Store per call, deny-by-default caps, HMAC-signed `tools/list` pagination. |
+| **[agent-flightbox](https://github.com/bharat3645/agent-flightbox)** | Go | `v0.1.0` | Flight recorder for agent processes — captures the syscall / exec / network surface of a run to tamper-evident JSONL, with a session `diff`. |
+
+### 🧠 AI Infrastructure
+
+| Repo | Stack | Release | What it does |
+|------|-------|:-------:|--------------|
+| **[mcp-gateway-lite](https://github.com/bharat3645/mcp-gateway-lite)** | Go | `v0.4.0` | Single-binary reverse proxy for MCP — allowlist filtering, rate limiting, tamper-evident audit log, `tools_lock` against rug-pulls. |
+| **[modelgate](https://github.com/bharat3645/modelgate)** | Go | — | Multi-provider LLM gateway — routing, automatic fallback, token/cost accounting, metadata-only audit trail. stdlib-only. |
+| **[localmodel-fit](https://github.com/bharat3645/localmodel-fit)** | Go | `v0.1.0` | Predicts whether a GGUF model fits and how fast it decodes on given hardware — MoE-aware, validated against real `ollama` runs. |
+| **[trace2eval](https://github.com/bharat3645/trace2eval)** | JavaScript | — | Turns raw agent traces into scrubbed, deduplicated eval datasets — PII scrub *before* dedupe, deterministic, offline. |
+
+### 🔐 Post-Quantum Crypto
+
+| Repo | Stack | Release | What it does |
+|------|-------|:-------:|--------------|
+| **[ml-kem-rb](https://github.com/bharat3645/ml-kem-rb)** | Ruby | — | Reference **ML-KEM (FIPS 203)** in pure Ruby, plus a real **hybrid X25519 + ML-KEM-768** KEM implementing the TLS 1.3 draft wire format. |
+| **pqc-scan** `🔒 private` | Rust | — | Crypto inventory → CycloneDX **CBOM** → A–F post-quantum readiness grade, with live TLS 1.3 handshake checks. Launches **Sept 2026**. |
+
+### 🗄️ Backend Systems & Supply Chain
+
+| Repo | Stack | Release | What it does |
+|------|-------|:-------:|--------------|
+| **[idempotent-rack](https://github.com/bharat3645/idempotent-rack)** | Ruby | `v0.1.0` | Idempotency-Key middleware for Rack/Rails — dedupes retried POST/PUT against a pluggable store. *(0.3.0 Redis/ActiveRecord backends in progress.)* |
+| **[acts-as-mcp](https://github.com/bharat3645/acts-as-mcp)** | Ruby | — | Expose ActiveRecord models as MCP tools from a Rails app with one class macro — scoped, read-only-by-default agent access. |
+| **[gemfile-lock-audit](https://github.com/bharat3645/gemfile-lock-audit)** | Ruby | — | Audits a `Gemfile.lock` for yanked gems, git-sourced deps, and pins that drift from the lockfile — zero network, CI-friendly. |
+
+---
+
+## ▌ VERIFIED BENCHMARKS
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="./assets/benchmarks-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/benchmarks-light.svg">
+  <img alt="Verified benchmarks — reproducible from each repo's committed harness" src="./assets/benchmarks-dark.svg" width="850">
+</picture>
+
+</div>
+
+<details>
+<summary><b>Reproduce these numbers yourself ▸</b></summary>
+
+```sh
+# mcp-gateway-lite — reverse-proxy overhead (Apple M4, go1.26.5)
+go test -run '^$' -bench . -benchtime=2s ./gateway/...      # 29.3µs direct vs 69.9µs through gateway
+
+# toolcage — per-call WASM sandbox overhead (ubuntu-latest CI, 200 echo calls)
+python3 ci/bench.py WORK ./target/release/toolcage x.wasm 200   # 0.415ms median vs 0.089ms unsandboxed floor
+
+# localmodel-fit — prefill 1/params scaling (Apple M4, real ollama)
+go run ./bench -model qwen2.5:0.5b -hw m4 -params 494032768     # measured 0.5b/1.5b ratio 3.06–3.18 vs exact 3.125
+
+# ml-kem-rb — hybrid X25519+ML-KEM-768, TLS draft wire format (FIPS 203)
+ruby -rml_kem/hybrid -e 'p MLKem::Hybrid.client_init[0].bytesize'  # => 1216 (server share 1120, shared secret 64 B)
+```
+</details>
+
+---
+
+## ▌ POST-QUANTUM MIGRATION CLOCK
+
+Two of my repos (`ml-kem-rb`, `pqc-scan`) exist because the crypto deadlines below are real and close. The clock counts down live against these US federal dates (NIST / NSA primary sources).
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="./assets/pqc-clock-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/pqc-clock-light.svg">
+  <img alt="Post-quantum migration clock — real US federal PQC deadlines counting down" src="./assets/pqc-clock-dark.svg" width="850">
+</picture>
 
 </div>
 
 ---
 
-## 💫 About Me
-
-- 🔭 **Currently Building:** [Voraxx](https://github.com/bharat3645) — AI-powered VAPT platform with Shannon multi-agent engine + a dedicated Voraxx MCP Server for security tool orchestration
-- 🆕 **Recently Shipped:** [voraxx-mcp-server](https://github.com/bharat3645/voraxx-mcp-server) (CVE/Shodan/Nuclei tools over MCP), [mcp-registry-finder](https://github.com/bharat3645/mcp-registry-finder) (searches the official MCP registry from inside an agent session), and [FrameSage](https://github.com/bharat3645/FrameSage) (tool-calling agent for pandas DataFrames)
-- 🧪 **Latest Batch (Jul 2026):** 10 new cross-domain tools — see [2026 Original Projects](#-2026-original-projects--solving-real-problems-across-domains) below; newest (Jul 16): [ollama-audit](https://github.com/bharat3645/ollama-audit), [mcp-sentinel](https://github.com/bharat3645/mcp-sentinel), and [agent-tool-audit](https://github.com/bharat3645/agent-tool-audit)
-- 🤖 **AI/LLM Focus:** Agentic AI systems, durable multi-agent pipelines (Temporal.io), RAG, and LLM-powered security automation
-- 💡 **Expertise:** Full-stack development, AI agent architecture, security research, microservices, and cloud-native systems
-- 👯 **Collaborate With Me On:** AI security tools, open-source agent frameworks, research papers, and hackathons
-- 🤝 **Help With:** MCP server design, LangGraph orchestration, Mastra.ai workflows, backend optimization, and RAG pipelines
-- 🌱 **Currently Learning:** Temporal.io durable workflow patterns, A2A (Agent-to-Agent) protocol, Google ADK multi-agent pipelines, and advanced LangGraph + Mastra.ai composition
-- 💬 **Ask Me About:** AI-driven VAPT, agentic pipelines, MCP server design, multi-agent orchestration, and Shannon engine architecture
-- 🎯 **2026 Goals (H2):** Ship Voraxx v1.0 + MCP Server (Q3), publish AI-assisted VAPT research write-up, open-source The-Ideal-Harness, and speak at a security/AI event
-- ⚡ **Fun Fact:** Built a complete AI project prototype in 24 hours during a hackathon that got featured!
-
----
-
-## 🚀 Q3 2026 Build Status
-
-| Project | Status | Progress | Stack | ETA |
-|---------|--------|----------|-------|-----|
-| **Voraxx v1.0** | 🔨 In Dev | `████████░░` 80% | LangGraph · Shannon · Claude Sonnet 4.6 | Q3 2026 |
-| **Shannon Engine** | 🔬 Active R&D | `██████░░░░` 60% | MCP · Temporal.io · LangGraph · A2A | Ongoing |
-| **The-Ideal-Harness** | 🏗️ Pre-release | `█████████░` 90% | TypeScript · MCP · Claude Code SDK | Q3 2026 |
-| **AI-VAPT Write-up** | ✍️ Drafting | `████░░░░░░` 40% | Research · LLM-assisted pentest | Q3 2026 |
-| **[Voraxx MCP Server](https://github.com/bharat3645/voraxx-mcp-server)** | 🔧 In Dev | `████░░░░░░` 40% | Python (stdlib-only) · MCP · Nuclei · Shodan · OSV.dev | Q4 2026 |
-
----
-
-## 🌐 Connect With Me
+## ▌ LANGUAGE MIX
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/bharat-singh-parihar)
-[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bharat3645)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:bharat3645@gmail.com)
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/bh.arat_parihar)
-[![Linktree](https://img.shields.io/badge/Linktree-00C300?style=for-the-badge&logo=Linktree&logoColor=white)](https://linktr.ee/bharat_singh_parihar)
-[![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=firefox&logoColor=white)](https://bharat3645.vercel.app)
-
-</div>
-
-
----
-
-## 🧠 AI & LLM Stack
-
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Anthropic Claude](https://img.shields.io/badge/Anthropic%20Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=chainlink&logoColor=white)
-![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge&logo=graphql&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
-![Gemini](https://img.shields.io/badge/Google%20Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
-![Groq](https://img.shields.io/badge/Groq-F55036?style=for-the-badge&logo=groq&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
-![MCP](https://img.shields.io/badge/Model_Context_Protocol-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
-![Claude Code SDK](https://img.shields.io/badge/Claude_Code_SDK-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
-![Claude Fable 5](https://img.shields.io/badge/Claude_Fable_5-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
-![A2A Protocol](https://img.shields.io/badge/A2A_Protocol-4285F4?style=for-the-badge&logo=google&logoColor=white)
-![Pydantic AI](https://img.shields.io/badge/PydanticAI-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
-![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
-![Qdrant](https://img.shields.io/badge/Qdrant-DC244C?style=for-the-badge&logo=qdrant&logoColor=white)
-![Pinecone](https://img.shields.io/badge/Pinecone-000000?style=for-the-badge&logo=pinecone&logoColor=white)
-![LlamaIndex](https://img.shields.io/badge/LlamaIndex-1C3C3C?style=for-the-badge&logo=python&logoColor=white)
-![Mastra](https://img.shields.io/badge/Mastra-000000?style=for-the-badge&logo=typescript&logoColor=white)
-![Google ADK](https://img.shields.io/badge/Google_ADK-4285F4?style=for-the-badge&logo=google&logoColor=white)
-![OpenRouter](https://img.shields.io/badge/OpenRouter-000000?style=for-the-badge&logo=openai&logoColor=white)
-![CrewAI](https://img.shields.io/badge/CrewAI-FF4B4B?style=for-the-badge&logo=robot-framework&logoColor=white)
-![LiteLLM](https://img.shields.io/badge/LiteLLM-412991?style=for-the-badge&logo=openai&logoColor=white)
-![Vercel AI SDK](https://img.shields.io/badge/Vercel_AI_SDK-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
-
-## 🔐 Security Tooling
-
-![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white)
-![Burp Suite](https://img.shields.io/badge/Burp_Suite-FF6633?style=for-the-badge&logo=portswigger&logoColor=white)
-![Metasploit](https://img.shields.io/badge/Metasploit-2596CD?style=for-the-badge&logo=metasploit&logoColor=white)
-![Nmap](https://img.shields.io/badge/Nmap-004088?style=for-the-badge&logo=nmap&logoColor=white)
-![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white)
-![OWASP](https://img.shields.io/badge/OWASP-000000?style=for-the-badge&logo=owasp&logoColor=white)
-![Nuclei](https://img.shields.io/badge/Nuclei-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![Subfinder](https://img.shields.io/badge/Subfinder-7B2FBE?style=for-the-badge&logo=go&logoColor=white)
-![ffuf](https://img.shields.io/badge/ffuf-CC0000?style=for-the-badge&logo=go&logoColor=white)
-![SQLMap](https://img.shields.io/badge/SQLMap-F05032?style=for-the-badge&logo=sqlite&logoColor=white)
-![Shodan](https://img.shields.io/badge/Shodan-AA0000?style=for-the-badge&logo=shodan&logoColor=white)
-![Semgrep](https://img.shields.io/badge/Semgrep-1B2D52?style=for-the-badge&logo=semgrep&logoColor=white)
-
-## 💻 Tech Stack:
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white) ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![PowerShell](https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white) ![Scala](https://img.shields.io/badge/scala-%23DC322F.svg?style=for-the-badge&logo=scala&logoColor=white) ![Solidity](https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white) ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![nVIDIA](https://img.shields.io/badge/cuda-000000.svg?style=for-the-badge&logo=nVIDIA&logoColor=green) ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Bun](https://img.shields.io/badge/Bun-%23000000.svg?style=for-the-badge&logo=bun&logoColor=white) ![tRPC](https://img.shields.io/badge/tRPC-%232596BE.svg?style=for-the-badge&logo=trpc&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white) ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white) ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![WordPress](https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white) ![Appwrite](https://img.shields.io/badge/Appwrite-%23FD366E.svg?style=for-the-badge&logo=appwrite&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![mlflow](https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&logo=numpy&logoColor=blue) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Scipy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white) ![Temporal](https://img.shields.io/badge/Temporal.io-000000?style=for-the-badge&logo=temporal&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black) ![TOR](https://img.shields.io/badge/tor-%237E4798.svg?style=for-the-badge&logo=tor-project&logoColor=white) ![nVIDIA](https://img.shields.io/badge/nVIDIA-%2376B900.svg?style=for-the-badge&logo=nVIDIA&logoColor=white)
-
----
-
-## 📊 GitHub Analytics
-
-<div align="center">
-
-![](https://github-readme-stats.vercel.app/api?username=bharat3645&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true)
-
-![](https://streak-stats.demolab.com?user=bharat3645&theme=tokyonight&hide_border=true)
-
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=bharat3645&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
-
-</div>
-
-## 🏆 GitHub Trophies
-
-<div align="center">
-
-![](https://github-profile-trophy.vercel.app/?username=bharat3645&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&column=7)
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="./assets/langmix-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/langmix-light.svg">
+  <img alt="Language mix by bytes across the public flagship repos" src="./assets/langmix-dark.svg" width="850">
+</picture>
 
 </div>
 
 ---
 
-## 🎯 Featured Projects
+## ▌ TOOLBOX
+
+| | |
+|---|---|
+| **Languages** | `Go` · `Rust` · `Ruby` · `Python` · `TypeScript` · `JavaScript` · `C` |
+| **AI / Agents** | `MCP` · `Claude / Anthropic API` · `LangGraph` · `Ollama` · `GGUF / llama.cpp` · `wasmtime` |
+| **Security** | `WASM sandboxing` · `SBOM / CBOM (CycloneDX)` · `SARIF` · `ML-KEM (FIPS 203)` · `TLS 1.3 hybrid KEX` |
+| **Backend / Infra** | `Rack / Rails` · `net/http` · `Redis` · `PostgreSQL` · `Docker` · `GitHub Actions` |
+| **Practices** | reference-validated impls · adversarial testing · reproducible benchmarks · tamper-evident audit logs |
+
+---
+
+## ▌ CONTRIBUTION GRAPH
 
 <div align="center">
 
-[![PRISM-Insfranest](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=PRISM-Insfranest&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/PRISM-Insfranest)
-[![The-Ideal-Harness](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=The-Ideal-Harness&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/The-Ideal-Harness)
-[![voraxx-mcp-server](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=voraxx-mcp-server&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/voraxx-mcp-server)
-[![FrameSage](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=FrameSage&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/FrameSage)
-[![Task-Tokenizer](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=Task-Tokenizer&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/Task-Tokenizer)
-[![mcp-registry-finder](https://github-readme-stats.vercel.app/api/pin/?username=bharat3645&repo=mcp-registry-finder&theme=tokyonight&hide_border=true)](https://github.com/bharat3645/mcp-registry-finder)
-
-</div>
-
-### 🛡️ Security & AI Agents
-- **Voraxx** `🔒 Private · v1.0 in progress` — AI-powered VAPT platform; automates recon, vulnerability scanning, and exploit chaining via LLM agents · *TypeScript · Temporal.io · Claude Agent SDK*
-- **Shannon AI Engine** `🔬 Core R&D` — Multi-agent reasoning engine inside Voraxx; orchestrates recon, enumeration, and exploitation workflows via LangGraph and MCP tools with durable Temporal.io workflows
-- **[voraxx-mcp-server](https://github.com/bharat3645/voraxx-mcp-server)** 🆕 — Minimal, dependency-free MCP server exposing CVE lookup (OSV.dev), Shodan host recon, and local Nuclei scan orchestration as agent tools · *Python*
-
-### 🤖 AI & Full-Stack
-- **[PRISM-Insfranest](https://github.com/bharat3645/PRISM-Insfranest)** — AI backend-generation platform: NL prompts → YAML DSL → production-ready Django, Go Fiber, or Rails projects with Docker, tests, and docs; benchmarked across 2,664 generations · *React · TypeScript · Flask · Groq*
-- **[The-Ideal-Harness](https://github.com/bharat3645/The-Ideal-Harness)** — Claude Code-native agent harness with MCP-portable enforcement and safety tooling, 170+ tests · *TypeScript · MCP*
-- **[FrameSage](https://github.com/bharat3645/FrameSage)** 🆕 — Tool-calling analysis agent for pandas DataFrames; answers plain-English questions and generates EDA reports with an explicit anti-hallucination boundary, no API key required · *Python*
-- **[Task-Tokenizer](https://github.com/bharat3645/Task-Tokenizer)** ⭐ — Web3 gig-economy platform with on-chain job listings and wallet-based freelancer matching · *Solidity · Hardhat · Next.js*
-- **[mcp-registry-finder](https://github.com/bharat3645/mcp-registry-finder)** 🆕 — Zero-dependency MCP server for searching the official Model Context Protocol registry from inside an agent session · *JavaScript*
-- **[Quorix](https://github.com/bharat3645/Quorix)** — Local-first reference app for agentic UI patterns: streaming replies, inline tool-call visualization, generative UI · *React · TypeScript*
-- **[GenAI-Platform](https://github.com/bharat3645/GenAI-Platform)** — Generative AI platform experiments and integrations
-- **[Mentoro](https://github.com/bharat3645/Mentoro)** — Gamified AI learning companion · *AI · Full-Stack*
-- **[NomadAI](https://github.com/bharat3645/NomadAI)** — Voice-first, multilingual AI travel companion for Delhi; Whisper + Groq LLM + Telegram · *Python · FastAPI*
-
-> 📂 See all projects at [github.com/bharat3645](https://github.com/bharat3645?tab=repositories)
-
----
-
-## 🧪 2026 Original Projects — Solving Real Problems Across Domains
-
-Ten new, independent tools shipped across July 2026 — each one deliberately combines two or more of my fields (security, AI agents, dev tooling, NLP, ML, SRE, AI infra) to solve a specific real-world problem, with a real tested implementation behind every README, not just a pitch.
-
-- **[dep-graveyard](https://github.com/bharat3645/dep-graveyard)** — Composite dependency-risk scorer: blends CVE severity (OSV.dev), package staleness, and license risk into one A–F grade with concrete remediation advice, instead of just another raw CVE list · *Python · Security + Dev Tooling + optional AI narrative*
-- **[citeguard](https://github.com/bharat3645/citeguard)** — Fully offline citation-claim verifier for research papers: flags citations that don't actually support the sentence next to them, using transparent TF-IDF similarity — no black-box API, nothing leaves your machine · *Python · NLP + Academic Integrity*
-- **[a11y-agent](https://github.com/bharat3645/a11y-agent)** — Context-aware accessibility scanner for the semantic smells axe-core and eslint-plugin-jsx-a11y miss: generic alt text, vague link text, color-only meaning, heading-hierarchy skips · *Python · Web A11y + Static Analysis + AI*
-- **[moodmesh](https://github.com/bharat3645/moodmesh)** — Private, ethics-first engineering-team health detector: turns git commit timing and PR review sentiment into rising-risk trend flags for managers, not individual scores · *Python · Dev Analytics + NLP*
-- **[biasscope](https://github.com/bharat3645/biasscope)** — Lightweight ML fairness report card: demographic parity, equal opportunity, and disparate-impact (four-fifths rule) computed transparently in pandas, graded A–F in plain English · *Python · ML + Compliance*
-- **[shiftsense](https://github.com/bharat3645/shiftsense)** — Turns a raw incident chat timeline into a structured blameless-postmortem draft: phase detection, time-to-mitigate/resolve stats, and deduplicated action items · *Python · SRE + AI*
-- **[ai-origin-trace](https://github.com/bharat3645/ai-origin-trace)** — Transparent, fully offline stylometric AI-vs-human authorship *signal* for text and code — explainable per-feature breakdown instead of a black-box percentage, built with explicit responsible-use framing against false accusations · *Python · Forensics + AI Ethics*
-- **[ollama-audit](https://github.com/bharat3645/ollama-audit)** 🆕 — Offline storage-hygiene auditor for a local Ollama model store: finds broken models (missing blobs), stale models, and orphaned reclaimable blobs by reading `manifests/` and `blobs/` directly — zero dependencies, zero network calls · *Node.js · AI Infra + Dev Tooling*
-- **[mcp-sentinel](https://github.com/bharat3645/mcp-sentinel)** 🆕 — Offline risk scanner for MCP client configs: grades each configured server A–F on inline secrets, `@latest` pins, shell indirection, and typosquat-like package names — zero network calls, zero dependencies · *Python · Security + AI Agents*
-- **[agent-tool-audit](https://github.com/bharat3645/agent-tool-audit)** 🆕 — Offline static analyzer for AI agent tool definitions (MCP `tools/list` or OpenAI function specs): flags prompt-injection-suspect descriptions, broad scope claims, and schema hygiene issues, graded A–F · *Python · Security + AI Agents*
-
----
-
-## 📚 Writing & Interests
-
-I write about what I'm building and learning:
-
-- 🛡️ AI-powered VAPT — multi-agent security automation with LangGraph
-- 🔗 MCP server design — extending LLMs with custom security tools
-- 🤖 Multi-agent system design and orchestration patterns
-- ⚡ Durable AI workflows with Temporal.io
-
-> 📝 Notes and posts in [BLOG.md](./BLOG.md)
-
----
-
-## 🎓 Certifications & Learning
-
-- 🏅 AWS Cloud Practitioner
-- 🏅 Google Cloud Associate Cloud Engineer *(in progress)*
-- 📖 Advanced Machine Learning Specialization
-- 📖 Kubernetes Administration
-- 📖 LLM & Prompt Engineering Mastery
-
-> 📜 Full list in [CERTIFICATIONS.md](./CERTIFICATIONS.md)
-
----
-
-## 📈 Development Metrics
-
-| Metric | Value |
-|--------|-------|
-| 📦 Total Repositories | 80 (67 public) |
-| 🌍 Open Source Contributions | 220+ |
-| 🐛 Issues Resolved | 95+ |
-| 👀 Code Reviews Participated | 50+ |
-| 🔥 Active Since | Sept 2023 |
-| 🥇 Primary Language | Python & TypeScript |
-| 🤖 AI Models Integrated | Claude Fable 5 · Opus 4.8 · GPT-4o · Gemini · Groq · Ollama |
-| 🎯 Contribution Focus | AI Agents · Security · Full-Stack |
-| 🛡️ Current Project | Voraxx (AI-VAPT) — Shannon engine in active dev |
-| 🧰 AI Frameworks Used | LangGraph · Mastra.ai · MCP · Google ADK · Pydantic AI · LiteLLM |
-| ⚡ Workflow Engine | Temporal.io (durable multi-agent pipelines) |
-
----
-
-## 💡 Skills Breakdown
-
-<table>
-<tr>
-<td>
-
-### 🤖 AI Agents & LLMs
-- LangGraph · Mastra.ai · CrewAI Orchestration
-- Claude Fable 5 & Opus 4.8 (Anthropic API)
-- Google ADK · A2A Protocol · Multi-Agent Systems
-- RAG & Vector Search (Qdrant, Pinecone)
-- MCP Server Design · Prompt Engineering & Extended Thinking
-
-</td>
-<td>
-
-### 🛡️ Security Research
-- AI-powered VAPT (Voraxx/Shannon)
-- Penetration Testing · OWASP Top 10
-- Network Recon (Nmap, Subfinder, Nuclei)
-- Web App Testing (Burp Suite, SQLMap, ffuf)
-- Static Analysis (Semgrep) · LLM-assisted exploit chaining
-
-</td>
-</tr>
-<tr>
-<td>
-
-### 💻 Full-Stack Dev
-- React, Next.js & TypeScript
-- Node.js, FastAPI & Django
-- PostgreSQL, MongoDB, Redis, Supabase
-- GraphQL, tRPC & REST APIs
-- TailwindCSS · Prisma ORM
-
-</td>
-<td>
-
-### ☁️ DevOps & Cloud
-- Docker & Kubernetes
-- Temporal.io Durable Workflows
-- AWS & Google Cloud (GCP)
-- CI/CD Pipelines · GitHub Actions
-- Infrastructure as Code · Cloudflare Workers
-
-</td>
-</tr>
-</table>
-
----
-
-### ✍️ Random Dev Quote
-
-![](https://quotes-github-readme.vercel.app/api?type=vertical&theme=tokyonight)
-
----
-
-## 🐍 Contribution Graph
-
-<div align="center">
-
-![](https://raw.githubusercontent.com/bharat3645/bharat3645/output/github-contribution-grid-snake-dark.svg)
-
-</div>
-
-## 📈 Activity Graph
-
-<div align="center">
-
-[![Bharat's Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=bharat3645&theme=tokyo-night&hide_border=true&area=true&area_color=58A6FF)](https://github.com/ashutosh00710/github-readme-activity-graph)
-
-</div>
-
----
-
-## 💬 Let's Connect & Collaborate!
-
-> 🟢 **Open to:** AI agent projects · Security research · Hackathons · Consulting
-
-I'm always interested in:
-- 🤝 Collaborating on AI agents, security tooling, and open-source projects
-- 🔬 Co-authoring research on LLM-assisted VAPT and agentic systems
-- 💼 Freelance & consulting: AI integrations, RAG pipelines, MCP server design
-- 🎓 Sharing knowledge — reach out for mentorship, talks, or pair programming
-- 🚀 Building impactful solutions that ship fast
-
----
-
-## ☕ Support My Work
-
-If you find my projects helpful, consider supporting me:
-
-<div align="center">
-
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bharat3645)
-[![Sponsor](https://img.shields.io/badge/GitHub%20Sponsor-EA4AAA?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sponsors/bharat3645)
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/bharat3645/bharat3645/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/bharat3645/bharat3645/output/github-contribution-grid-snake.svg">
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/bharat3645/bharat3645/output/github-contribution-grid-snake-dark.svg">
+</picture>
 
 </div>
 
@@ -326,14 +166,8 @@ If you find my projects helpful, consider supporting me:
 
 <div align="center">
 
-**Made with ❤️ by [Bharat Singh Parihar](https://github.com/bharat3645)**
-
-![Last Updated](https://img.shields.io/badge/Last%20Updated-July%2016%202026-58A6FF?style=flat-square)
-![Status](https://img.shields.io/badge/Status-Shannon%20Engine%20Active%20Dev-brightgreen?style=flat-square)
-![Open To](https://img.shields.io/badge/Open%20To-Collaboration-orange?style=flat-square)
-
-*Building [Voraxx](https://github.com/bharat3645) — AI-Powered VAPT · Shipping 2026*
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" alt="footer" width="100%"/>
+**Every panel above is a self-hosted SVG built from live GitHub data — no third-party widget services, no unverified stats.**
+<br>
+Generated by [`assets/generate.py`](./assets/generate.py) · refreshed daily via [GitHub Actions](./.github/workflows/profile-assets.yml)
 
 </div>
