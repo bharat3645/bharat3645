@@ -457,7 +457,7 @@ def benchmarks(p, d):
     idn = "b"
     s = [frame(W, H, p, idn)]
     s.append(corner_marks(W, H, p))
-    s.append(head(p, W, "06", "VERIFIED BENCHMARKS",
+    s.append(head(p, W, "07", "VERIFIED BENCHMARKS",
                   "every figure reproducible from the repo's own committed harness — no hand-waving",
                   "green"))
     bx, by, gap = 24, 88, 16
@@ -498,7 +498,7 @@ def pqc_clock(p, d):
     idn = "q"
     s = [frame(W, H, p, idn)]
     s.append(corner_marks(W, H, p))
-    s.append(head(p, W, "07", "PQC MIGRATION CLOCK",
+    s.append(head(p, W, "08", "PQC MIGRATION CLOCK",
                   "why the crypto work ships now — real US federal PQC deadlines, counting down live",
                   "purple", live=True))
     today = NOW.date()
@@ -642,7 +642,7 @@ def langmix(p, d):
     total = sum(v for _, v in items) or 1
     s = [frame(W, H, p, idn)]
     s.append(corner_marks(W, H, p))
-    s.append(head(p, W, "08", "CODEBASE COMPOSITION",
+    s.append(head(p, W, "09", "CODEBASE COMPOSITION",
                   "every byte across the public flagships, area-proportional · computed live from the API",
                   "cyan", live=True))
     tx, ty, tw, th = 24, 86, W - 48, H - 100
@@ -921,79 +921,70 @@ def pulse(p, d):
 # ---------------------------------------------------------------------------
 # Instrument — build-sprint timeline (real repo ship dates)
 # ---------------------------------------------------------------------------
+def _yfrac(datestr):  # "YYYY-MM" -> position across 2023-01 .. 2027-01
+    y, m = (int(v) for v in datestr.split("-")[:2])
+    return ((y - 2023) * 12 + (m - 1)) / 48.0
+
+
 def timeline(p, d):
-    W, H = 850, 340
+    W, H = 850, 344
     idn = "m"
-    created = d["created"]
-    pub = [f for f in facts.FLAGSHIPS if not f.get("private") and f["name"] in created]
+    ax0, ax1, ay = 40, W - 30, 208
     s = [frame(W, H, p, idn)]
     s.append(corner_marks(W, H, p))
-    tagged = sum(1 for f in pub if f["tag"])
-    s.append(head(p, W, "05", "BUILD SPRINT",
-                  f"{len(pub)} public + 1 private = 13 flagships in a {_span(created)}-day burst · {tagged} version-tagged",
+    s.append(head(p, W, "05", "THE JOURNEY",
+                  "three years, four eras — coursework → research → shipping infra · real repo & milestone dates",
                   "purple"))
-    if not pub:
-        s.append(text(W / 2, H / 2, "activity data unavailable", size=13, fill="muted",
-                      anchor="middle", font=MONO, p=p))
-        s.append("</svg>")
-        return "".join(s)
-    dates = sorted({created[f["name"]].date() for f in pub})
-    K = len(dates)
-    steps, cum = [], 0
-    for day in dates:
-        reps = [f for f in pub if created[f["name"]].date() == day]
-        cum += len(reps)
-        steps.append((day, cum, reps))
-    maxc = cum
-    # plot geometry
-    x0, x1, pty, pby = 60, W - 40, 96, 190
-    colw = (x1 - x0) / K
-    xcol = [x0 + (i + 0.6) * colw for i in range(K)]
 
-    def yof(c):
-        return pby - c / maxc * (pby - pty)
-    # y gridlines + ticks
-    for c in range(0, maxc + 1, 4):
-        s.append(line(x0, yof(c), x1, yof(c), stroke="grid", sw=1.5, p=p))
-        s.append(text(x0 - 10, yof(c) + 4, str(c), size=9.5, fill="faint", weight=700,
-                      font=MONO, anchor="end", p=p))
-    # step path (cumulative growth) + filled area
-    pts, prev = [(x0, yof(0))], 0
-    for i, (day, c, reps) in enumerate(steps):
-        pts.append((xcol[i], yof(prev)))
-        pts.append((xcol[i], yof(c)))
-        prev = c
-    pts.append((x1, yof(prev)))
-    area = " ".join(f"{x:.1f},{y:.1f}" for x, y in pts) + f" {x1:.1f},{pby:.1f} {x0:.1f},{pby:.1f}"
-    s.append(f'<polygon points="{area}" fill="{p["purple"]}" fill-opacity="0.18"/>')
-    s.append(f'<polyline points="{" ".join(f"{x:.1f},{y:.1f}" for x,y in pts)}" '
-             f'fill="none" stroke="{p["ink"]}" stroke-width="3" stroke-linejoin="round"/>')
-    # risers: marker + cumulative count + repos added
-    for i, (day, c, reps) in enumerate(steps):
-        mx2, my2 = xcol[i], yof(c)
-        s.append(circle(mx2, my2, 6, fill="purple", stroke="ink", sw=2.5, p=p))
-        s.append(rect(mx2 - 15, my2 - 32, 30, 19, fill="purple", rx=3, stroke="ink", sw=2, p=p))
-        s.append(text(mx2, my2 - 19, str(c), size=12, fill="on_accent", weight=800,
+    def xof(datestr):
+        return ax0 + _yfrac(datestr) * (ax1 - ax0)
+    # era bands (one per year) + labels
+    by0, by1 = 82, H - 18
+    for i, era in enumerate(facts.JOURNEY_ERAS):
+        bx0 = xof(f"{era['key']}-01")
+        bx1 = xof(f"{int(era['key'])+1}-01")
+        s.append(f'<rect x="{bx0:.1f}" y="{by0}" width="{bx1-bx0:.1f}" height="{by1-by0}" '
+                 f'fill="{p[era["accent"]]}" fill-opacity="0.06"/>')
+        if i > 0:
+            s.append(line(bx0, by0, bx0, by1, stroke="grid", sw=1.5, p=p, dash="3 4"))
+        cxb = (bx0 + bx1) / 2
+        s.append(text(cxb, by0 + 15, era["key"], size=13, fill=era["accent"], weight=800,
                       font=MONO, anchor="middle", p=p))
-        s.append(text(mx2, pby + 16, day.strftime("%b %d"), size=10, fill="ink", weight=800,
-                      font=MONO, anchor="middle", p=p))
-        s.append(text(mx2, pby + 29, f"+{len(reps)}", size=9, fill="purple", weight=800,
-                      font=MONO, anchor="middle", p=p))
-        chipw = min(150, colw - 10)
-        col_x = mx2 - chipw / 2
-        for k, f in enumerate(reps):
-            yy = pby + 40 + k * 19
-            lc = facts.LANG_COLORS.get(f["lang"], p["muted"])
-            s.append(rect(col_x, yy, chipw, 16, fill="card", rx=2, stroke="ink", sw=1.4, p=p))
-            s.append(circle(col_x + 9, yy + 8, 3.2, fill=lc, stroke="ink", sw=1.1, p=p))
-            nm = f["name"]
-            if len(nm) > 16:
-                nm = nm[:15] + "…"
-            s.append(text(col_x + 17, yy + 11, nm, size=9, fill="ink", weight=700, font=MONO, p=p))
-            if f["tag"]:
-                s.append(circle(col_x + chipw - 8, yy + 8, 3, fill="sig", p=p))
-    # endpoint marker (the total is stated in the subtitle, so no overlapping label)
-    s.append(circle(x1, yof(maxc), 5, fill="sig", stroke="ink", sw=2, p=p))
+        s.append(text(cxb, by0 + 28, era["label"], size=9.5, fill="muted", weight=800,
+                      font=MONO, anchor="middle", spacing=0.5, p=p))
+    # axis
+    s.append(line(ax0, ay, ax1, ay, stroke="ink", sw=3, p=p))
+    # milestones, two lanes with proximity stagger
+    def lay(lane):
+        ms = sorted((m for m in facts.JOURNEY_MILES if m["lane"] == lane), key=lambda m: xof(m["date"]))
+        out, prevx, row = [], -999, 0
+        for m in ms:
+            x = xof(m["date"])
+            row = 1 - row if x - prevx < 150 else 0
+            out.append((m, x, row))
+            prevx = x
+        return out
+    up = {0: ay - 26, 1: ay - 66}
+    dn = {0: ay + 26, 1: ay + 66}
+    for m, x, row in lay("up"):
+        my = up[row]
+        s.append(line(x, ay, x, my, stroke=m["accent"], sw=2, p=p))
+        s.append(circle(x, my, 5, fill=m["accent"], stroke="ink", sw=2, p=p))
+        s.append(text(x, my - 20, m["label"], size=10.5, fill="ink", weight=800, font=MONO,
+                      anchor="middle", p=p))
+        s.append(text(x, my - 9, m["sub"], size=8.5, fill="muted", weight=600, font=MONO,
+                      anchor="middle", p=p))
+    for m, x, row in lay("down"):
+        my = dn[row]
+        s.append(line(x, ay, x, my, stroke=m["accent"], sw=2, p=p))
+        s.append(circle(x, my, 5, fill=m["accent"], stroke="ink", sw=2, p=p))
+        s.append(text(x, my + 15, m["label"], size=10.5, fill="ink", weight=800, font=MONO,
+                      anchor="middle", p=p))
+        s.append(text(x, my + 26, m["sub"], size=8.5, fill="muted", weight=600, font=MONO,
+                      anchor="middle", p=p))
+    # lane legend (bottom, clear of the 2026 milestones)
+    s.append(text(ax0, H - 8, "▲ above = repos & ships       ▼ below = research & career",
+                  size=9, fill="faint", weight=700, font=MONO, p=p))
     s.append("</svg>")
     return "".join(s)
 
@@ -1032,7 +1023,7 @@ def stack(p, d):
     idn = "k"
     s = [frame(W, H, p, idn)]
     s.append(corner_marks(W, H, p))
-    s.append(head(p, W, "09", "AGENT-SECURITY STACK",
+    s.append(head(p, W, "10", "AGENT-SECURITY STACK",
                   "not scattered tools — where each flagship sits in one real agent request path",
                   "red"))
     # --- main request path ---
@@ -1125,7 +1116,7 @@ def constellation(p, d):
     mx = max(tot.values(), default=1) or 1
     s = [frame(W, H, p, idn)]
     s.append(corner_marks(W, H, p))
-    s.append(head(p, W, "10", "PORTFOLIO CONSTELLATION",
+    s.append(head(p, W, "11", "PORTFOLIO CONSTELLATION",
                   "the flagships as a network — node size = commits · edges = shared MCP + verified links",
                   "cyan", live=True))
 
@@ -1185,10 +1176,56 @@ def constellation(p, d):
 
 
 # ---------------------------------------------------------------------------
+# Instrument 11 — research & impact (publications + shipped-work proof points)
+# ---------------------------------------------------------------------------
+def research(p, d):
+    W, H = 850, 318
+    idn = "r"
+    s = [frame(W, H, p, idn)]
+    s.append(corner_marks(W, H, p))
+    s.append(head(p, W, "06", "RESEARCH & IMPACT",
+                  "peer-reviewed output + shipped-work numbers — what a repo list alone doesn't show",
+                  "pink"))
+    # publications
+    s.append(text(24, 86, "PEER-REVIEWED", size=10, fill="faint", weight=800, font=MONO,
+                  spacing=1, p=p))
+    accents = ["pink", "purple", "cyan"]
+    counts = facts.PUBLICATIONS["counts"]
+    x0, y0, gap = 24, 94, 12
+    tw = (W - 48 - 2 * gap) / 3
+    for i, (num, lab, sub) in enumerate(counts):
+        x = x0 + i * (tw + gap)
+        s.append(card(x, y0, tw, 50, p, fill="card", accent=accents[i], dx=5, dy=5))
+        s.append(text(x + 18, y0 + 34, num, size=30, fill="ink", weight=800, font=MONO, p=p))
+        s.append(text(x + 52, y0 + 22, lab, size=12, fill="ink", weight=800, font=MONO, p=p))
+        s.append(text(x + 52, y0 + 37, sub, size=9.5, fill="muted", weight=600, font=MONO, p=p))
+    # venues
+    vy = 168
+    for i, v in enumerate(facts.PUBLICATIONS["venues"]):
+        yy = vy + i * 14
+        s.append(text(26, yy, "›", size=10, fill="pink", weight=800, font=MONO, p=p))
+        s.append(text(38, yy, v, size=10, fill="muted", weight=600, font=MONO, p=p))
+    # divider
+    s.append(line(24, 232, W - 24, 232, stroke="grid", sw=1.5, p=p))
+    # shipped impact
+    s.append(text(24, 250, "SHIPPED IMPACT", size=10, fill="faint", weight=800, font=MONO,
+                  spacing=1, p=p))
+    iy, iacc = 258, ["green", "blue", "purple", "orange"]
+    iw = (W - 48 - 3 * gap) / 4
+    for i, (val, lab, det) in enumerate(facts.IMPACT):
+        x = 24 + i * (iw + gap)
+        s.append(card(x, iy, iw, 48, p, fill="card", accent=iacc[i], dx=4, dy=4))
+        s.append(text(x + 14, iy + 21, val, size=15, fill="ink", weight=800, font=MONO, p=p))
+        s.append(text(x + 14, iy + 34, lab, size=9.5, fill="muted", weight=700, font=MONO, p=p))
+    s.append("</svg>")
+    return "".join(s)
+
+
+# ---------------------------------------------------------------------------
 INSTRUMENTS = {"boot": boot, "hero": hero, "status": status_board, "domains": radar,
                "pulse": pulse, "timeline": timeline, "benchmarks": benchmarks,
                "pqc-clock": pqc_clock, "langmix": langmix, "stack": stack,
-               "network": constellation}
+               "network": constellation, "research": research}
 
 
 def main():

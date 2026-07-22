@@ -124,3 +124,74 @@ LANG_COLORS = {
     "JavaScript": "#f1e05a", "TypeScript": "#3178c6", "Shell": "#89e051",
     "C": "#555555", "HTML": "#e34c26",
 }
+
+
+# ===========================================================================
+# Real professional background (from the owner's resumes, 2026-07). These are
+# owner-supplied facts, not API-derived. Repo links are only included where the
+# repo was verified to exist and be public on github.com/bharat3645.
+# ===========================================================================
+
+# Multi-year journey — real dated milestones (repo dates verified via the API;
+# research/career/publication dates from the resumes). Drives the JOURNEY chart.
+JOURNEY_ERAS = [
+    dict(key="2023", label="FOUNDATIONS", accent="cyan",
+         note="first repos, GDSC winner, CSI chapter founded"),
+    dict(key="2024", label="RESEARCH", accent="purple",
+         note="deepfake CNN + image-encryption research → IEEE"),
+    dict(key="2025", label="BUILD & SHIP", accent="orange",
+         note="hackathons, GenAI/RAG, web3, first internship"),
+    dict(key="2026", label="INFRA & SECURITY", accent="red",
+         note="agent harness → the OSS infra/security sprint"),
+]
+
+# (year_fraction 0..1 across 2023-01 .. 2027-01, label, sublabel, lane)
+# lane: "up" = repo/ship, "down" = research/career milestone
+JOURNEY_MILES = [
+    dict(date="2023-10", label="first repos", sub="GitHub journey begins", lane="up", accent="cyan"),
+    dict(date="2024-05", label="deepfake detector", sub="CNN 93.5% → IEEE paper", lane="up", accent="purple"),
+    dict(date="2024-06", label="research intern", sub="PGDAV, Univ. of Delhi", lane="down", accent="purple"),
+    dict(date="2024-11", label="IEEE ICISCT", sub="SCOPUS · Kookmin Univ.", lane="down", accent="purple"),
+    dict(date="2025-04", label="GigX", sub="3rd · BITS Web3.0 '25", lane="up", accent="orange"),
+    dict(date="2025-07", label="GenAI / RAG era", sub="GraphRAG workspace builds", lane="up", accent="orange"),
+    dict(date="2025-10", label="IEEE ICPCT", sub="SCOPUS · Amity", lane="down", accent="orange"),
+    dict(date="2025-12", label="AI/ML intern @ RnR", sub="−58% / −65% inference cost", lane="down", accent="orange"),
+    dict(date="2026-03", label="Springer Q1", sub="journal paper", lane="down", accent="red"),
+    dict(date="2026-06", label="The-Ideal-Harness", sub="agent control plane", lane="up", accent="red"),
+    dict(date="2026-07", label="OSS sprint", sub="13 flagship repos", lane="up", accent="red"),
+]
+
+# Peer-reviewed output — the standout, differentiating fact.
+PUBLICATIONS = dict(
+    counts=[("1", "SPRINGER Q1", "journal, 2026"),
+            ("3", "IEEE / SCOPUS", "conference papers"),
+            ("2", "BOOK CHAPTERS", "2025")],
+    venues=[
+        "Springer Nature — Q1 journal (2026)",
+        "IEEE ICISCT 2024 — Kookmin University (SCOPUS)",
+        "IEEE ICPCT 2025 — Amity University (SCOPUS)",
+        "Book chapters: federated learning · renewable-energy AI (2025)",
+    ],
+)
+
+# Career proof points — real numbers from shipped work (owner-supplied).
+IMPACT = [
+    ("−58% / −65%", "AI inference cost", "5-module model-routing harness, 2 enterprise products"),
+    ("29 svcs · 500+", "concurrent scale", "Go microservices, Temporal-orchestrated backend"),
+    ("93.5%", "deepfake accuracy", "CNN detector → SCOPUS-indexed IEEE paper"),
+    ("< 1% FP", "ID validation", "Verhoeff / Luhn-mod-36 across 13+ ID formats"),
+]
+
+# Verified older public repos worth surfacing (each confirmed public + real).
+EARLIER = [
+    dict(name="Real-and-fake-face-distinction", year="2024", lang="Jupyter Notebook",
+         blurb="Keras CNN classifying real vs AI-generated faces — the research behind the IEEE deepfake-detection paper."),
+    dict(name="pbl", year="2024", lang="Jupyter Notebook",
+         blurb="Deep-learning image encryption: DCGAN key generator + attention/residual CNN, with NPCR/UACI security analysis."),
+    dict(name="GigX", year="2025", lang="TypeScript",
+         blurb="Decentralized freelance marketplace — Solidity/Hardhat on-chain jobs, escrow & reputation + Next.js. 3rd, BITS Pilani Web3.0 '25."),
+    dict(name="GenAI-Platform", year="2025", lang="TypeScript",
+         blurb="GenAI workspace: multi-PDF RAG chat, GraphRAG entity graphs, ATS feedback, text-to-SQL (React/Supabase UI)."),
+]
+
+CAREER_LINE = "AI/ML Engineering Intern @ RnR Consulting · B.Tech (Hons.) CS, Data Science — Symbiosis Nagpur, 2022–26"

@@ -26,12 +26,13 @@
 
 ## ▌ WHOAMI
 
-I build **small, verifiable tools for the parts of the AI stack that fail quietly** — agent sandboxes, MCP gateways, model-fit predictors, and post-quantum crypto. Each of the 13 flagship repos below ships with a real test suite, CI, and — where it makes a claim about speed or correctness — a committed benchmark you can re-run yourself.
+I build **small, verifiable tools for the parts of the AI stack that fail quietly** — agent sandboxes, MCP gateways, model-fit predictors, and post-quantum crypto. Each of the flagship repos below ships with a real test suite, CI, and — where it makes a claim about speed or correctness — a committed benchmark you can re-run yourself. It's the latest chapter of a three-year arc: coursework → CV/security **research** → hackathons and GenAI → shipping infrastructure.
 
-- 🔭 **Now:** hardening the flagship portfolio for launch · `pqc-scan` in private beta ahead of the **Sept 2026** FIPS 140-2 sunset
+- 💼 **Now:** AI/ML Engineering Intern @ **RnR Consulting** (Delhi) — shipped a model-routing harness that cut inference cost **58% / 65%**; Go microservices in a 29-service, Temporal-orchestrated backend serving 500+ concurrent users
+- 🎓 **Research:** **1 Springer Q1 journal · 3 IEEE / SCOPUS papers · 2 book chapters** — deepfake detection, federated learning, PQC (see the Research & Impact panel below)
 - 🧭 **Focus:** agent security · AI infrastructure · post-quantum readiness · backend systems
 - 🧪 **How I work:** reference-validated implementations, adversarial tests, reproducible benchmarks — no unverified claims
-- 💬 **Ask me about:** MCP security & sandboxing · LLM gateways · PQC migration · idempotent backends
+- 🎓 **B.Tech (Hons.) CS**, Data Science — Symbiosis Institute of Technology, Nagpur (2022–26), CGPA 8.5/10
 - 📫 **Reach me:** [LinkedIn](https://linkedin.com/in/bharat-singh-parihar) · [Portfolio](https://bharat3645.vercel.app) · [Email](mailto:404ghost.2@gmail.com)
 
 ---
@@ -97,6 +98,17 @@ I build **small, verifiable tools for the parts of the AI stack that fail quietl
 | **[acts-as-mcp](https://github.com/bharat3645/acts-as-mcp)** | Ruby | — | Expose ActiveRecord models as MCP tools from a Rails app with one class macro — scoped, read-only-by-default agent access. |
 | **[gemfile-lock-audit](https://github.com/bharat3645/gemfile-lock-audit)** | Ruby | — | Audits a `Gemfile.lock` for yanked gems, git-sourced deps, and pins that drift from the lockfile — zero network, CI-friendly. |
 
+### 📜 Selected earlier work (2024–2025)
+
+The recent flagships are the current chapter — the portfolio goes back to 2023. A few older public repos worth surfacing:
+
+| Repo | Year | What it is |
+|------|:----:|------------|
+| **[Real-and-fake-face-distinction](https://github.com/bharat3645/Real-and-fake-face-distinction)** | 2024 | Keras CNN classifying real vs AI-generated faces — the research behind the **SCOPUS-indexed IEEE deepfake-detection paper** (93.5% accuracy). |
+| **[pbl](https://github.com/bharat3645/pbl)** | 2024 | Deep-learning **image encryption** — DCGAN key generator + attention/residual CNN, with NPCR/UACI security analysis. |
+| **[GigX](https://github.com/bharat3645/GigX)** | 2025 | Decentralized freelance marketplace — Solidity/Hardhat on-chain jobs, escrow & reputation + Next.js. **3rd place, BITS Pilani Web3.0 '25**. |
+| **[GenAI-Platform](https://github.com/bharat3645/GenAI-Platform)** | 2025 | GenAI workspace UI: multi-PDF RAG chat, **GraphRAG** entity graphs, ATS resume feedback, text-to-SQL (React · Supabase). |
+
 ---
 
 ## ▌ ACTIVITY PULSE
@@ -111,17 +123,33 @@ I build **small, verifiable tools for the parts of the AI stack that fail quietl
 
 </div>
 
-## ▌ BUILD SPRINT
+## ▌ THE JOURNEY
 
 <div align="center">
 
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/timeline-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/timeline-light.svg">
-  <img alt="Cumulative growth chart of the build sprint, showing the flagship repo count climbing across each real ship date, with the repositories added at every step" src="./assets/timeline-dark.svg" width="850">
+  <img alt="Multi-year timeline across four eras (2023 foundations, 2024 research, 2025 build and ship, 2026 infrastructure and security), plotting real dated milestones — first repos, the deepfake-detection research and IEEE papers, hackathon wins, the AI/ML internship, the Springer journal paper, and the OSS sprint" src="./assets/timeline-dark.svg" width="850">
 </picture>
 
 </div>
+
+---
+
+## ▌ RESEARCH & IMPACT
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="./assets/research-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/research-light.svg">
+  <img alt="Research and impact panel: peer-reviewed output (one Springer Q1 journal paper, three IEEE SCOPUS-indexed conference papers, two book chapters) with venues, plus shipped-work proof points — 58 to 65 percent AI inference cost reduction, a 29-service backend at 500-plus concurrent users, 93.5 percent deepfake-detection accuracy, and under 1 percent false positives on ID validation" src="./assets/research-dark.svg" width="850">
+</picture>
+
+</div>
+
+> Peer-reviewed research is rare on a GitHub profile — **1 Springer Nature Q1 journal, 3 SCOPUS-indexed IEEE papers** (ICISCT '24 @ Kookmin University, ICPCT '25 @ Amity), and **2 book chapters** (federated learning; renewable-energy AI). The deepfake detector above fed one of those IEEE papers.
 
 ---
 
