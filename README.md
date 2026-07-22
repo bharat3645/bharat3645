@@ -187,15 +187,19 @@ Two of my repos (`ml-kem-rb`, `pqc-scan`) exist because the crypto deadlines bel
 
 ---
 
-## ▌ TOOLBOX
+## ▌ AGENT-SECURITY STACK
 
-| | |
-|---|---|
-| **Languages** | `Go` · `Rust` · `Ruby` · `Python` · `TypeScript` · `JavaScript` · `C` |
-| **AI / Agents** | `MCP` · `Claude / Anthropic API` · `LangGraph` · `Ollama` · `GGUF / llama.cpp` · `wasmtime` |
-| **Security** | `WASM sandboxing` · `SBOM / CBOM (CycloneDX)` · `SARIF` · `ML-KEM (FIPS 203)` · `TLS 1.3 hybrid KEX` |
-| **Backend / Infra** | `Rack / Rails` · `net/http` · `Redis` · `PostgreSQL` · `Docker` · `GitHub Actions` |
-| **Practices** | reference-validated impls · adversarial testing · reproducible benchmarks · tamper-evident audit logs |
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="./assets/stack-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/stack-light.svg">
+  <img alt="Agent-security stack — where each flagship sits in a real agent request path" src="./assets/stack-dark.svg" width="850">
+</picture>
+
+</div>
+
+> These aren't scattered side-projects. `modelgate` gates the LLM calls; `mcp-gateway-lite` filters the tool calls; `toolcage` sandboxes each one; `mcp-sentinel`, `agent-rules-audit`, `agent-flightbox` and `trace2eval` watch the run — and `ml-kem-rb` / `pqc-scan` are the post-quantum floor the whole thing has to stand on.
 
 ---
 

@@ -971,9 +971,101 @@ def _span(created):
 
 
 # ---------------------------------------------------------------------------
+# Instrument 9 — agent-security stack (architecture / request-path map)
+# ---------------------------------------------------------------------------
+def _arrow(x1, y1, x2, y2, p, c="ink", sw=3):
+    ang = math.atan2(y2 - y1, x2 - x1)
+    hl, hw = 9, 5
+    bx, by = x2 - hl * math.cos(ang), y2 - hl * math.sin(ang)
+    p1 = (bx - hw * math.sin(ang), by + hw * math.cos(ang))
+    p2 = (bx + hw * math.sin(ang), by - hw * math.cos(ang))
+    return (line(x1, y1, bx, by, stroke=c, sw=sw, p=p, cap="round")
+            + f'<polygon points="{x2:.1f},{y2:.1f} {p1[0]:.1f},{p1[1]:.1f} '
+              f'{p2[0]:.1f},{p2[1]:.1f}" fill="{col(p, c)}"/>')
+
+
+def _node(s, p, x, y, w, h, title, sub, accent, dx=5):
+    s.append(card(x, y, w, h, p, fill="card", dx=dx, dy=dx))
+    s.append(rect(x, y, w, 5, fill=accent, rx=0, p=p))
+    s.append(line(x, y + 5, x + w, y + 5, stroke="ink", sw=2, p=p))
+    s.append(text(x + 11, y + 24, title, size=12.5, fill="ink", weight=800, font=MONO, p=p))
+    s.append(text(x + 11, y + 39, sub, size=9.5, fill="muted", weight=600, font=MONO, p=p))
+
+
+def stack(p, d):
+    W, H = 850, 384
+    idn = "k"
+    s = [frame(W, H, p, idn)]
+    s.append(corner_marks(W, H, p))
+    s.append(head(p, W, "09", "AGENT-SECURITY STACK",
+                  "not scattered tools — where each flagship sits in one real agent request path",
+                  "red"))
+    # --- main request path ---
+    s.append(text(30, 92, "REQUEST PATH", size=9.5, fill="faint", weight=800, font=MONO,
+                  spacing=1, p=p))
+    # AGENT source
+    ax, ay, aw, ah = 28, 108, 92, 62
+    s.append(card(ax, ay, aw, ah, p, fill="card", accent="red", dx=5))
+    s.append(rect(ax, ay, aw, 5, fill="red", rx=0, p=p))
+    s.append(text(ax + aw / 2, ay + 30, "AGENT", size=13, fill="ink", weight=800,
+                  font=MONO, anchor="middle", p=p))
+    s.append(text(ax + aw / 2, ay + 46, "LLM + tools", size=9, fill="muted", weight=600,
+                  font=MONO, anchor="middle", p=p))
+    # LLM lane (upper)
+    _node(s, p, 210, 96, 168, 50, "modelgate", "route · fallback · cost", "blue")
+    s.append(text(388 + 22, 116, "LLM", size=11, fill="muted", weight=800, font=MONO, p=p))
+    s.append(text(388 + 12, 132, "provider", size=8.5, fill="faint", weight=600, font=MONO, p=p))
+    s.append(rect(386, 100, 3, 42, fill="blue", rx=1, p=p))
+    # tool lane (lower)
+    _node(s, p, 210, 158, 168, 50, "mcp-gateway-lite", "allowlist · rate-limit", "blue")
+    _node(s, p, 398, 158, 132, 50, "toolcage", "WASM sandbox", "red")
+    s.append(text(548, 176, "TOOL", size=11, fill="muted", weight=800, font=MONO, p=p))
+    s.append(text(548, 191, "runs", size=8.5, fill="faint", weight=600, font=MONO, p=p))
+    s.append(rect(542, 160, 3, 42, fill="red", rx=1, p=p))
+    # arrows
+    s.append(_arrow(ax + aw, ay + 20, 210, 121, p, c="blue"))       # agent -> modelgate
+    s.append(_arrow(378, 121, 388, 118, p, c="blue"))               # modelgate -> LLM
+    s.append(_arrow(ax + aw, ay + 42, 210, 183, p, c="red"))        # agent -> gateway
+    s.append(_arrow(378, 183, 398, 183, p, c="ink"))                # gateway -> toolcage
+    s.append(_arrow(530, 183, 542, 183, p, c="red"))                # toolcage -> tool
+    # --- observers rail ---
+    oy = 236
+    s.append(line(24, oy - 12, W - 24, oy - 12, stroke="grid", sw=2, p=p))
+    s.append(text(30, oy + 2, "OBSERVED & VERIFIED BY", size=9.5, fill="faint", weight=800,
+                  font=MONO, spacing=1, p=p))
+    obs = [
+        ("agent-rules-audit", "lints the agent's rule files", "red"),
+        ("mcp-sentinel", "grades the MCP config A–F", "red"),
+        ("agent-flightbox", "records the run's syscalls", "red"),
+        ("trace2eval", "turns traces into eval sets", "blue"),
+    ]
+    ox = 28
+    ow = (W - 56 - 3 * 12) / 4
+    for i, (nm, role, acc) in enumerate(obs):
+        x = ox + i * (ow + 12)
+        s.append(card(x, oy + 14, ow, 50, p, fill="card", accent=acc, dx=4))
+        s.append(text(x + 14, oy + 34, nm, size=11, fill="ink", weight=800, font=MONO, p=p))
+        _wrap(s, p, role, x + 14, oy + 50, ow - 22, size=9, fill="muted", lh=11, maxlines=2)
+    # --- PQC foundation ---
+    fy = 322
+    s.append(rect(24 + 5, fy + 5, W - 48, 40, fill="ink", rx=3, p=p))
+    s.append(rect(24, fy, W - 48, 40, fill="card", rx=3, stroke="ink", sw=2.5, p=p))
+    s.append(rect(24, fy, 7, 40, fill="purple", rx=0, p=p))
+    s.append(line(31, fy, 31, fy + 40, stroke="ink", sw=2.5, p=p))
+    s.append(text(44, fy + 18, "POST-QUANTUM FOUNDATION", size=11, fill="ink", weight=800,
+                  font=MONO, spacing=0.5, p=p))
+    s.append(text(44, fy + 33, "ml-kem-rb · pqc-scan — the crypto layer this whole stack has to migrate to",
+                  size=9.5, fill="muted", weight=600, font=MONO, p=p))
+    s.append(text(W - 34, fy + 26, "FIPS 203", size=11, fill="purple", weight=800,
+                  font=MONO, anchor="end", p=p))
+    s.append("</svg>")
+    return "".join(s)
+
+
+# ---------------------------------------------------------------------------
 INSTRUMENTS = {"boot": boot, "hero": hero, "status": status_board, "domains": radar,
                "pulse": pulse, "timeline": timeline, "benchmarks": benchmarks,
-               "pqc-clock": pqc_clock, "langmix": langmix}
+               "pqc-clock": pqc_clock, "langmix": langmix, "stack": stack}
 
 
 def main():
