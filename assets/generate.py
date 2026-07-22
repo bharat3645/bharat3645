@@ -706,13 +706,15 @@ def boot(p, d):
     s.append(rect(16 + 6, 12 + 6, W - 32, H - 24, fill="ink", rx=4, p=p))
     s.append(rect(16, 12, W - 32, H - 24, fill="card", rx=4, stroke="ink", sw=3, p=p))
     s.append(rect(16, 12, W - 32, H - 24, fill=f"url(#dg{idn})", rx=4, p=p))
-    s.append(corner_marks(W, H, p, inset=9, L=15))
+    # no corner registration marks: the window-chrome instruments (00 boot,
+    # 01 hero) share a plain windowed frame; the dashboard panels (02-10) carry
+    # the marks. Keeps the two families visually distinct and internally consistent.
     # chrome
     s.append(rect(16, 12, W - 32, 38, fill="ink", rx=0, p=p))
     for i in range(3):
         s.append(rect(34 + i * 22, 24, 13, 13, fill=["sig", "yellow", "green"][i], rx=2,
                       stroke="ink", sw=1.5, p=p))
-    s.append(text(W - 32, 36, f"bharat3645@security: ~/portfolio", size=12.5,
+    s.append(text(W - 32, 36, "00 // bharat3645@security:~/portfolio", size=12.5,
                   fill="page", weight=800, font=MONO, anchor="end", spacing=0.3, p=p))
     tagcol = {"ok": "green", "warn": "orange", "run": "blue"}
     n = len(lines)
@@ -928,7 +930,7 @@ def timeline(p, d):
     s.append(corner_marks(W, H, p))
     tagged = sum(1 for f in pub if f["tag"])
     s.append(head(p, W, "05", "BUILD SPRINT",
-                  f"{len(pub)} public flagships shipped in a {_span(created)}-day burst · {tagged} version-tagged",
+                  f"{len(pub)} public + 1 private = 13 flagships in a {_span(created)}-day burst · {tagged} version-tagged",
                   "purple"))
     if not pub:
         s.append(text(W / 2, H / 2, "activity data unavailable", size=13, fill="muted",
@@ -990,10 +992,8 @@ def timeline(p, d):
             s.append(text(col_x + 17, yy + 11, nm, size=9, fill="ink", weight=700, font=MONO, p=p))
             if f["tag"]:
                 s.append(circle(col_x + chipw - 8, yy + 8, 3, fill="sig", p=p))
-    # endpoint callout: +1 private -> 13
+    # endpoint marker (the total is stated in the subtitle, so no overlapping label)
     s.append(circle(x1, yof(maxc), 5, fill="sig", stroke="ink", sw=2, p=p))
-    s.append(text(x1 - 6, yof(maxc) - 12, f"{maxc} public  +1 private = 13", size=10,
-                  fill="ink", weight=800, font=MONO, anchor="end", p=p))
     s.append("</svg>")
     return "".join(s)
 
