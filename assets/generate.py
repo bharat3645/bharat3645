@@ -821,20 +821,33 @@ def status_board(p, d):
 # Instrument — activity pulse (real commits/day + recent commits)
 # ---------------------------------------------------------------------------
 def pulse(p, d):
-    W, H = 850, 336
+    W, H = 850, 360
     idn = "p"
-    perday = d["perday"] or [(NOW.date() - timedelta(days=WINDOW - 1 - i), 0)
-                             for i in range(WINDOW)]
-    total = sum(c for _, c in perday)
-    active = sum(1 for _, c in perday if c > 0)
-    peak = max((c for _, c in perday), default=0)
+    pub = [f for f in facts.FLAGSHIPS if not f.get("private")]
+    ndays = 14
+    today = NOW.date()
+    cols = [today - timedelta(days=ndays - 1 - i) for i in range(ndays)]
+    colset = set(cols)
+    mat = {f["name"]: {} for f in pub}
+    for c in d["commits"]:
+        dd = c["dt"].date()
+        if dd in colset and c["repo"] in mat:
+            mat[c["repo"]][dd] = mat[c["repo"]].get(dd, 0) + 1
+    totals = {n: sum(v.values()) for n, v in mat.items()}
+    maxcell = max((v for r in mat.values() for v in r.values()), default=1)
+    grand = sum(totals.values())
+    active_days = len({dd for r in mat.values() for dd in r})
+    daytotals = {col: sum(mat[n].get(col, 0) for n in mat) for col in cols}
+    busiest = max(daytotals.values(), default=0)
+    rows = sorted(pub, key=lambda f: totals[f["name"]], reverse=True)
+
     s = [frame(W, H, p, idn)]
     s.append(corner_marks(W, H, p))
     s.append(head(p, W, "04", "ACTIVITY PULSE",
-                  f"real commits across the public flagships over the last {WINDOW} days · live from the API",
+                  f"commits per flagship over the last {ndays} days — brighter = busier · live from the API",
                   "orange", live=True))
-    chips = [(str(total), "COMMITS", "orange"), (str(active), "ACTIVE DAYS", "cyan"),
-             (str(peak), "BUSIEST DAY", "sig")]
+    chips = [(str(grand), "COMMITS", "orange"), (str(active_days), "ACTIVE DAYS", "cyan"),
+             (str(busiest), "BUSIEST DAY", "sig")]
     cx = 24
     for val, lab, c in chips:
         label = f"{val} {lab}"
@@ -845,42 +858,48 @@ def pulse(p, d):
         s.append(text(cx + 13 + len(val) * 8 + 6, 98, lab, size=10, fill="muted",
                       weight=700, font=MONO, p=p))
         cx += cw + 12
-    # bar chart
-    bx, by, bw, bh = 26, 120, W - 52, 84
-    s.append(line(bx, by + bh, bx + bw, by + bh, stroke="ink", sw=2.5, p=p))
-    n = len(perday)
-    slot = bw / n
-    barw = slot * 0.66
-    scale = (bh - 8) / max(peak, 1)
-    for i, (dt, c) in enumerate(perday):
-        x = bx + i * slot + (slot - barw) / 2
-        hh = c * scale
-        if c > 0:
-            col_ = "sig" if c == peak else "orange"
-            s.append(rect(x, by + bh - hh, barw, hh, fill=col_, rx=1, stroke="ink", sw=1.2, p=p))
-        else:
-            s.append(rect(x, by + bh - 3, barw, 3, fill="grid", rx=1, p=p))
-    s.append(text(bx, by + bh + 15, perday[0][0].strftime("%b %d"), size=9.5, fill="faint",
+    # activity matrix: rows = repos (busiest first), cols = days
+    gx, gy = 176, 124
+    gw = W - 24 - 44 - gx
+    gap = 2
+    cw = gw / ndays
+    rh = 16
+    for r, f in enumerate(rows):
+        name = f["name"]
+        y = gy + r * rh
+        lc = facts.LANG_COLORS.get(f["lang"], p["muted"])
+        s.append(circle(30, y + rh / 2 - 1, 3.6, fill=lc, stroke="ink", sw=1.2, p=p))
+        s.append(text(40, y + rh / 2 + 3, name, size=10.5, fill="ink", weight=700,
+                      font=MONO, p=p))
+        for i, col in enumerate(cols):
+            cnt = mat[name].get(col, 0)
+            x = gx + i * cw
+            if cnt == 0:
+                s.append(rect(x, y + 1, cw - gap, rh - 4, fill="none", rx=1,
+                              stroke="grid", sw=1, p=p))
+            else:
+                op = round(0.32 + 0.68 * (cnt / maxcell), 2)
+                fillc = "sig" if cnt == maxcell else "orange"
+                s.append(f'<rect x="{x:.1f}" y="{y+1:.1f}" width="{cw-gap:.1f}" '
+                         f'height="{rh-4}" rx="1" fill="{p[fillc]}" fill-opacity="{op}" '
+                         f'stroke="{p["ink"]}" stroke-width="1"/>')
+        s.append(text(W - 26, y + rh / 2 + 3, str(totals[name]), size=10.5,
+                      fill="ink" if totals[name] else "faint", weight=800, font=MONO,
+                      anchor="end", p=p))
+    # date axis + legend
+    ay = gy + len(rows) * rh + 12
+    for i, col in enumerate(cols):
+        if i == 0 or i == ndays - 1 or col.day == 1:
+            s.append(text(gx + i * cw + (cw - gap) / 2, ay, col.strftime("%m/%d"), size=8.5,
+                          fill="faint", weight=700, font=MONO, anchor="middle", p=p))
+    s.append(text(gx, ay + 20, "less", size=9.5, fill="faint", weight=700, font=MONO, p=p))
+    for k in range(5):
+        s.append(rect(gx + 34 + k * 16, ay + 12, 12, 10, fill="orange",
+                      opacity=round(0.32 + 0.68 * (k / 4), 2), rx=1, stroke="ink", sw=1, p=p))
+    s.append(text(gx + 34 + 5 * 16 + 4, ay + 20, "more", size=9.5, fill="faint",
                   weight=700, font=MONO, p=p))
-    s.append(text(bx + bw, by + bh + 15, perday[-1][0].strftime("%b %d"), size=9.5,
-                  fill="faint", weight=700, font=MONO, anchor="end", p=p))
-    # recent commits
-    ry = 244
-    s.append(text(26, ry, "RECENT COMMITS", size=10.5, fill="ink", weight=800, font=MONO,
-                  spacing=0.5, p=p))
-    for i, c in enumerate(d["recent"][:5]):
-        yy = ry + 16 + i * 16
-        dot = DOMAIN_ACCENT.get(c["domain"], "muted")
-        s.append(circle(31, yy - 3, 3.6, fill=dot, stroke="ink", sw=1.2, p=p))
-        s.append(text(42, yy, f"{c['repo']}", size=10.5, fill="ink", weight=800, font=MONO, p=p))
-        msg = c["msg"]
-        maxlen = 74
-        if len(msg) > maxlen:
-            msg = msg[:maxlen - 1] + "…"
-        s.append(text(42 + len(c["repo"]) * 7.1 + 10, yy, msg, size=10.5, fill="muted",
-                      weight=600, font=MONO, p=p))
-        s.append(text(W - 30, yy, rel_age(c["dt"]), size=10, fill="faint", weight=700,
-                      font=MONO, anchor="end", p=p))
+    s.append(text(W - 26, ay + 20, "commits →", size=9.5, fill="faint", weight=700,
+                  font=MONO, anchor="end", p=p))
     s.append("</svg>")
     return "".join(s)
 
