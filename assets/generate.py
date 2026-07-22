@@ -1063,9 +1063,97 @@ def stack(p, d):
 
 
 # ---------------------------------------------------------------------------
+# Instrument 10 — portfolio constellation (repo network graph)
+# ---------------------------------------------------------------------------
+# Hand-placed layout (deterministic). Edges below are FACTUAL only:
+#   - the MCP backbone connects repos that genuinely implement/consume MCP
+#   - gw<->sentinel is the documented CI cross-check (mcp-gateway-lite README)
+#   - mlkem<->pqc-scan is the ML-KEM implement/detect pair
+NET_POS = {
+    "agent-rules-audit": (138, 150), "toolcage": (232, 138),
+    "mcp-sentinel": (138, 232), "agent-flightbox": (250, 224),
+    "mcp-gateway-lite": (568, 150), "modelgate": (668, 148),
+    "localmodel-fit": (566, 232), "trace2eval": (668, 232),
+    "ml-kem-rb": (250, 372), "pqc-scan": (352, 388),
+    "idempotent-rack": (566, 372), "acts-as-mcp": (664, 366),
+    "gemfile-lock-audit": (772, 250),
+}
+NET_HUB = (410, 250)
+NET_MCP = ["agent-rules-audit", "mcp-sentinel", "toolcage", "mcp-gateway-lite", "acts-as-mcp"]
+
+
+def constellation(p, d):
+    W, H = 850, 462
+    idn = "n"
+    tot = {f["name"]: sum(1 for c in d["commits"] if c["repo"] == f["name"])
+           for f in facts.FLAGSHIPS}
+    mx = max(tot.values(), default=1) or 1
+    s = [frame(W, H, p, idn)]
+    s.append(corner_marks(W, H, p))
+    s.append(head(p, W, "10", "PORTFOLIO CONSTELLATION",
+                  "the flagships as a network — node size = commits · edges = shared MCP + verified links",
+                  "cyan", live=True))
+
+    def rad(nm):
+        return 13 + (tot.get(nm, 0) / mx) * 13
+
+    # cluster labels
+    for label, (lx, ly), c in [("AGENT SECURITY", (150, 104), "red"),
+                               ("AI INFRA", (612, 104), "blue"),
+                               ("POST-QUANTUM", (250, 424), "purple"),
+                               ("BACKEND", (615, 424), "green"),
+                               ("SUPPLY", (772, 300), "yellow")]:
+        s.append(text(lx, ly, label, size=10, fill=c, weight=800, font=MONO,
+                      anchor="middle", spacing=0.5, p=p))
+    # edges (behind nodes)
+    hx, hy = NET_HUB
+    for nm in NET_MCP:
+        x, y = NET_POS[nm]
+        s.append(line(hx, hy, x, y, stroke="grid", sw=1.8, p=p))
+    # special factual edges
+    def edge(a, b, c, lbl, dash=None):
+        ax, ay = NET_POS[a]
+        bx, by = NET_POS[b]
+        out = line(ax, ay, bx, by, stroke=c, sw=2.4, p=p, dash=dash)
+        mx2, my2 = (ax + bx) / 2, (ay + by) / 2
+        return out + text(mx2, my2 - 5, lbl, size=8, fill=c, weight=800, font=MONO,
+                          anchor="middle", p=p)
+    s.append(edge("mcp-gateway-lite", "mcp-sentinel", p["sig"], "CI verifies"))
+    s.append(edge("ml-kem-rb", "pqc-scan", p["purple"], "ML-KEM"))
+    s.append(edge("modelgate", "mcp-gateway-lite", p["blue"], "mirrors", dash="4 3"))
+    # hub
+    s.append(circle(hx, hy, 21, fill="card", stroke="ink", sw=2.5, p=p))
+    s.append(text(hx, hy - 1, "MCP", size=12, fill="ink", weight=800, font=MONO,
+                  anchor="middle", p=p))
+    s.append(text(hx, hy + 12, "hub", size=8, fill="muted", weight=700, font=MONO,
+                  anchor="middle", p=p))
+    # nodes
+    for f in facts.FLAGSHIPS:
+        nm = f["name"]
+        x, y = NET_POS[nm]
+        c = DOMAIN_ACCENT[f["domain"]]
+        r = rad(nm)
+        s.append(circle(x + 3, y + 3, r, fill="ink", p=p))       # hard shadow
+        s.append(circle(x, y, r, fill=c, stroke="ink", sw=2.5, p=p))
+        if f.get("tag"):
+            s.append(text(x, y + 4, f["tag"].replace("v", ""), size=8.5, fill="on_accent",
+                          weight=800, font=MONO, anchor="middle", p=p))
+        short = nm.replace("agent-", "a-").replace("mcp-", "").replace("-audit", "")
+        lblw = len(nm) * 6.0 + 10
+        ly2 = y + r + 13
+        s.append(rect(x - lblw / 2 + 2, ly2 - 11 + 2, lblw, 15, fill="ink", rx=2, p=p))
+        s.append(rect(x - lblw / 2, ly2 - 11, lblw, 15, fill="card", rx=2, stroke="ink", sw=1.3, p=p))
+        s.append(text(x, ly2, nm, size=8.5, fill="ink", weight=700, font=MONO,
+                      anchor="middle", p=p))
+    s.append("</svg>")
+    return "".join(s)
+
+
+# ---------------------------------------------------------------------------
 INSTRUMENTS = {"boot": boot, "hero": hero, "status": status_board, "domains": radar,
                "pulse": pulse, "timeline": timeline, "benchmarks": benchmarks,
-               "pqc-clock": pqc_clock, "langmix": langmix, "stack": stack}
+               "pqc-clock": pqc_clock, "langmix": langmix, "stack": stack,
+               "network": constellation}
 
 
 def main():

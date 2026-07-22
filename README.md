@@ -203,17 +203,19 @@ Two of my repos (`ml-kem-rb`, `pqc-scan`) exist because the crypto deadlines bel
 
 ---
 
-## ▌ CONTRIBUTION GRAPH
+## ▌ PORTFOLIO CONSTELLATION
 
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/bharat3645/bharat3645/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/bharat3645/bharat3645/output/github-contribution-grid-snake.svg">
-  <img alt="Contribution snake" src="https://raw.githubusercontent.com/bharat3645/bharat3645/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: dark)"  srcset="./assets/network-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/network-light.svg">
+  <img alt="Portfolio constellation — the flagships as a network, node size = commits, edges = shared MCP + verified links" src="./assets/network-dark.svg" width="850">
 </picture>
 
 </div>
+
+> Node size is real commit count. The `MCP` hub links the repos that actually speak the protocol; the bright edge is the CI cross-check where **mcp-gateway-lite** verifies **mcp-sentinel**'s own lockfile output — a real test, not a diagram flourish.
 
 ---
 
