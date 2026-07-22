@@ -908,7 +908,7 @@ def pulse(p, d):
 # Instrument — build-sprint timeline (real repo ship dates)
 # ---------------------------------------------------------------------------
 def timeline(p, d):
-    W, H = 850, 300
+    W, H = 850, 340
     idn = "m"
     created = d["created"]
     pub = [f for f in facts.FLAGSHIPS if not f.get("private") and f["name"] in created]
@@ -925,40 +925,63 @@ def timeline(p, d):
         return "".join(s)
     dates = sorted({created[f["name"]].date() for f in pub})
     K = len(dates)
-    ax0, ax1, ay = 40, W - 40, 106
-    s.append(line(ax0, ay, ax1, ay, stroke="ink", sw=3, p=p))
-    colw = (ax1 - ax0) / K
-    centers = [ax0 + colw * (i + 0.5) for i in range(K)]
-    # real day-gap annotations between evenly-spaced ship-days
-    for i in range(K - 1):
-        gap = (dates[i + 1] - dates[i]).days
-        mid = (centers[i] + centers[i + 1]) / 2
-        s.append(text(mid, ay - 6, f"+{gap}d", size=9, fill="faint", weight=700,
-                      font=MONO, anchor="middle", p=p))
-    for i, day in enumerate(dates):
-        cxc = centers[i]
+    steps, cum = [], 0
+    for day in dates:
         reps = [f for f in pub if created[f["name"]].date() == day]
-        s.append(line(cxc, ay - 8, cxc, ay + 8, stroke="ink", sw=3, p=p))
-        s.append(rect(cxc - 7, ay - 7, 14, 14, fill="purple", rx=1, stroke="ink", sw=2, p=p))
-        s.append(text(cxc, ay - 18, day.strftime("%b %d"), size=11, fill="ink", weight=800,
+        cum += len(reps)
+        steps.append((day, cum, reps))
+    maxc = cum
+    # plot geometry
+    x0, x1, pty, pby = 60, W - 40, 96, 190
+    colw = (x1 - x0) / K
+    xcol = [x0 + (i + 0.6) * colw for i in range(K)]
+
+    def yof(c):
+        return pby - c / maxc * (pby - pty)
+    # y gridlines + ticks
+    for c in range(0, maxc + 1, 4):
+        s.append(line(x0, yof(c), x1, yof(c), stroke="grid", sw=1.5, p=p))
+        s.append(text(x0 - 10, yof(c) + 4, str(c), size=9.5, fill="faint", weight=700,
+                      font=MONO, anchor="end", p=p))
+    # step path (cumulative growth) + filled area
+    pts, prev = [(x0, yof(0))], 0
+    for i, (day, c, reps) in enumerate(steps):
+        pts.append((xcol[i], yof(prev)))
+        pts.append((xcol[i], yof(c)))
+        prev = c
+    pts.append((x1, yof(prev)))
+    area = " ".join(f"{x:.1f},{y:.1f}" for x, y in pts) + f" {x1:.1f},{pby:.1f} {x0:.1f},{pby:.1f}"
+    s.append(f'<polygon points="{area}" fill="{p["purple"]}" fill-opacity="0.18"/>')
+    s.append(f'<polyline points="{" ".join(f"{x:.1f},{y:.1f}" for x,y in pts)}" '
+             f'fill="none" stroke="{p["ink"]}" stroke-width="3" stroke-linejoin="round"/>')
+    # risers: marker + cumulative count + repos added
+    for i, (day, c, reps) in enumerate(steps):
+        mx2, my2 = xcol[i], yof(c)
+        s.append(circle(mx2, my2, 6, fill="purple", stroke="ink", sw=2.5, p=p))
+        s.append(rect(mx2 - 15, my2 - 32, 30, 19, fill="purple", rx=3, stroke="ink", sw=2, p=p))
+        s.append(text(mx2, my2 - 19, str(c), size=12, fill="on_accent", weight=800,
                       font=MONO, anchor="middle", p=p))
-        s.append(text(cxc, ay + 28, f"{len(reps)} shipped", size=9.5, fill="purple",
-                      weight=800, font=MONO, anchor="middle", p=p))
-        chipw = min(162, colw - 14)
-        col_x = cxc - chipw / 2
+        s.append(text(mx2, pby + 16, day.strftime("%b %d"), size=10, fill="ink", weight=800,
+                      font=MONO, anchor="middle", p=p))
+        s.append(text(mx2, pby + 29, f"+{len(reps)}", size=9, fill="purple", weight=800,
+                      font=MONO, anchor="middle", p=p))
+        chipw = min(150, colw - 10)
+        col_x = mx2 - chipw / 2
         for k, f in enumerate(reps):
-            yy = ay + 44 + k * 24
+            yy = pby + 40 + k * 19
             lc = facts.LANG_COLORS.get(f["lang"], p["muted"])
-            s.append(rect(col_x + 4, yy + 4, chipw, 19, fill="ink", rx=3, p=p))
-            s.append(rect(col_x, yy, chipw, 19, fill="card", rx=3, stroke="ink", sw=1.6, p=p))
-            s.append(circle(col_x + 11, yy + 9.5, 3.6, fill=lc, stroke="ink", sw=1.2, p=p))
+            s.append(rect(col_x, yy, chipw, 16, fill="card", rx=2, stroke="ink", sw=1.4, p=p))
+            s.append(circle(col_x + 9, yy + 8, 3.2, fill=lc, stroke="ink", sw=1.1, p=p))
             nm = f["name"]
             if len(nm) > 16:
                 nm = nm[:15] + "…"
-            s.append(text(col_x + 20, yy + 13, nm, size=9.5, fill="ink", weight=700,
-                          font=MONO, p=p))
+            s.append(text(col_x + 17, yy + 11, nm, size=9, fill="ink", weight=700, font=MONO, p=p))
             if f["tag"]:
-                s.append(circle(col_x + chipw - 9, yy + 9.5, 3, fill="sig", p=p))
+                s.append(circle(col_x + chipw - 8, yy + 8, 3, fill="sig", p=p))
+    # endpoint callout: +1 private -> 13
+    s.append(circle(x1, yof(maxc), 5, fill="sig", stroke="ink", sw=2, p=p))
+    s.append(text(x1 - 6, yof(maxc) - 12, f"{maxc} public  +1 private = 13", size=10,
+                  fill="ink", weight=800, font=MONO, anchor="end", p=p))
     s.append("</svg>")
     return "".join(s)
 
