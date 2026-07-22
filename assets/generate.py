@@ -558,7 +558,7 @@ def pqc_clock(p, d):
 
 
 def _wrap(s, p, txt, x, y, w, size=10, fill="muted", lh=12, maxlines=3, font=SANS):
-    cpl = max(6, int(w / (size * 0.53)))
+    cpl = max(6, int(w / (size * 0.62)))  # conservative glyph advance so lines never overflow
     words, line_s, lines = txt.split(), "", []
     for word in words:
         t = (line_s + " " + word).strip()

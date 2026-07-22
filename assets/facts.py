@@ -97,7 +97,7 @@ BENCHMARKS = [
          env="Apple M4 · qwen2.5 0.5b+1.5b · real ollama", source="bench/RESULTS.md",
          bar=0.02),
     dict(repo="ml-kem-rb", metric="hybrid KEM (TLS draft)",
-         value="1216 / 1120 B", detail="X25519+ML-KEM-768 client/server shares, 64B shared secret",
+         value="1216 / 1120 B", detail="X25519+ML-KEM-768 client/server shares · 64B secret",
          env="draft-ietf-tls-ecdhe-mlkem-05 · FIPS 203", source="README.md",
          bar=None),  # not a latency bar — shown as spec
 ]
@@ -109,13 +109,13 @@ BENCHMARKS = [
 # ---------------------------------------------------------------------------
 PQC_DEADLINES = [
     dict(date="2026-09-21", label="FIPS 140-2 → Historical",
-         note="FIPS 140-2 certs no longer valid for new federal procurement"),
+         note="FIPS 140-2 certs invalid for new federal procurement"),
     dict(date="2027-01-01", label="NSA CNSA 2.0",
-         note="new National Security Systems must support ML-KEM-1024 + ML-DSA-87"),
+         note="new NSS must support ML-KEM-1024 + ML-DSA-87"),
     dict(date="2030-01-01", label="NIST IR 8547: deprecate",
-         note="RSA / ECDSA / ECDH / DH deprecated for new federal deployments"),
+         note="RSA / ECDSA / ECDH / DH deprecated for new systems"),
     dict(date="2035-01-01", label="NIST IR 8547: disallow",
-         note="classical asymmetric crypto disallowed — treated as forgeable"),
+         note="classical asymmetric crypto disallowed — forgeable"),
 ]
 
 # GitHub linguist colors for the languages we actually ship.
