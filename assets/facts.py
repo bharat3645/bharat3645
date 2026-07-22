@@ -135,27 +135,36 @@ LANG_COLORS = {
 # Multi-year journey — real dated milestones (repo dates verified via the API;
 # research/career/publication dates from the resumes). Drives the JOURNEY chart.
 JOURNEY_ERAS = [
-    dict(key="2023", label="FOUNDATIONS", accent="cyan",
-         note="first repos, GDSC winner, CSI chapter founded"),
+    dict(key="2022", label="FOUNDATIONS", accent="cyan",
+         note="B.Tech CS begins — the CS journey starts"),
+    dict(key="2023", label="FIRST BUILDS", accent="blue",
+         note="first repos, early hackathon wins"),
     dict(key="2024", label="RESEARCH", accent="purple",
-         note="deepfake CNN + image-encryption research → IEEE"),
+         note="deepfake CNN + image encryption → IEEE"),
     dict(key="2025", label="BUILD & SHIP", accent="orange",
-         note="hackathons, GenAI/RAG, web3, first internship"),
+         note="hackathons, GenAI/RAG, first internship"),
     dict(key="2026", label="INFRA & SECURITY", accent="red",
-         note="agent harness → the OSS infra/security sprint"),
+         note="agent harness → OSS infra/security sprint"),
 ]
 
-# (year_fraction 0..1 across 2023-01 .. 2027-01, label, sublabel, lane)
-# lane: "up" = repo/ship, "down" = research/career milestone
+# GitHub activity is only provable from 2023-10 (account created 2023-09); the
+# 2022 era is anchored on real dated education facts (HSC 2022, B.Tech start
+# 2022). No verifiable 2021 activity exists, so no 2021 era is invented.
+# ~3 milestones per era for even visual weight (was 1 in 2023, 4 in 2025).
+# Year-level items (education, GDSC/IEEE recognitions) sit in their real year;
+# only the month is approximate. up = repos/ships, down = research/career/edu.
 JOURNEY_MILES = [
-    dict(date="2023-10", label="first repos", sub="GitHub journey begins", lane="up", accent="cyan"),
-    dict(date="2024-05", label="deepfake detector", sub="CNN 93.5% → IEEE paper", lane="up", accent="purple"),
+    dict(date="2022-05", label="Class XII", sub="HSC · 2022", lane="down", accent="cyan"),
+    dict(date="2022-09", label="B.Tech CS begins", sub="Symbiosis · Data Science", lane="down", accent="cyan"),
+    dict(date="2023-04", label="GDSC winner", sub="hackathon win '23", lane="up", accent="blue"),
+    dict(date="2023-07", label="IEEE Research 3rd", sub="3rd place '23", lane="down", accent="blue"),
+    dict(date="2023-10", label="first repos", sub="GitHub journey begins", lane="up", accent="blue"),
+    dict(date="2024-05", label="deepfake detector", sub="CNN 93.5% → IEEE", lane="up", accent="purple"),
     dict(date="2024-06", label="research intern", sub="PGDAV, Univ. of Delhi", lane="down", accent="purple"),
-    dict(date="2024-11", label="IEEE ICISCT", sub="SCOPUS · Kookmin Univ.", lane="down", accent="purple"),
+    dict(date="2024-11", label="IEEE ICISCT", sub="SCOPUS · Kookmin", lane="down", accent="purple"),
     dict(date="2025-04", label="GigX", sub="3rd · BITS Web3.0 '25", lane="up", accent="orange"),
-    dict(date="2025-07", label="GenAI / RAG era", sub="GraphRAG workspace builds", lane="up", accent="orange"),
     dict(date="2025-10", label="IEEE ICPCT", sub="SCOPUS · Amity", lane="down", accent="orange"),
-    dict(date="2025-12", label="AI/ML intern @ RnR", sub="−58% / −65% inference cost", lane="down", accent="orange"),
+    dict(date="2025-12", label="AI/ML intern @ RnR", sub="−58% / −65% cost", lane="down", accent="orange"),
     dict(date="2026-03", label="Springer Q1", sub="journal paper", lane="down", accent="red"),
     dict(date="2026-06", label="The-Ideal-Harness", sub="agent control plane", lane="up", accent="red"),
     dict(date="2026-07", label="OSS sprint", sub="13 flagship repos", lane="up", accent="red"),

@@ -26,7 +26,7 @@
 
 ## ▌ WHOAMI
 
-I build **small, verifiable tools for the parts of the AI stack that fail quietly** — agent sandboxes, MCP gateways, model-fit predictors, and post-quantum crypto. Each of the flagship repos below ships with a real test suite, CI, and — where it makes a claim about speed or correctness — a committed benchmark you can re-run yourself. It's the latest chapter of a three-year arc: coursework → CV/security **research** → hackathons and GenAI → shipping infrastructure.
+I build **small, verifiable tools for the parts of the AI stack that fail quietly** — agent sandboxes, MCP gateways, model-fit predictors, and post-quantum crypto. Each of the flagship repos below ships with a real test suite, CI, and — where it makes a claim about speed or correctness — a committed benchmark you can re-run yourself. It's the latest chapter of a multi-year arc: coursework → CV/security **research** → hackathons and GenAI → shipping infrastructure.
 
 - 💼 **Now:** AI/ML Engineering Intern @ **RnR Consulting** (Delhi) — shipped a model-routing harness that cut inference cost **58% / 65%**; Go microservices in a 29-service, Temporal-orchestrated backend serving 500+ concurrent users
 - 🎓 **Research:** **1 Springer Q1 journal · 3 IEEE / SCOPUS papers · 2 book chapters** — deepfake detection, federated learning, PQC (see the Research & Impact panel below)
@@ -130,7 +130,7 @@ The recent flagships are the current chapter — the portfolio goes back to 2023
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/timeline-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/timeline-light.svg">
-  <img alt="Multi-year timeline across four eras (2023 foundations, 2024 research, 2025 build and ship, 2026 infrastructure and security), plotting real dated milestones — first repos, the deepfake-detection research and IEEE papers, hackathon wins, the AI/ML internship, the Springer journal paper, and the OSS sprint" src="./assets/timeline-dark.svg" width="850">
+  <img alt="Multi-year timeline across five eras (2022 foundations, 2023 first builds, 2024 research, 2025 build and ship, 2026 infrastructure and security), plotting real dated milestones — B.Tech CS begins, first repos, hackathon wins, the deepfake-detection research and IEEE/Springer papers, the AI/ML internship, and the OSS sprint" src="./assets/timeline-dark.svg" width="850">
 </picture>
 
 </div>

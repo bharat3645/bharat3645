@@ -921,25 +921,25 @@ def pulse(p, d):
 # ---------------------------------------------------------------------------
 # Instrument — build-sprint timeline (real repo ship dates)
 # ---------------------------------------------------------------------------
-def _yfrac(datestr):  # "YYYY-MM" -> position across 2023-01 .. 2027-01
+def _yfrac(datestr):  # "YYYY-MM" -> position across 2022-01 .. 2027-01
     y, m = (int(v) for v in datestr.split("-")[:2])
-    return ((y - 2023) * 12 + (m - 1)) / 48.0
+    return ((y - 2022) * 12 + (m - 1)) / 60.0
 
 
 def timeline(p, d):
-    W, H = 850, 344
+    W, H = 850, 366
     idn = "m"
-    ax0, ax1, ay = 40, W - 30, 208
+    ax0, ax1, ay = 40, W - 30, 198
     s = [frame(W, H, p, idn)]
     s.append(corner_marks(W, H, p))
     s.append(head(p, W, "05", "THE JOURNEY",
-                  "three years, four eras — coursework → research → shipping infra · real repo & milestone dates",
+                  "five years, five eras — from first classes to shipping infra · real dated milestones",
                   "purple"))
 
     def xof(datestr):
         return ax0 + _yfrac(datestr) * (ax1 - ax0)
-    # era bands (one per year) + labels
-    by0, by1 = 82, H - 18
+    # era bands (one per year, equal width) + labels
+    by0, by1 = 80, H - 16
     for i, era in enumerate(facts.JOURNEY_ERAS):
         bx0 = xof(f"{era['key']}-01")
         bx1 = xof(f"{int(era['key'])+1}-01")
@@ -948,42 +948,50 @@ def timeline(p, d):
         if i > 0:
             s.append(line(bx0, by0, bx0, by1, stroke="grid", sw=1.5, p=p, dash="3 4"))
         cxb = (bx0 + bx1) / 2
-        s.append(text(cxb, by0 + 15, era["key"], size=13, fill=era["accent"], weight=800,
+        s.append(text(cxb, by0 + 13, era["key"], size=13, fill=era["accent"], weight=800,
                       font=MONO, anchor="middle", p=p))
-        s.append(text(cxb, by0 + 28, era["label"], size=9.5, fill="muted", weight=800,
-                      font=MONO, anchor="middle", spacing=0.5, p=p))
-    # axis
+        s.append(text(cxb, by0 + 25, era["label"], size=9, fill="muted", weight=800,
+                      font=MONO, anchor="middle", spacing=0.3, p=p))
     s.append(line(ax0, ay, ax1, ay, stroke="ink", sw=3, p=p))
-    # milestones, two lanes with proximity stagger
-    def lay(lane):
-        ms = sorted((m for m in facts.JOURNEY_MILES if m["lane"] == lane), key=lambda m: xof(m["date"]))
-        out, prevx, row = [], -999, 0
+
+    # greedy multi-row packing: place each milestone on the lowest row whose last
+    # entry is >= MINGAP away in x, so labels never share a row too close.
+    MINGAP = 118
+
+    def lay(lane, maxrows):
+        ms = sorted((m for m in facts.JOURNEY_MILES if m["lane"] == lane),
+                    key=lambda m: xof(m["date"]))
+        lastx, out = [], []
         for m in ms:
             x = xof(m["date"])
-            row = 1 - row if x - prevx < 150 else 0
-            out.append((m, x, row))
-            prevx = x
+            r = next((ri for ri, lx in enumerate(lastx) if x - lx >= MINGAP), None)
+            if r is None:
+                if len(lastx) < maxrows:
+                    r = len(lastx); lastx.append(x)
+                else:
+                    r = min(range(len(lastx)), key=lambda i: lastx[i])
+            lastx[r] = x
+            out.append((m, x, r))
         return out
-    up = {0: ay - 26, 1: ay - 66}
-    dn = {0: ay + 26, 1: ay + 66}
-    for m, x, row in lay("up"):
-        my = up[row]
+    up = {0: ay - 26, 1: ay - 62}
+    dn = {0: ay + 24, 1: ay + 56, 2: ay + 88}
+    for m, x, r in lay("up", 2):
+        my = up[r]
         s.append(line(x, ay, x, my, stroke=m["accent"], sw=2, p=p))
         s.append(circle(x, my, 5, fill=m["accent"], stroke="ink", sw=2, p=p))
         s.append(text(x, my - 20, m["label"], size=10.5, fill="ink", weight=800, font=MONO,
                       anchor="middle", p=p))
         s.append(text(x, my - 9, m["sub"], size=8.5, fill="muted", weight=600, font=MONO,
                       anchor="middle", p=p))
-    for m, x, row in lay("down"):
-        my = dn[row]
+    for m, x, r in lay("down", 3):
+        my = dn[r]
         s.append(line(x, ay, x, my, stroke=m["accent"], sw=2, p=p))
         s.append(circle(x, my, 5, fill=m["accent"], stroke="ink", sw=2, p=p))
         s.append(text(x, my + 15, m["label"], size=10.5, fill="ink", weight=800, font=MONO,
                       anchor="middle", p=p))
         s.append(text(x, my + 26, m["sub"], size=8.5, fill="muted", weight=600, font=MONO,
                       anchor="middle", p=p))
-    # lane legend (bottom, clear of the 2026 milestones)
-    s.append(text(ax0, H - 8, "▲ above = repos & ships       ▼ below = research & career",
+    s.append(text(ax0, H - 7, "▲ above = repos & ships       ▼ below = research & career",
                   size=9, fill="faint", weight=700, font=MONO, p=p))
     s.append("</svg>")
     return "".join(s)
