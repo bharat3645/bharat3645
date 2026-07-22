@@ -572,10 +572,65 @@ def _wrap(s, p, txt, x, y, w, size=10, fill="muted", lh=12, maxlines=3, font=SAN
 
 
 # ---------------------------------------------------------------------------
-# Instrument 5 — language mix (left-to-right reveal)
+# Instrument 8 — language mix (squarified treemap)
 # ---------------------------------------------------------------------------
+def _lum(hexc):
+    hexc = hexc.lstrip("#")
+    r, g, b = int(hexc[0:2], 16), int(hexc[2:4], 16), int(hexc[4:6], 16)
+    return 0.299 * r + 0.587 * g + 0.114 * b
+
+
+def _sq_layoutrow(sizes, x, y, dx, dy):
+    w = sum(sizes) / dy
+    out, yy = [], y
+    for sv in sizes:
+        out.append((x, yy, w, sv / w))
+        yy += sv / w
+    return out
+
+
+def _sq_layoutcol(sizes, x, y, dx, dy):
+    h = sum(sizes) / dx
+    out, xx = [], x
+    for sv in sizes:
+        out.append((xx, y, sv / h, h))
+        xx += sv / h
+    return out
+
+
+def _sq_layout(sizes, x, y, dx, dy):
+    return _sq_layoutrow(sizes, x, y, dx, dy) if dx >= dy else _sq_layoutcol(sizes, x, y, dx, dy)
+
+
+def _sq_leftover(sizes, x, y, dx, dy):
+    if dx >= dy:
+        w = sum(sizes) / dy
+        return x + w, y, dx - w, dy
+    h = sum(sizes) / dx
+    return x, y + h, dx, dy - h
+
+
+def _sq_worst(sizes, x, y, dx, dy):
+    return max(max(w / h, h / w) for (_, _, w, h) in _sq_layout(sizes, x, y, dx, dy))
+
+
+def squarify(sizes, x, y, dx, dy):
+    """Squarified treemap (Bruls et al.). Returns rects in input order."""
+    sizes = [float(s) for s in sizes]
+    if not sizes:
+        return []
+    if len(sizes) == 1:
+        return _sq_layout(sizes, x, y, dx, dy)
+    i = 1
+    while i < len(sizes) and _sq_worst(sizes[:i], x, y, dx, dy) >= _sq_worst(sizes[:i + 1], x, y, dx, dy):
+        i += 1
+    cur, rest = sizes[:i], sizes[i:]
+    lx, ly, ldx, ldy = _sq_leftover(cur, x, y, dx, dy)
+    return _sq_layout(cur, x, y, dx, dy) + squarify(rest, lx, ly, ldx, ldy)
+
+
 def langmix(p, d):
-    W, H = 850, 158
+    W, H = 850, 320
     idn = "l"
     lb = d["lang_bytes"] or {"Go": 351152, "Rust": 224529, "Ruby": 156837,
                              "Python": 118975, "JavaScript": 100465, "Shell": 26261}
@@ -583,28 +638,38 @@ def langmix(p, d):
     total = sum(v for _, v in items) or 1
     s = [frame(W, H, p, idn)]
     s.append(corner_marks(W, H, p))
-    s.append(head(p, W, "08", "LANGUAGE MIX",
-                  "by bytes across the public flagship repos · computed live from the GitHub API",
+    s.append(head(p, W, "08", "CODEBASE COMPOSITION",
+                  "every byte across the public flagships, area-proportional · computed live from the API",
                   "cyan", live=True))
-    bx, by, bw, bh = 24, 84, W - 48, 26
-    s.append(rect(bx + 4, by + 4, bw, bh, fill="ink", rx=2, p=p))
-    x = bx
-    for lang, v in items:
-        seg = v / total * bw
+    tx, ty, tw, th = 24, 86, W - 48, H - 100
+    area = tw * th
+    rects = squarify([v / total * area for _, v in items], tx, ty, tw, th)
+    # tile fills first, then a unified ink border grid on top for clean shared edges
+    for (lang, v), (rx, ry, rw, rh) in zip(items, rects):
         c = facts.LANG_COLORS.get(lang, p["muted"])
-        s.append(f'<rect x="{x:.1f}" y="{by}" width="{max(0,seg):.1f}" height="{bh}" fill="{c}"/>')
-        if x > bx:
-            s.append(line(x, by, x, by + bh, stroke="ink", sw=2, p=p))
-        x += seg
-    s.append(rect(bx, by, bw, bh, fill="none", rx=2, stroke="ink", sw=2.5, p=p))
-    lx, ly = 24, 138
-    for lang, v in items:
+        s.append(f'<rect x="{rx:.2f}" y="{ry:.2f}" width="{rw:.2f}" height="{rh:.2f}" fill="{c}"/>')
+    for (lang, v), (rx, ry, rw, rh) in zip(items, rects):
+        c = facts.LANG_COLORS.get(lang, p["muted"])
+        tcol = "#141109" if _lum(c) > 140 else "#f4efe1"
         pct = v / total * 100
-        c = facts.LANG_COLORS.get(lang, p["muted"])
-        s.append(rect(lx, ly - 11, 13, 13, fill=c, rx=2, stroke="ink", sw=1.5, p=p))
-        label = f"{lang} {pct:.1f}%"
-        s.append(text(lx + 19, ly, label, size=12, fill="ink", weight=700, font=MONO, p=p))
-        lx += 40 + len(label) * 7.5
+        s.append(f'<rect x="{rx:.2f}" y="{ry:.2f}" width="{rw:.2f}" height="{rh:.2f}" '
+                 f'fill="none" stroke="{p["ink"]}" stroke-width="3"/>')
+        kb = f"{v/1000:.0f} KB" if v >= 1000 else f"{v} B"
+        if rw > 92 and rh > 52:
+            s.append(text(rx + 12, ry + 26, lang, size=16, fill=tcol, weight=800, font=MONO, p=p))
+            s.append(text(rx + 12, ry + 45, f"{pct:.1f}%", size=13, fill=tcol, weight=800,
+                          font=MONO, opacity=0.92, p=p))
+            if rh > 74:
+                s.append(text(rx + 12, ry + rh - 12, kb, size=10.5, fill=tcol, weight=600,
+                              font=MONO, opacity=0.8, p=p))
+        elif rw > 46 and rh > 30:
+            s.append(text(rx + 8, ry + 19, lang, size=12, fill=tcol, weight=800, font=MONO, p=p))
+            s.append(text(rx + 8, ry + 34, f"{pct:.1f}%", size=11, fill=tcol, weight=700,
+                          font=MONO, opacity=0.9, p=p))
+        else:
+            s.append(text(rx + rw / 2, ry + rh / 2 + 4, f"{pct:.0f}%", size=11, fill=tcol,
+                          weight=800, font=MONO, anchor="middle", p=p))
+    s.append(rect(tx, ty, tw, th, fill="none", rx=2, stroke="ink", sw=3.5, p=p))
     s.append("</svg>")
     return "".join(s)
 
