@@ -13,13 +13,13 @@
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/boot-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/boot-light.svg">
-  <img alt="portfolio boot sequence" src="./assets/boot-dark.svg" width="850">
+  <img alt="Terminal boot log that mounts the portfolio's five domains with their repo counts, reports overall CI health, flags any failing build, and confirms the flagship and public-repo totals" src="./assets/boot-dark.svg" width="850">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/hero-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg">
-  <img alt="Bharat Singh Parihar — agent-security & AI-infrastructure engineer" src="./assets/hero-dark.svg" width="850">
+  <img alt="Header for Bharat Singh Parihar, agent-security and AI-infrastructure engineer, with live tiles for flagship repos, green CI, languages, public repos and followers" src="./assets/hero-dark.svg" width="850">
 </picture>
 
 </div>
@@ -43,7 +43,7 @@ I build **small, verifiable tools for the parts of the AI stack that fail quietl
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/status-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/status-light.svg">
-  <img alt="Live system status — per-repo CI verdict, release, last commit and build history" src="./assets/status-dark.svg" width="850">
+  <img alt="Live system-status board showing, for each public flagship repo, its CI pass or fail verdict, release tag, time since last commit, and a bar of recent build results" src="./assets/status-dark.svg" width="850">
 </picture>
 
 </div>
@@ -59,7 +59,7 @@ I build **small, verifiable tools for the parts of the AI stack that fail quietl
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/domains-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/domains-light.svg">
-  <img alt="Domain map — 13 flagship repositories across five problem domains" src="./assets/domains-dark.svg" width="850">
+  <img alt="Radar chart mapping the 13 flagship repositories across five domains — agent security, AI infrastructure, post-quantum crypto, backend systems and supply chain — sized by live repo count per domain" src="./assets/domains-dark.svg" width="850">
 </picture>
 
 </div>
@@ -106,7 +106,7 @@ I build **small, verifiable tools for the parts of the AI stack that fail quietl
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/pulse-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/pulse-light.svg">
-  <img alt="Activity pulse — real commits per day across the public flagships" src="./assets/pulse-dark.svg" width="850">
+  <img alt="Heatmap of commits per flagship repository over the last 14 days, one row per repo sorted by activity, with brighter cells meaning more commits that day" src="./assets/pulse-dark.svg" width="850">
 </picture>
 
 </div>
@@ -118,7 +118,7 @@ I build **small, verifiable tools for the parts of the AI stack that fail quietl
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/timeline-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/timeline-light.svg">
-  <img alt="Build sprint — the real dates the flagship repos shipped" src="./assets/timeline-dark.svg" width="850">
+  <img alt="Cumulative growth chart of the build sprint, showing the flagship repo count climbing across each real ship date, with the repositories added at every step" src="./assets/timeline-dark.svg" width="850">
 </picture>
 
 </div>
@@ -132,7 +132,7 @@ I build **small, verifiable tools for the parts of the AI stack that fail quietl
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/benchmarks-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/benchmarks-light.svg">
-  <img alt="Verified benchmarks — reproducible from each repo's committed harness" src="./assets/benchmarks-dark.svg" width="850">
+  <img alt="Four verified benchmarks — mcp-gateway-lite proxy overhead, toolcage WASM-sandbox overhead, localmodel-fit prefill-scaling error, and ml-kem-rb hybrid-KEM byte sizes — each reproducible from that repo's own harness" src="./assets/benchmarks-dark.svg" width="850">
 </picture>
 
 </div>
@@ -166,7 +166,7 @@ Two of my repos (`ml-kem-rb`, `pqc-scan`) exist because the crypto deadlines bel
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/pqc-clock-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/pqc-clock-light.svg">
-  <img alt="Post-quantum migration clock — real US federal PQC deadlines counting down" src="./assets/pqc-clock-dark.svg" width="850">
+  <img alt="Post-quantum migration clock counting down to four real US federal cryptography deadlines: the FIPS 140-2 sunset, NSA CNSA 2.0, and the NIST IR 8547 deprecate and disallow dates" src="./assets/pqc-clock-dark.svg" width="850">
 </picture>
 
 </div>
@@ -180,7 +180,7 @@ Two of my repos (`ml-kem-rb`, `pqc-scan`) exist because the crypto deadlines bel
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/langmix-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/langmix-light.svg">
-  <img alt="Language mix by bytes across the public flagship repos" src="./assets/langmix-dark.svg" width="850">
+  <img alt="Treemap of the portfolio's language composition by bytes across the public flagship repos, with each language block sized in proportion to its share" src="./assets/langmix-dark.svg" width="850">
 </picture>
 
 </div>
@@ -194,7 +194,7 @@ Two of my repos (`ml-kem-rb`, `pqc-scan`) exist because the crypto deadlines bel
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/stack-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/stack-light.svg">
-  <img alt="Agent-security stack — where each flagship sits in a real agent request path" src="./assets/stack-dark.svg" width="850">
+  <img alt="Architecture diagram placing each flagship in a real agent request path: modelgate on the LLM lane; mcp-gateway-lite and toolcage on the tool lane; mcp-sentinel, agent-rules-audit, agent-flightbox and trace2eval as observers; over a post-quantum foundation of ml-kem-rb and pqc-scan" src="./assets/stack-dark.svg" width="850">
 </picture>
 
 </div>
@@ -210,7 +210,7 @@ Two of my repos (`ml-kem-rb`, `pqc-scan`) exist because the crypto deadlines bel
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/network-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/network-light.svg">
-  <img alt="Portfolio constellation — the flagships as a network, node size = commits, edges = shared MCP + verified links" src="./assets/network-dark.svg" width="850">
+  <img alt="Network graph of the 13 flagship repositories clustered by domain, node size proportional to commit count, connected through a shared-MCP hub with labeled links including the mcp-gateway-lite and mcp-sentinel CI cross-check" src="./assets/network-dark.svg" width="850">
 </picture>
 
 </div>

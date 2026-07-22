@@ -194,12 +194,14 @@ def text(x, y, s, size=13, fill="ink", weight=700, font=SANS, anchor="start",
     if spacing is not None:
         style += f';letter-spacing:{spacing}px'
     extra = f' opacity="{opacity}"' if opacity is not None else ""
-    return (f'<text x="{x:.1f}" y="{y:.1f}" fill="{col(p,fill)}" text-anchor="{anchor}" '
+    anc = f' text-anchor="{anchor}"' if anchor != "start" else ""  # start is default
+    return (f'<text x="{x:.1f}" y="{y:.1f}" fill="{col(p,fill)}"{anc} '
             f'style="{style}"{extra}>{esc(s)}</text>')
 
 
 def rect(x, y, w, h, fill="card", rx=0, stroke=None, sw=2.5, opacity=None, p=None):
-    s = (f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" rx="{rx}" '
+    rxa = f' rx="{rx}"' if rx else ""  # rx=0 is the default; omit to save bytes
+    s = (f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}"{rxa} '
          f'fill="{col(p,fill)}"')
     if stroke:
         s += f' stroke="{col(p,stroke)}" stroke-width="{sw}"'
@@ -209,8 +211,9 @@ def rect(x, y, w, h, fill="card", rx=0, stroke=None, sw=2.5, opacity=None, p=Non
 
 
 def line(x1, y1, x2, y2, stroke="ink", sw=2, p=None, dash=None, cap="butt", opacity=None):
+    capa = f' stroke-linecap="{cap}"' if cap != "butt" else ""  # butt is default
     s = (f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" '
-         f'stroke="{col(p,stroke)}" stroke-width="{sw}" stroke-linecap="{cap}"')
+         f'stroke="{col(p,stroke)}" stroke-width="{sw}"{capa}')
     if dash:
         s += f' stroke-dasharray="{dash}"'
     if opacity is not None:
@@ -247,23 +250,24 @@ def tab(x, y, label, accent, p, size=15, h=30, dx=5, dy=5, font=MONO):
     return out, w
 
 
-def defs(idn, p):
+def defs(idn, p, sweep=False):
     """Per-file <defs>: dot-grid texture + radar sweep gradient (namespaced ids)."""
+    grad = (f'<radialGradient id="sw{idn}" cx="0.5" cy="0.5" r="0.5">'
+            f'<stop offset="0" stop-color="{p["sig"]}" stop-opacity="0.34"/>'
+            f'<stop offset="1" stop-color="{p["sig"]}" stop-opacity="0"/></radialGradient>'
+            ) if sweep else ""
     return (
         f'<defs>'
         f'<pattern id="dg{idn}" width="19" height="19" patternUnits="userSpaceOnUse">'
         f'<circle cx="1.6" cy="1.6" r="1.15" fill="{p["ink"]}" opacity="0.05"/></pattern>'
-        f'<radialGradient id="sw{idn}" cx="0.5" cy="0.5" r="0.5">'
-        f'<stop offset="0" stop-color="{p["sig"]}" stop-opacity="0.34"/>'
-        f'<stop offset="1" stop-color="{p["sig"]}" stop-opacity="0"/></radialGradient>'
-        f'</defs>'
+        + grad + f'</defs>'
     )
 
 
-def frame(w, h, p, idn, texture=True):
+def frame(w, h, p, idn, texture=True, sweep=False):
     s = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" '
          f'viewBox="0 0 {w} {h}" role="img" font-family="{SANS}">'
-         + defs(idn, p) + rect(0, 0, w, h, fill="page", rx=0, p=p))
+         + defs(idn, p, sweep) + rect(0, 0, w, h, fill="page", rx=0, p=p))
     if texture:
         s += rect(0, 0, w, h, fill=f"url(#dg{idn})", rx=0, p=p)
     return s
@@ -377,7 +381,7 @@ def radar(p, d):
     mx = max(counts.values()) or 1
     cx, cy, R = 200, 290, 128
     N = len(doms)
-    s = [frame(W, H, p, idn)]
+    s = [frame(W, H, p, idn, sweep=True)]  # only the radar uses the sweep gradient
     s.append(corner_marks(W, H, p))
     s.append(head(p, W, "03", "DOMAIN MAP",
                   "13 flagship repositories · five problem domains · axis = live repo count",
@@ -805,14 +809,18 @@ def status_board(p, d):
         bx = W - 30 - total_w
         s.append(text(bx - 10, y, "CI", size=9.5, fill="faint", weight=700, font=MONO,
                       anchor="end", p=p))
+        # bare rects inside a shared-stroke group (stroke inherits) — saves the
+        # per-rect stroke/stroke-width bytes across ~144 ticks
+        s.append(f'<g stroke="{p["ink"]}" stroke-width="1">')
         for j in range(12):
             idx = j - (12 - len(hist))
             c = "grid"
             if idx >= 0:
                 v = hist[idx]
                 c = "green" if v == "success" else "red" if v == "failure" else "yellow"
-            s.append(rect(bx + j * (tw + gap), y - 10, tw, 13, fill=c, rx=1,
-                          stroke="ink", sw=1, p=p))
+            s.append(f'<rect x="{bx + j * (tw + gap):.1f}" y="{y-10:.1f}" width="{tw}" '
+                     f'height="13" rx="1" fill="{p[c]}"/>')
+        s.append('</g>')
     s.append("</svg>")
     return "".join(s)
 
@@ -864,6 +872,9 @@ def pulse(p, d):
     gap = 2
     cw = gw / ndays
     rh = 16
+    # collect cells and emit them in two shared-stroke groups (stroke inherits),
+    # saving the per-rect stroke bytes across ~168 cells; labels sit outside the grid
+    empty_cells, filled_cells = [], []
     for r, f in enumerate(rows):
         name = f["name"]
         y = gy + r * rh
@@ -875,17 +886,18 @@ def pulse(p, d):
             cnt = mat[name].get(col, 0)
             x = gx + i * cw
             if cnt == 0:
-                s.append(rect(x, y + 1, cw - gap, rh - 4, fill="none", rx=1,
-                              stroke="grid", sw=1, p=p))
+                empty_cells.append(f'<rect x="{x:.1f}" y="{y+1:.1f}" width="{cw-gap:.1f}" '
+                                   f'height="{rh-4}" rx="1"/>')
             else:
                 op = round(0.32 + 0.68 * (cnt / maxcell), 2)
                 fillc = "sig" if cnt == maxcell else "orange"
-                s.append(f'<rect x="{x:.1f}" y="{y+1:.1f}" width="{cw-gap:.1f}" '
-                         f'height="{rh-4}" rx="1" fill="{p[fillc]}" fill-opacity="{op}" '
-                         f'stroke="{p["ink"]}" stroke-width="1"/>')
+                filled_cells.append(f'<rect x="{x:.1f}" y="{y+1:.1f}" width="{cw-gap:.1f}" '
+                                    f'height="{rh-4}" rx="1" fill="{p[fillc]}" fill-opacity="{op}"/>')
         s.append(text(W - 26, y + rh / 2 + 3, str(totals[name]), size=10.5,
                       fill="ink" if totals[name] else "faint", weight=800, font=MONO,
                       anchor="end", p=p))
+    s.append(f'<g fill="none" stroke="{p["grid"]}" stroke-width="1">' + "".join(empty_cells) + '</g>')
+    s.append(f'<g stroke="{p["ink"]}" stroke-width="1">' + "".join(filled_cells) + '</g>')
     # date axis + legend
     ay = gy + len(rows) * rh + 12
     for i, col in enumerate(cols):
