@@ -975,22 +975,33 @@ def timeline(p, d):
         return out
     up = {0: ay - 26, 1: ay - 62}
     dn = {0: ay + 24, 1: ay + 56, 2: ay + 88}
-    for m, x, r in lay("up", 2):
-        my = up[r]
+    up_placed = [(m, x, up[r]) for m, x, r in lay("up", 2)]
+    dn_placed = [(m, x, dn[r]) for m, x, r in lay("down", 3)]
+
+    # Pass 1: every connector line + marker circle, both lanes, drawn FIRST.
+    # A deeper row's line can run close to a shallower row's date (e.g. IEEE
+    # ICPCT / AI-ML intern / Springer Q1 all sit within a few months of each
+    # other), so without this ordering the line draws straight through that
+    # row's text. Pass 2 backs every label with an opaque chip on top, so no
+    # line is ever visible crossing text.
+    for m, x, my in up_placed + dn_placed:
         s.append(line(x, ay, x, my, stroke=m["accent"], sw=2, p=p))
         s.append(circle(x, my, 5, fill=m["accent"], stroke="ink", sw=2, p=p))
-        s.append(text(x, my - 20, m["label"], size=10.5, fill="ink", weight=800, font=MONO,
+
+    # Pass 2: label chip + text on top. Chip bounds wrap the label+sub pair at
+    # their exact original text positions (label/sub sizes and offsets below).
+    def label_chip(x, my, lab, sub, top, label_y, sub_y):
+        w = max(len(lab) * 10.5 * 0.62, len(sub) * 8.5 * 0.62) + 10
+        s.append(rect(x - w / 2, top, w, 23, fill="page", rx=2, p=p))
+        s.append(text(x, label_y, lab, size=10.5, fill="ink", weight=800, font=MONO,
                       anchor="middle", p=p))
-        s.append(text(x, my - 9, m["sub"], size=8.5, fill="muted", weight=600, font=MONO,
+        s.append(text(x, sub_y, sub, size=8.5, fill="muted", weight=600, font=MONO,
                       anchor="middle", p=p))
-    for m, x, r in lay("down", 3):
-        my = dn[r]
-        s.append(line(x, ay, x, my, stroke=m["accent"], sw=2, p=p))
-        s.append(circle(x, my, 5, fill=m["accent"], stroke="ink", sw=2, p=p))
-        s.append(text(x, my + 15, m["label"], size=10.5, fill="ink", weight=800, font=MONO,
-                      anchor="middle", p=p))
-        s.append(text(x, my + 26, m["sub"], size=8.5, fill="muted", weight=600, font=MONO,
-                      anchor="middle", p=p))
+    for m, x, my in up_placed:  # label above the marker: baseline at my-20/-9
+        label_chip(x, my, m["label"], m["sub"], top=my - 29, label_y=my - 20, sub_y=my - 9)
+    for m, x, my in dn_placed:  # label below the marker: baseline at my+15/+26
+        label_chip(x, my, m["label"], m["sub"], top=my + 6, label_y=my + 15, sub_y=my + 26)
+
     s.append(text(ax0, H - 7, "▲ above = repos & ships       ▼ below = research & career",
                   size=9, fill="faint", weight=700, font=MONO, p=p))
     s.append("</svg>")
