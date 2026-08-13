@@ -28,11 +28,12 @@
 
 I build **small, verifiable tools for the parts of the AI stack that fail quietly** — agent sandboxes, MCP gateways, model-fit predictors, and post-quantum crypto. Each of the flagship repos below ships with a real test suite, CI, and — where it makes a claim about speed or correctness — a committed benchmark you can re-run yourself. It's the latest chapter of a multi-year arc: coursework → CV/security **research** → hackathons and GenAI → shipping infrastructure.
 
-- 💼 **Now:** AI/ML Engineering Intern @ **RnR Consulting** (Delhi) — shipped a model-routing harness that cut inference cost **58% / 65%**; Go microservices in a 29-service, Temporal-orchestrated backend serving 500+ concurrent users
+- 💼 **Now:** CTO @ a stealth AI startup (clinical AI) · AI Engineer @ **Nextent Labs** — groundwater & environmental intelligence for government water departments
+- 🛠️ **Recently:** AI/ML @ **RnR Consulting** (Delhi) — shipped a model-routing harness that cut inference cost **58% / 65%**; Go microservices in a 29-service, Temporal-orchestrated backend serving 500+ concurrent users
 - 🎓 **Research:** **1 Springer Q1 journal · 3 IEEE / SCOPUS papers · 2 book chapters** — deepfake detection, federated learning, PQC (see the Research & Impact panel below)
 - 🧭 **Focus:** agent security · AI infrastructure · post-quantum readiness · backend systems
 - 🧪 **How I work:** reference-validated implementations, adversarial tests, reproducible benchmarks — no unverified claims
-- 🎓 **B.Tech (Hons.) CS**, Data Science — Symbiosis Institute of Technology, Nagpur (2022–26), CGPA 8.5/10
+- 🎓 **B.Tech (Hons.) CS**, Data Science — Symbiosis Institute of Technology, Nagpur (2022–26)
 - 📫 **Reach me:** [LinkedIn](https://linkedin.com/in/bharat-singh-parihar) · [Portfolio](https://bharat3645.vercel.app) · [Email](mailto:404ghost.2@gmail.com)
 
 ---
@@ -69,6 +70,7 @@ I build **small, verifiable tools for the parts of the AI stack that fail quietl
 
 | Repo | Stack | Release | What it does |
 |------|-------|:-------:|--------------|
+| **[The-Ideal-Harness](https://github.com/bharat3645/The-Ideal-Harness)** | TypeScript | — | The control-plane OS around a stateless model. A deny-wins, fail-closed policy floor on `PreToolUse`/`PostToolUse` hooks — enforcement below the model, not a paragraph in a prompt — plus secret redaction, injection fencing, skill vetting, a hash-chained audit journal, code-graph memory and cache-safe tool-result compression. Six modules, 329 tests, **zero runtime dependencies**. Contributors welcome — see the `good first issue` label. |
 | **[agent-rules-audit](https://github.com/bharat3645/agent-rules-audit)** | JavaScript | — | Static linter for AI-agent rule files (Cursor / Claude / Copilot) — flags over-broad tool grants and injection-prone instructions. |
 | **[mcp-sentinel](https://github.com/bharat3645/mcp-sentinel)** | Rust | — | Offline risk scanner for MCP client configs — grades each server **A–F** on inline secrets, `@latest` pins, shell indirection, typosquats. |
 | **[toolcage](https://github.com/bharat3645/toolcage)** | Rust | `v0.1.0` | WASM sandbox for MCP tool calls — a fresh `wasmtime` Store per call, deny-by-default caps, HMAC-signed `tools/list` pagination. |
@@ -227,7 +229,7 @@ Two of my repos (`ml-kem-rb`, `pqc-scan`) exist because the crypto deadlines bel
 
 </div>
 
-> These aren't scattered side-projects. `modelgate` gates the LLM calls; `mcp-gateway-lite` filters the tool calls; `toolcage` sandboxes each one; `mcp-sentinel`, `agent-rules-audit`, `agent-flightbox` and `trace2eval` watch the run — and `ml-kem-rb` / `pqc-scan` are the post-quantum floor the whole thing has to stand on.
+> These aren't scattered side-projects. **The Ideal Harness** is the control plane the whole path runs through; `modelgate` gates the LLM calls; `mcp-gateway-lite` filters the tool calls; `toolcage` sandboxes each one; `mcp-sentinel`, `agent-rules-audit`, `agent-flightbox` and `trace2eval` watch the run — and `ml-kem-rb` / `pqc-scan` are the post-quantum floor the whole thing has to stand on.
 
 ---
 
