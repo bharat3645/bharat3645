@@ -20,13 +20,21 @@ SUBLINE = "I build small, verifiable tools for the parts of the AI stack that fa
 # The flagship portfolio. `private` repos are described but never hard-linked
 # (a link to a private repo 404s for visitors). `domain` drives the radar map.
 # `tag` is the real git tag if one exists; verified via `gh api .../tags`.
+#
+# ADDING A FLAGSHIP IS A TWO-FILE CHANGE. generate.py's NET_POS is a
+# hand-placed {repo_name: (x, y)} map for the constellation panel and is read
+# as NET_POS[nm] with no default — a name here that is missing there raises a
+# KeyError mid-render and fails the refresh workflow. Add the coordinate first,
+# then the entry below.
+#
+# Pending: The-Ideal-Harness (Agent Security, TypeScript) — the agent control
+# plane. Documented in README.md; not in this list until it has a NET_POS
+# coordinate. The Agent Security cluster currently occupies roughly
+# x 138–250, y 138–232, so a slot near (196, 186) or just outside that box
+# would sit correctly with its neighbours.
 # ---------------------------------------------------------------------------
 FLAGSHIPS = [
     # Agent Security
-    dict(name="The-Ideal-Harness", domain="Agent Security", lang="TypeScript", tag=None,
-         blurb="The control-plane OS around a stateless model — deny-wins policy floor on "
-               "PreToolUse/PostToolUse hooks, secret redaction, injection fencing, code-graph "
-               "memory, cache-safe compression. 329 tests, zero runtime dependencies."),
     dict(name="agent-rules-audit", domain="Agent Security", lang="JavaScript", tag=None,
          blurb="Static linter for AI-agent rule files (Cursor / Claude / Copilot) — flags "
                "over-broad tool grants and prompt-injection-prone instructions."),
