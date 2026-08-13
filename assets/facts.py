@@ -169,22 +169,25 @@ JOURNEY_MILES = [
     dict(date="2025-04", label="GigX", sub="3rd · BITS Web3.0 '25", lane="up", accent="orange"),
     dict(date="2025-10", label="IEEE ICPCT", sub="SCOPUS · Amity", lane="down", accent="orange"),
     dict(date="2025-12", label="AI/ML Developer @ RnR", sub="−58% / −65% cost", lane="down", accent="orange"),
-    dict(date="2026-03", label="Springer Q1", sub="journal paper", lane="down", accent="red"),
+    dict(date="2026-04", label="Scientific Reports", sub="Springer Q1 · GraphRAG", lane="down", accent="red"),
     dict(date="2026-06", label="The-Ideal-Harness", sub="agent control plane", lane="up", accent="red"),
     dict(date="2026-07", label="OSS sprint", sub="agent-security flagships", lane="up", accent="red"),
     dict(date="2026-08", label="CTO · AI Engineer", sub="clinical AI · Nextent Labs", lane="down", accent="red"),
 ]
 
 # Peer-reviewed output — the standout, differentiating fact.
+# Published count is 4 (1 journal + 3 conference). The two book chapters are
+# still in process and are labelled as such rather than counted as shipped —
+# the same standard the benchmarks on this page are held to.
 PUBLICATIONS = dict(
-    counts=[("1", "SPRINGER Q1", "journal, 2026"),
+    counts=[("1", "SPRINGER Q1", "Scientific Reports, 2026"),
             ("3", "IEEE / SCOPUS", "conference papers"),
-            ("2", "BOOK CHAPTERS", "2025")],
+            ("2", "BOOK CHAPTERS", "in progress")],
     venues=[
-        "Springer Nature — Q1 journal (2026)",
+        "Scientific Reports (Nature) — Q1, Apr 2026 · doi:10.1038/s41598-026-47145-x",
         "IEEE ICISCT 2024 — Kookmin University (SCOPUS)",
         "IEEE ICPCT 2025 — Amity University (SCOPUS)",
-        "Book chapters: federated learning · renewable-energy AI (2025)",
+        "Book chapters: federated learning · renewable-energy AI (in progress)",
     ],
 )
 
@@ -205,7 +208,7 @@ EARLIER = [
     dict(name="GigX", year="2025", lang="TypeScript",
          blurb="Decentralized freelance marketplace — Solidity/Hardhat on-chain jobs, escrow & reputation + Next.js. 3rd, BITS Pilani Web3.0 '25."),
     dict(name="GenAI-Platform", year="2025", lang="TypeScript",
-         blurb="GenAI workspace: multi-PDF RAG chat, GraphRAG entity graphs, ATS feedback, text-to-SQL (React/Supabase UI)."),
+         blurb="GenAI workspace: multi-PDF RAG chat, GraphRAG entity graphs, ATS feedback, text-to-SQL — the implementation behind the Scientific Reports paper."),
 ]
 
 CAREER_LINE = "CTO @ stealth AI startup · AI Engineer @ Nextent Labs · ex-AI/ML Developer @ RnR Consulting · B.Tech (Hons.) CS, Data Science — Symbiosis Nagpur, 2022–26"
