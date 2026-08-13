@@ -8,7 +8,7 @@ live here as constants with their source; everything the API *can* give us
 (repo languages, CI status, follower/repo counts) is fetched live by
 generate.py and is never hard-coded.
 
-Last verified: 2026-07-21.
+Last verified: 2026-08-13.
 """
 
 OWNER = "bharat3645"
@@ -23,6 +23,10 @@ SUBLINE = "I build small, verifiable tools for the parts of the AI stack that fa
 # ---------------------------------------------------------------------------
 FLAGSHIPS = [
     # Agent Security
+    dict(name="The-Ideal-Harness", domain="Agent Security", lang="TypeScript", tag=None,
+         blurb="The control-plane OS around a stateless model — deny-wins policy floor on "
+               "PreToolUse/PostToolUse hooks, secret redaction, injection fencing, code-graph "
+               "memory, cache-safe compression. 329 tests, zero runtime dependencies."),
     dict(name="agent-rules-audit", domain="Agent Security", lang="JavaScript", tag=None,
          blurb="Static linter for AI-agent rule files (Cursor / Claude / Copilot) — flags "
                "over-broad tool grants and prompt-injection-prone instructions."),
@@ -142,7 +146,7 @@ JOURNEY_ERAS = [
     dict(key="2024", label="RESEARCH", accent="purple",
          note="deepfake CNN + image encryption → IEEE"),
     dict(key="2025", label="BUILD & SHIP", accent="orange",
-         note="hackathons, GenAI/RAG, first internship"),
+         note="hackathons, GenAI/RAG, first industry role"),
     dict(key="2026", label="INFRA & SECURITY", accent="red",
          note="agent harness → OSS infra/security sprint"),
 ]
@@ -164,10 +168,11 @@ JOURNEY_MILES = [
     dict(date="2024-11", label="IEEE ICISCT", sub="SCOPUS · Kookmin", lane="down", accent="purple"),
     dict(date="2025-04", label="GigX", sub="3rd · BITS Web3.0 '25", lane="up", accent="orange"),
     dict(date="2025-10", label="IEEE ICPCT", sub="SCOPUS · Amity", lane="down", accent="orange"),
-    dict(date="2025-12", label="AI/ML intern @ RnR", sub="−58% / −65% cost", lane="down", accent="orange"),
+    dict(date="2025-12", label="AI/ML Developer @ RnR", sub="−58% / −65% cost", lane="down", accent="orange"),
     dict(date="2026-03", label="Springer Q1", sub="journal paper", lane="down", accent="red"),
     dict(date="2026-06", label="The-Ideal-Harness", sub="agent control plane", lane="up", accent="red"),
-    dict(date="2026-07", label="OSS sprint", sub="13 flagship repos", lane="up", accent="red"),
+    dict(date="2026-07", label="OSS sprint", sub="agent-security flagships", lane="up", accent="red"),
+    dict(date="2026-08", label="CTO · AI Engineer", sub="clinical AI · Nextent Labs", lane="down", accent="red"),
 ]
 
 # Peer-reviewed output — the standout, differentiating fact.
@@ -203,4 +208,4 @@ EARLIER = [
          blurb="GenAI workspace: multi-PDF RAG chat, GraphRAG entity graphs, ATS feedback, text-to-SQL (React/Supabase UI)."),
 ]
 
-CAREER_LINE = "AI/ML Engineering Intern @ RnR Consulting · B.Tech (Hons.) CS, Data Science — Symbiosis Nagpur, 2022–26"
+CAREER_LINE = "CTO @ stealth AI startup · AI Engineer @ Nextent Labs · ex-AI/ML Developer @ RnR Consulting · B.Tech (Hons.) CS, Data Science — Symbiosis Nagpur, 2022–26"
