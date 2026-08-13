@@ -31,11 +31,11 @@ I build **small, verifiable tools for the parts of the AI stack that fail quietl
 That's the current chapter. The arc behind it runs from C data structures in 2023, through computer-vision research and a stretch of hackathons and Web3 builds, into GenAI platforms, and now into infrastructure and security. The whole path is below, not just the recent sprint.
 
 - 💼 **Now:** CTO @ a stealth AI startup (clinical AI) · AI Engineer @ **Nextent Labs** — groundwater & environmental intelligence for government water departments
-- 🛠️ **Recently:** AI/ML @ **RnR Consulting** (Delhi) — shipped a model-routing harness that cut inference cost **58% / 65%**; Go microservices in a 29-service, Temporal-orchestrated backend serving 500+ concurrent users
-- 🎓 **Research:** **1 Springer Q1 journal · 3 IEEE / SCOPUS papers · 2 book chapters** — deepfake detection, federated learning, PQC (see the Research & Impact panel below)
+- 🛠️ **Recently:** AI/ML Developer @ **RnR Consulting** (Delhi) — shipped a model-routing harness that cut inference cost **58% / 65%**; Go microservices in a 29-service, Temporal-orchestrated backend serving 500+ concurrent users
+- 🎓 **Research:** **1 Springer Q1 journal · 3 IEEE / SCOPUS papers**, plus 2 book chapters in progress — GenAI/GraphRAG, deepfake detection, federated learning
 - 🧭 **Focus:** agent security · AI infrastructure · post-quantum readiness · backend systems
 - 🧪 **How I work:** reference-validated implementations, adversarial tests, reproducible benchmarks — no unverified claims
-- 🎓 **B.Tech (Hons.) CS**, Data Science — Symbiosis Institute of Technology, Nagpur (2022–26)
+- 🎓 **B.Tech (Hons.) CS**, Data Science — Symbiosis Institute of Technology, Nagpur (2022–26), CGPA 8.5/10
 - 📫 **Reach me:** [LinkedIn](https://linkedin.com/in/bharat-singh-parihar) · [Portfolio](https://bharat3645.vercel.app) · [Email](mailto:404ghost.2@gmail.com)
 
 ---
@@ -163,7 +163,7 @@ Computer vision, accessibility, Web3, and a lot of shipping.
 | **[NomadAI](https://github.com/bharat3645/NomadAI)** | Telegram voice-bot travel companion — Whisper transcribes, Groq Llama-3 detects language and vibe, Maps finds spots, gTTS answers in voice. |
 | **[Mentoro](https://github.com/bharat3645/Mentoro)** | Emotion-adaptive gamified learning buddy — Remix + Go + Postgres monorepo. Prototype; most endpoints are mock data, stated plainly in its README. |
 | **[medical-insurance-cost-prediction](https://github.com/bharat3645/medical-insurance-cost-prediction)** | R pipeline — EDA, linear/Ridge/Lasso and random forest, plus a Shiny app. |
-| **[GenAI-Platform](https://github.com/bharat3645/GenAI-Platform)** | GenAI workspace: multi-PDF RAG chat, **GraphRAG** entity graphs, ATS resume feedback, text-to-SQL. Later iteration: **[genai-platform-v2](https://github.com/bharat3645/genai-platform-v2)** with a Kubernetes path. |
+| **[GenAI-Platform](https://github.com/bharat3645/GenAI-Platform)** | GenAI workspace: multi-PDF RAG chat, **GraphRAG** entity graphs, ATS resume feedback, text-to-SQL. **This is the implementation behind the Scientific Reports paper below.** Later iteration: **[genai-platform-v2](https://github.com/bharat3645/genai-platform-v2)** with a Kubernetes path. |
 
 ### 2026 — infrastructure, security, and applied CV
 
@@ -210,7 +210,7 @@ Everything in the flagship tables above, plus:
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/timeline-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/timeline-light.svg">
-  <img alt="Multi-year timeline across five eras (2022 foundations, 2023 first builds, 2024 research, 2025 build and ship, 2026 infrastructure and security), plotting real dated milestones — B.Tech CS begins, first repos, hackathon wins, the deepfake-detection research and IEEE/Springer papers, the AI/ML internship, and the OSS sprint" src="./assets/timeline-dark.svg" width="850">
+  <img alt="Multi-year timeline across five eras (2022 foundations, 2023 first builds, 2024 research, 2025 build and ship, 2026 infrastructure and security), plotting real dated milestones — B.Tech CS begins, first repos, hackathon wins, the deepfake-detection research and the IEEE and Springer papers, the AI/ML developer role at RnR, the agent harness, and the current CTO and AI engineer roles" src="./assets/timeline-dark.svg" width="850">
 </picture>
 
 </div>
@@ -224,12 +224,14 @@ Everything in the flagship tables above, plus:
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/research-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/research-light.svg">
-  <img alt="Research and impact panel: peer-reviewed output (one Springer Q1 journal paper, three IEEE SCOPUS-indexed conference papers, two book chapters) with venues, plus shipped-work proof points — 58 to 65 percent AI inference cost reduction, a 29-service backend at 500-plus concurrent users, 93.5 percent deepfake-detection accuracy, and under 1 percent false positives on ID validation" src="./assets/research-dark.svg" width="850">
+  <img alt="Research and impact panel: peer-reviewed output — one Springer Q1 journal paper in Scientific Reports, three IEEE SCOPUS-indexed conference papers, and two book chapters in progress — with venues, plus shipped-work proof points: 58 to 65 percent AI inference cost reduction, a 29-service backend at 500-plus concurrent users, 93.5 percent deepfake-detection accuracy, and under 1 percent false positives on ID validation" src="./assets/research-dark.svg" width="850">
 </picture>
 
 </div>
 
-> Peer-reviewed research is rare on a GitHub profile — **1 Springer Nature Q1 journal, 3 SCOPUS-indexed IEEE papers** (ICISCT '24 @ Kookmin University, ICPCT '25 @ Amity), and **2 book chapters** (federated learning; renewable-energy AI). The deepfake detector above fed one of those IEEE papers.
+> **[A unified multimodal GenAI platform integrating GraphRAG multi-agent systems and custom language models for intelligent document processing and knowledge synthesis](https://www.nature.com/articles/s41598-026-47145-x)** — *Scientific Reports* (Nature) 16:16508, April 2026. `doi:10.1038/s41598-026-47145-x`
+>
+> Plus **3 SCOPUS-indexed IEEE papers** (ICISCT '24 @ Kookmin University, ICPCT '25 @ Amity) and **2 book chapters in progress** (federated learning; renewable-energy AI). The deepfake detector above fed one of the IEEE papers; **GenAI-Platform** is the implementation behind the *Scientific Reports* work.
 
 ---
 
