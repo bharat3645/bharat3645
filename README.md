@@ -22,6 +22,8 @@
   <img alt="Header for Bharat Singh Parihar, agent-security and AI-infrastructure engineer, with live tiles for flagship repos, green CI, languages, public repos and followers" src="./assets/hero-dark.svg" width="850">
 </picture>
 
+<sub>jump to: <a href="#-live-system-status">status</a> · <a href="#-portfolio-map">repos</a> · <a href="#-research--impact">research</a> · <a href="#-verified-benchmarks">benchmarks</a> · <a href="#-agent-security-stack">architecture</a> · <a href="#-contribution-graph">activity</a></sub>
+
 </div>
 
 ## ▌ WHOAMI
@@ -35,6 +37,7 @@ That's the current chapter. The arc behind it runs from C data structures in 202
 - 🎓 **Research:** **1 Springer Q1 journal · 3 IEEE / SCOPUS papers**, plus 2 book chapters in progress — GenAI/GraphRAG, deepfake detection, federated learning
 - 🧭 **Focus:** agent security · AI infrastructure · post-quantum readiness · backend systems
 - 🧪 **How I work:** reference-validated implementations, adversarial tests, reproducible benchmarks — no unverified claims
+- 🔜 **Shipping next:** first-class Node/Ruby bindings for `promptproof` on its already-public C ABI (the Python `ctypes` wrapper shipped first); LangSmith/Braintrust export adapters for `trace2eval` — tracked in each repo's own Roadmap section, not just here
 - 🎓 **B.Tech (Hons.) CS**, Data Science — Symbiosis Institute of Technology, Nagpur (2022–26), CGPA 8.5/10
 - 📫 **Reach me:** [LinkedIn](https://linkedin.com/in/bharat-singh-parihar) · [Portfolio](https://bharat3645.vercel.app) · [Email](mailto:404ghost.2@gmail.com)
 
