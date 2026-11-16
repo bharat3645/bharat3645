@@ -66,9 +66,9 @@ Five things worth your time. Everything else is in the catalogue further down.
 *Problem:* Ruby had no readable implementation of the post-quantum key-exchange standard.
 *What it is:* ML-KEM (FIPS 203) in pure Ruby, checked against the NIST known-answer vectors for all three parameter sets, plus the hybrid X25519 + ML-KEM-768 exchange in the TLS 1.3 draft wire format. A reference implementation; it is not hardened against timing attacks and says so.
 
-**[GenAI-Platform](https://github.com/bharat3645/GenAI-Platform)** · TypeScript, Python
+**[genai-platform-v2](https://github.com/bharat3645/genai-platform-v2)** · TypeScript, Python
 *Problem:* document question-answering that retrieves passages but loses how they relate.
-*What it is:* multi-document RAG with GraphRAG entity graphs and a multi-agent pipeline. This is the implementation behind the *Scientific Reports* paper listed under Research.
+*What it is:* multi-document RAG with GraphRAG entity graphs and a multi-agent pipeline. This is the implementation behind the *Scientific Reports* paper listed under Research. It is research code: it does not yet have the test suite the tools above have, and that is being fixed.
 
 ---
 
