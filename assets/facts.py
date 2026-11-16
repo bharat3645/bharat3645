@@ -8,7 +8,7 @@ live here as constants with their source; everything the API *can* give us
 (repo languages, CI status, follower/repo counts) is fetched live by
 generate.py and is never hard-coded.
 
-Last verified: 2026-08-13.
+Last verified: 2026-11-16 (tags via `git ls-remote --tags`).
 """
 
 OWNER = "bharat3645"
@@ -35,10 +35,10 @@ SUBLINE = "I build small, verifiable tools for the parts of the AI stack that fa
 # ---------------------------------------------------------------------------
 FLAGSHIPS = [
     # Agent Security
-    dict(name="agent-rules-audit", domain="Agent Security", lang="JavaScript", tag=None,
-         blurb="Static linter for AI-agent rule files (Cursor / Claude / Copilot) — flags "
-               "over-broad tool grants and prompt-injection-prone instructions."),
-    dict(name="mcp-sentinel", domain="Agent Security", lang="Rust", tag=None,
+    dict(name="agent-rules-audit", domain="Agent Security", lang="JavaScript", tag="v0.3.0",
+         blurb="Offline scanner for agent instruction files — hidden-Unicode smuggling, encoded "
+               "payloads, instruction overrides and exfiltration directives. SARIF, zero deps."),
+    dict(name="mcp-sentinel", domain="Agent Security", lang="Rust", tag="v0.3.0",
          blurb="Offline risk scanner for MCP client configs — grades each server A–F on inline "
                "secrets, @latest pins, shell indirection and typosquat-like names."),
     dict(name="toolcage", domain="Agent Security", lang="Rust", tag="v0.1.0",
@@ -48,30 +48,30 @@ FLAGSHIPS = [
          blurb="Flight recorder for agent processes — captures the syscall/exec/network surface "
                "of a run to tamper-evident JSONL, with a session `diff`."),
     # AI Infrastructure
-    dict(name="mcp-gateway-lite", domain="AI Infrastructure", lang="Go", tag="v0.4.0",
+    dict(name="mcp-gateway-lite", domain="AI Infrastructure", lang="Go", tag="v0.5.0",
          blurb="Single-binary reverse proxy for MCP — tool-allowlist filtering, rate limiting, "
                "tamper-evident audit log and a tools_lock against rug-pulls."),
-    dict(name="modelgate", domain="AI Infrastructure", lang="Go", tag=None,
+    dict(name="modelgate", domain="AI Infrastructure", lang="Go", tag="v0.2.0",
          blurb="Multi-provider LLM gateway — routing, automatic fallback, token/cost accounting "
                "and a metadata-only audit trail. stdlib-only."),
     dict(name="localmodel-fit", domain="AI Infrastructure", lang="Go", tag="v0.1.0",
          blurb="Predicts whether a GGUF model fits and how fast it decodes on given hardware — "
                "MoE-aware, with a benchmark harness validated against real ollama runs."),
-    dict(name="trace2eval", domain="AI Infrastructure", lang="JavaScript", tag=None,
+    dict(name="trace2eval", domain="AI Infrastructure", lang="JavaScript", tag="v0.1.0",
          blurb="Turns raw agent traces into scrubbed, deduplicated evaluation datasets — "
                "PII scrub before dedupe, deterministic and offline."),
     # Post-Quantum Crypto
-    dict(name="ml-kem-rb", domain="Post-Quantum Crypto", lang="Ruby", tag=None,
+    dict(name="ml-kem-rb", domain="Post-Quantum Crypto", lang="Ruby", tag="v0.2.0",
          blurb="Reference ML-KEM (FIPS 203) in pure Ruby, plus a real hybrid X25519+ML-KEM-768 "
                "KEM implementing the TLS 1.3 draft wire format."),
     dict(name="pqc-scan", domain="Post-Quantum Crypto", lang="Rust", tag=None, private=True,
          blurb="Crypto inventory → CycloneDX CBOM → A–F post-quantum readiness grade, with live "
-               "TLS 1.3 handshake checks. Private until the Sept 2026 launch."),
+               "TLS 1.3 handshake checks. Private; release planned around 1 Jan 2027."),
     # Backend & Rails
-    dict(name="idempotent-rack", domain="Backend Systems", lang="Ruby", tag="v0.1.0",
+    dict(name="idempotent-rack", domain="Backend Systems", lang="Ruby", tag="v0.3.0",
          blurb="Idempotency-Key middleware for Rack/Rails — dedupes retried POST/PUT against a "
                "pluggable store (memory / file / Redis / ActiveRecord)."),
-    dict(name="acts-as-mcp", domain="Backend Systems", lang="Ruby", tag=None,
+    dict(name="acts-as-mcp", domain="Backend Systems", lang="Ruby", tag="v0.1.0",
          blurb="Expose ActiveRecord models as MCP tools from a Rails app with one class macro — "
                "scoped, read-only-by-default agent access to your data layer."),
     # Supply-Chain / Dev Tooling

@@ -75,9 +75,9 @@ That's the current chapter. The arc behind it runs from C data structures in 202
 
 | Repo | Stack | Release | What it does |
 |------|-------|:-------:|--------------|
-| **[The-Ideal-Harness](https://github.com/bharat3645/The-Ideal-Harness)** | TypeScript | — | The control-plane OS around a stateless model. A deny-wins, fail-closed policy floor on `PreToolUse`/`PostToolUse` hooks — enforcement below the model, not a paragraph in a prompt — plus secret redaction, injection fencing, skill vetting, a hash-chained audit journal, code-graph memory and cache-safe tool-result compression. Six modules, 329 tests, **zero runtime dependencies**. Contributors welcome — see the `good first issue` label. |
-| **[agent-rules-audit](https://github.com/bharat3645/agent-rules-audit)** | JavaScript | — | Static linter for AI-agent rule files (Cursor / Claude / Copilot) — flags over-broad tool grants and injection-prone instructions. |
-| **[mcp-sentinel](https://github.com/bharat3645/mcp-sentinel)** | Rust | — | Offline risk scanner for MCP client configs — grades each server **A–F** on inline secrets, `@latest` pins, shell indirection, typosquats. |
+| **[The-Ideal-Harness](https://github.com/bharat3645/The-Ideal-Harness)** | TypeScript | `v0.3.0` | The control-plane OS around a stateless model. A deny-wins, fail-closed policy floor on `PreToolUse`/`PostToolUse` hooks — enforcement below the model, not a paragraph in a prompt — plus secret redaction, injection fencing, skill vetting, a hash-chained audit journal, code-graph memory and cache-safe tool-result compression. Six modules, **zero runtime dependencies**. Contributors welcome — see the `good first issue` label. |
+| **[agent-rules-audit](https://github.com/bharat3645/agent-rules-audit)** | JavaScript | `v0.3.0` | Offline scanner for agent instruction files (`AGENTS.md`, `CLAUDE.md`, `.cursorrules`, skills, MCP configs) — catches hidden-Unicode smuggling across every default-ignorable code point (including variation-selector payloads), encoded blobs, instruction overrides and exfiltration directives. SARIF output, baseline file, zero dependencies. |
+| **[mcp-sentinel](https://github.com/bharat3645/mcp-sentinel)** | Rust | `v0.3.0` | Offline risk scanner for MCP client configs — grades each server **A–F** on inline secrets, `@latest` pins, shell indirection, typosquats. |
 | **[toolcage](https://github.com/bharat3645/toolcage)** | Rust | `v0.1.0` | Per-tool-call WASM sandbox for MCP servers — every `tools/call` runs in a fresh `wasmtime` instance with only the filesystem that tool's policy grants. |
 | **[agent-flightbox](https://github.com/bharat3645/agent-flightbox)** | Go | `v0.1.0` | Flight recorder for agent processes — captures the syscall / exec / network surface of a run to tamper-evident JSONL, with a session `diff`. |
 
@@ -88,7 +88,7 @@ That's the current chapter. The arc behind it runs from C data structures in 202
 | **[mcp-gateway-lite](https://github.com/bharat3645/mcp-gateway-lite)** | Go | `v0.5.0` | Single-binary reverse proxy for MCP — allowlist filtering, rate limiting, tamper-evident audit log, `tools_lock` against rug-pulls, and now inline promptproof scanning of tool results. |
 | **[modelgate](https://github.com/bharat3645/modelgate)** | Go | `v0.2.0` | Multi-provider LLM gateway — routing, automatic fallback, token/cost accounting, metadata-only audit trail. stdlib-only. |
 | **[localmodel-fit](https://github.com/bharat3645/localmodel-fit)** | Go | `v0.1.0` | Memory-bandwidth-aware local-LLM advisor — predicted decode tok/s, the best quant that fits, speculative-decoding hints. Published methodology, validated against real `ollama` runs. |
-| **[trace2eval](https://github.com/bharat3645/trace2eval)** | JavaScript | — | Turns raw agent traces into scrubbed, deduplicated eval datasets — PII scrub *before* dedupe, deterministic, offline. |
+| **[trace2eval](https://github.com/bharat3645/trace2eval)** | JavaScript | `v0.1.0` | Turns raw agent traces into scrubbed, deduplicated eval datasets — PII scrub *before* dedupe, deterministic, offline. |
 | **[promptproof](https://github.com/bharat3645/promptproof)** | Rust | `v0.2.0` | Data-plane prompt-injection/exfiltration scanner for untrusted content flowing back into a model — the layer none of the other agent-security tools cover. Zero deps, `#![forbid(unsafe_code)]`. Embedded as middleware in both mcp-gateway-lite and modelgate above. |
 
 ### 🔌 MCP Ecosystem
@@ -104,7 +104,7 @@ That's the current chapter. The arc behind it runs from C data structures in 202
 | Repo | Stack | Release | What it does |
 |------|-------|:-------:|--------------|
 | **[ml-kem-rb](https://github.com/bharat3645/ml-kem-rb)** | Ruby | `v0.2.0` | Reference **ML-KEM (FIPS 203)** in pure Ruby, plus a real **hybrid X25519 + ML-KEM-768** KEM implementing the TLS 1.3 draft wire format. |
-| **pqc-scan** `🔒 private` | Rust | — | Crypto inventory → CycloneDX **CBOM** → A–F post-quantum readiness grade, with live TLS 1.3 handshake checks. Launches **Sept 2026**. |
+| **pqc-scan** `🔒 private` | Rust | — | Crypto inventory → CycloneDX **CBOM** → A–F post-quantum readiness grade, with live TLS 1.3 handshake checks. In private development; public release planned around the CNSA 2.0 date (1 Jan 2027). |
 
 ### 🧰 Developer Tooling & Responsible ML
 
@@ -192,6 +192,15 @@ Everything in the flagship tables above, plus:
 | **[Sona-Sapphire](https://github.com/bharat3645/Sona-Sapphire)** | Cinematic agency site — Next.js 16, React 19, Tailwind 4, StringTune choreography. Local-SEO tuned with geo meta, JSON-LD `LocalBusiness`, sitemap; Resend inquiry form. |
 | **adv-samit-siddhanta** `archived` | Single-page site for a Supreme Court advocate — **zero-dependency vanilla HTML/CSS/JS**, scroll reveals, parallax, BCI-compliant disclaimer. Client deliverable. |
 | **[3D-Portfolio-Website](https://github.com/bharat3645/3D-Portfolio-Website)** | My own portfolio — Next.js 14, React Three Fiber / Spline, Framer Motion. Live at [bharat3645.vercel.app](https://bharat3645.vercel.app). |
+
+---
+
+## ▌ OPEN SOURCE, BOTH DIRECTIONS
+
+Small numbers, all real. Details in [OPEN_SOURCE.md](./OPEN_SOURCE.md).
+
+- **Contributions received:** [`toolcage#2`](https://github.com/bharat3645/toolcage/pull/2) — hash-chained audit log, by [@mahirhir](https://github.com/mahirhir) (merged) · [`The-Ideal-Harness#59`](https://github.com/bharat3645/The-Ideal-Harness/pull/59) — Gemini setup guide, by [@rish170](https://github.com/rish170) (merged)
+- **Contributions sent:** [`zaproxy/zaproxy#9401`](https://github.com/zaproxy/zaproxy/pull/9401) and [`jekyll/jekyll-avatar#64`](https://github.com/jekyll/jekyll-avatar/pull/64) — both open, neither merged yet
 
 ---
 
