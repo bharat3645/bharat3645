@@ -22,24 +22,53 @@
   <img alt="Header for Bharat Singh Parihar, agent-security and AI-infrastructure engineer, with live tiles for flagship repos, green CI, languages, public repos and followers" src="./assets/hero-dark.svg" width="850">
 </picture>
 
-<sub>jump to: <a href="#-live-system-status">status</a> · <a href="#-portfolio-map">repos</a> · <a href="#-research--impact">research</a> · <a href="#-verified-benchmarks">benchmarks</a> · <a href="#-agent-security-stack">architecture</a> · <a href="#-contribution-graph">activity</a></sub>
+<sub>jump to: <a href="#-live-system-status">status</a> · <a href="#-selected-work">selected work</a> · <a href="#-portfolio-map">repos</a> · <a href="#-research--impact">research</a> · <a href="#-verified-benchmarks">benchmarks</a> · <a href="#-agent-security-stack">architecture</a> · <a href="#-contribution-graph">activity</a></sub>
 
 </div>
 
 ## ▌ WHOAMI
 
-I build **small, verifiable tools for the parts of the AI stack that fail quietly** — agent sandboxes, MCP gateways, model-fit predictors, and post-quantum crypto. Each of the flagship repos below ships with a real test suite, CI, and — where it makes a claim about speed or correctness — a committed benchmark you can re-run yourself.
+I'm a backend and AI engineer. I like problems where a wrong answer is expensive and easy to miss: agent tooling that has to hold a security boundary, post-quantum cryptography that has to match the standard byte for byte, and groundwater models that a government department will act on.
 
-That's the current chapter. The arc behind it runs from C data structures in 2023, through computer-vision research and a stretch of hackathons and Web3 builds, into GenAI platforms, and now into infrastructure and security. The whole path is below, not just the recent sprint.
+At **Nextent Labs** I build the telemetry validation, time-series forecasting and spatial analysis behind HydroGeoSenZ, a groundwater-intelligence platform used by water departments and research institutions. I'm also co-founder and CTO of a clinical-AI startup that is still in stealth. Before that I spent eight months at **R&R Consulting** on an enterprise data-discovery product: a cross-platform endpoint agent in Go, PII detection with checksum validators for 13+ identifier formats, and a model-routing layer that cut inference cost by 58–65%.
 
-- 💼 **Now:** CTO @ a stealth AI startup (clinical AI) · AI Engineer @ **Nextent Labs** — groundwater & environmental intelligence for government water departments
-- 🛠️ **Recently:** AI/ML Developer @ **RnR Consulting** (Delhi) — shipped a model-routing harness that cut inference cost **58% / 65%**; Go microservices in a 29-service, Temporal-orchestrated backend serving 500+ concurrent users
-- 🎓 **Research:** **1 Springer Q1 journal · 3 IEEE / SCOPUS papers**, plus 2 book chapters in progress — GenAI/GraphRAG, deepfake detection, federated learning
-- 🧭 **Focus:** agent security · AI infrastructure · post-quantum readiness · backend systems
-- 🧪 **How I work:** reference-validated implementations, adversarial tests, reproducible benchmarks — no unverified claims
-- 🔜 **Shipping next:** first-class Node/Ruby bindings for `promptproof` on its already-public C ABI (the Python `ctypes` wrapper shipped first); LangSmith/Braintrust export adapters for `trace2eval` — tracked in each repo's own Roadmap section, not just here
-- 🎓 **B.Tech (Hons.) CS**, Data Science — Symbiosis Institute of Technology, Nagpur (2022–26), CGPA 8.5/10
-- 📫 **Reach me:** [LinkedIn](https://linkedin.com/in/bharat-singh-parihar) · [Portfolio](https://bharat3645.vercel.app) · [Email](mailto:404ghost.2@gmail.com)
+The open-source work on this page is where I pick the problem myself. Most of it is small on purpose. Each tool does one job, ships with its tests, and says plainly what it does not cover.
+
+| | |
+|---|---|
+| **Now** | AI Engineer, Nextent Labs (Aug 2026 – ) · Co-founder & CTO, clinical-AI startup in stealth (Aug 2025 – ) |
+| **Before** | Web Development Associate, R&R Consulting, New Delhi (Dec 2025 – Jul 2026) · Research Intern, PGDAV College, University of Delhi (2024) |
+| **Research** | 1 journal paper in *Scientific Reports* (2026) · 3 IEEE conference papers · Indian patent application 202621033605, published May 2026 |
+| **Education** | B.Tech, Computer Science and Engineering, Data Science minor · Symbiosis Institute of Technology, Nagpur · 2022 – 2026 |
+| **Shipped with** | Go, Python, TypeScript, Rust, Ruby · PostgreSQL, Redis, Temporal, Neo4j, FAISS |
+| **Also used** | Java, C, R, Solidity, in coursework, hackathons and earlier projects |
+| **Reach me** | [LinkedIn](https://linkedin.com/in/bharat-singh-parihar) · [Portfolio](https://bharat3645.vercel.app) · [Email](mailto:bharat3645@gmail.com) |
+
+---
+
+## ▌ SELECTED WORK
+
+Five things worth your time. Everything else is in the catalogue further down.
+
+**[The-Ideal-Harness](https://github.com/bharat3645/The-Ideal-Harness)** · TypeScript
+*Problem:* safety rules written into a prompt are suggestions; a model can be talked out of them.
+*What it is:* a control plane around a stateless model. Policy is enforced on tool-call hooks, deny wins, and failure closes. Adds secret redaction, injection fencing, skill vetting and a hash-chained journal. No runtime dependencies.
+
+**[toolcage](https://github.com/bharat3645/toolcage) + [mcp-gateway-lite](https://github.com/bharat3645/mcp-gateway-lite)** · Rust, Go
+*Problem:* an MCP server is third-party code with your file system and network, and it can change its tools after you approved them.
+*What they are:* a per-call WASM sandbox, and a single-binary reverse proxy that pins tool schemas and keeps a tamper-evident audit log. Measured cost: about 0.33 ms per sandboxed call and about 40 µs through the proxy. The audit log's hash chain came from an outside contributor.
+
+**[agent-rules-audit](https://github.com/bharat3645/agent-rules-audit)** · JavaScript
+*Problem:* instruction files such as `AGENTS.md` and `.cursorrules` can carry text no reviewer can see.
+*What it is:* an offline scanner for those files. It checks every invisible code point Unicode defines rather than a hand-kept list, after a census showed the list approach had been missing 4,025 of 4,174 of them, including the variation-selector trick used to hide payloads behind an emoji.
+
+**[ml-kem-rb](https://github.com/bharat3645/ml-kem-rb)** · Ruby
+*Problem:* Ruby had no readable implementation of the post-quantum key-exchange standard.
+*What it is:* ML-KEM (FIPS 203) in pure Ruby, checked against the NIST known-answer vectors for all three parameter sets, plus the hybrid X25519 + ML-KEM-768 exchange in the TLS 1.3 draft wire format. A reference implementation; it is not hardened against timing attacks and says so.
+
+**[GenAI-Platform](https://github.com/bharat3645/GenAI-Platform)** · TypeScript, Python
+*Problem:* document question-answering that retrieves passages but loses how they relate.
+*What it is:* multi-document RAG with GraphRAG entity graphs and a multi-agent pipeline. This is the implementation behind the *Scientific Reports* paper listed under Research.
 
 ---
 
@@ -70,6 +99,9 @@ That's the current chapter. The arc behind it runs from C data structures in 202
 </picture>
 
 </div>
+
+<details>
+<summary><b>Full catalogue of maintained repositories ▸</b></summary>
 
 ### 🛡️ Agent Security
 
@@ -129,11 +161,16 @@ Small, single-purpose CLIs. Each one exists because a specific check was missing
 | **[compliance-manager](https://github.com/bharat3645/compliance-manager)** | Go | — | Desktop PII/compliance scanner (Go + Wails) — extracts document text, matches rule definitions, scores risk, browses results as a file hierarchy. Optional Python ML validation and OCR. |
 | **[DAG-Pipeline](https://github.com/bharat3645/DAG-Pipeline)** | JavaScript | — | Visual node-based pipeline builder (React Flow) with a FastAPI backend that validates the graph as cycle-free using Kahn's algorithm. |
 
+</details>
+
 ---
 
 ## ▌ THE ARC — 2023 to now
 
 The flagships above are the current chapter. This is how it got there. Each row is a real repo, and the honest caveats each one carries in its own README are carried through here too.
+
+<details>
+<summary><b>Earlier work, year by year ▸</b></summary>
 
 ### 2023 — foundations
 
@@ -145,7 +182,7 @@ The flagships above are the current chapter. This is how it got there. Each row 
 
 | Repo | What it is |
 |------|------------|
-| **[Real-and-fake-face-distinction](https://github.com/bharat3645/Real-and-fake-face-distinction)** | Keras CNN classifying real vs AI-generated faces — the research behind the **SCOPUS-indexed IEEE deepfake-detection paper** (93.5% accuracy). |
+| **[Real-and-fake-face-distinction](https://github.com/bharat3645/Real-and-fake-face-distinction)** | Keras CNN classifying real vs AI-generated faces — the research behind the **IEEE deepfake-detection paper**. |
 | **[pbl](https://github.com/bharat3645/pbl)** | Deep-learning **image encryption** — DCGAN key generator + attention/residual CNN, with NPCR/UACI security analysis. |
 | **[hackathon](https://github.com/bharat3645/hackathon)** | A CLI that scaffolds a hackathon project skeleton in seconds. First tool I built because the friction annoyed me — the same instinct behind everything in the tooling section above. |
 | **[shadcn-dashboard](https://github.com/bharat3645/shadcn-dashboard)** | Next.js 15 + shadcn/ui admin template. Mock data, no backend — a UI study, labelled as one. |
@@ -193,6 +230,8 @@ Everything in the flagship tables above, plus:
 | **adv-samit-siddhanta** `archived` | Single-page site for a Supreme Court advocate — **zero-dependency vanilla HTML/CSS/JS**, scroll reveals, parallax, BCI-compliant disclaimer. Client deliverable. |
 | **[3D-Portfolio-Website](https://github.com/bharat3645/3D-Portfolio-Website)** | My own portfolio — Next.js 14, React Three Fiber / Spline, Framer Motion. Live at [bharat3645.vercel.app](https://bharat3645.vercel.app). |
 
+</details>
+
 ---
 
 ## ▌ OPEN SOURCE, BOTH DIRECTIONS
@@ -237,14 +276,16 @@ Small numbers, all real. Details in [OPEN_SOURCE.md](./OPEN_SOURCE.md).
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/research-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/research-light.svg">
-  <img alt="Research and impact panel: peer-reviewed output — one Springer Q1 journal paper in Scientific Reports, three IEEE SCOPUS-indexed conference papers, and two book chapters in progress — with venues, plus shipped-work proof points: 58 to 65 percent AI inference cost reduction, a 29-service backend at 500-plus concurrent users, 93.5 percent deepfake-detection accuracy, and under 1 percent false positives on ID validation" src="./assets/research-dark.svg" width="850">
+  <img alt="Research and impact panel: peer-reviewed output — one journal paper in Scientific Reports, three IEEE conference papers and a published patent application, with venues, plus shipped-work proof points: 58 to 65 percent AI inference cost reduction, a 29-service backend at 500-plus concurrent users, and under 1 percent false positives on ID validation" src="./assets/research-dark.svg" width="850">
 </picture>
 
 </div>
 
 > **[A unified multimodal GenAI platform integrating GraphRAG multi-agent systems and custom language models for intelligent document processing and knowledge synthesis](https://www.nature.com/articles/s41598-026-47145-x)** — *Scientific Reports* (Nature) 16:16508, April 2026. `doi:10.1038/s41598-026-47145-x`
 >
-> Plus **3 SCOPUS-indexed IEEE papers** (ICISCT '24 @ Kookmin University, ICPCT '25 @ Amity) and **2 book chapters in progress** (federated learning; renewable-energy AI). The deepfake detector above fed one of the IEEE papers; **GenAI-Platform** is the implementation behind the *Scientific Reports* work.
+> Plus **3 IEEE conference papers** (ICISCT '24 at Kookmin University, ICPCT '25 at Amity) and a book chapter. The deepfake detector in the earlier work fed one of the IEEE papers; **GenAI-Platform** is the implementation behind the *Scientific Reports* work.
+>
+> **Patent application:** *Comprehensive Groundwater Level Analysis and Prediction System Using Integrated Machine Learning and Time Series Analysis*, Indian application no. 202621033605, filed 18 March 2026, published 15 May 2026.
 
 ---
 

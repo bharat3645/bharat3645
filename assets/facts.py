@@ -171,12 +171,12 @@ JOURNEY_MILES = [
     dict(date="2023-04", label="GDSC winner", sub="hackathon win '23", lane="up", accent="blue"),
     dict(date="2023-07", label="IEEE Research 3rd", sub="3rd place '23", lane="down", accent="blue"),
     dict(date="2023-10", label="first repos", sub="GitHub journey begins", lane="up", accent="blue"),
-    dict(date="2024-05", label="deepfake detector", sub="CNN 93.5% → IEEE", lane="up", accent="purple"),
+    dict(date="2024-05", label="deepfake detector", sub="CNN → IEEE paper", lane="up", accent="purple"),
     dict(date="2024-06", label="research intern", sub="PGDAV, Univ. of Delhi", lane="down", accent="purple"),
     dict(date="2024-11", label="IEEE ICISCT", sub="SCOPUS · Kookmin", lane="down", accent="purple"),
     dict(date="2025-04", label="GigX", sub="3rd · BITS Web3.0 '25", lane="up", accent="orange"),
     dict(date="2025-10", label="IEEE ICPCT", sub="SCOPUS · Amity", lane="down", accent="orange"),
-    dict(date="2025-12", label="AI/ML Developer @ RnR", sub="−58% / −65% cost", lane="down", accent="orange"),
+    dict(date="2025-12", label="R&R Consulting", sub="−58–65% inference cost", lane="down", accent="orange"),
     dict(date="2026-04", label="Scientific Reports", sub="Springer Q1 · GraphRAG", lane="down", accent="red"),
     dict(date="2026-06", label="The-Ideal-Harness", sub="agent control plane", lane="up", accent="red"),
     dict(date="2026-07", label="OSS sprint", sub="agent-security flagships", lane="up", accent="red"),
@@ -184,18 +184,17 @@ JOURNEY_MILES = [
 ]
 
 # Peer-reviewed output — the standout, differentiating fact.
-# Published count is 4 (1 journal + 3 conference). The two book chapters are
-# still in process and are labelled as such rather than counted as shipped —
-# the same standard the benchmarks on this page are held to.
+# Published count is 4 (1 journal + 3 conference), plus one published Indian
+# patent application. Source: owner's master profile, 2026-10-19.
 PUBLICATIONS = dict(
     counts=[("1", "SPRINGER Q1", "Scientific Reports, 2026"),
             ("3", "IEEE / SCOPUS", "conference papers"),
-            ("2", "BOOK CHAPTERS", "in progress")],
+            ("1", "PATENT APPLICATION", "published 2026")],
     venues=[
         "Scientific Reports (Nature) — Q1, Apr 2026 · doi:10.1038/s41598-026-47145-x",
         "IEEE ICISCT 2024 — Kookmin University (SCOPUS)",
         "IEEE ICPCT 2025 — Amity University (SCOPUS)",
-        "Book chapters: federated learning · renewable-energy AI (in progress)",
+        "Patent application IN 202621033605 — published 2026-05-15",
     ],
 )
 
@@ -203,7 +202,7 @@ PUBLICATIONS = dict(
 IMPACT = [
     ("−58% / −65%", "AI inference cost", "5-module model-routing harness, 2 enterprise products"),
     ("29 svcs · 500+", "concurrent scale", "Go microservices, Temporal-orchestrated backend"),
-    ("93.5%", "deepfake accuracy", "CNN detector → SCOPUS-indexed IEEE paper"),
+    ("IN 202621033605", "patent application", "groundwater-level prediction · published May 2026"),
     ("< 1% FP", "ID validation", "Verhoeff / Luhn-mod-36 across 13+ ID formats"),
 ]
 
@@ -219,4 +218,4 @@ EARLIER = [
          blurb="GenAI workspace: multi-PDF RAG chat, GraphRAG entity graphs, ATS feedback, text-to-SQL — the implementation behind the Scientific Reports paper."),
 ]
 
-CAREER_LINE = "CTO @ stealth AI startup · AI Engineer @ Nextent Labs · ex-AI/ML Developer @ RnR Consulting · B.Tech (Hons.) CS, Data Science — Symbiosis Nagpur, 2022–26"
+CAREER_LINE = "AI Engineer @ Nextent Labs · Co-founder & CTO @ stealth clinical-AI startup · ex-R&R Consulting · B.Tech CSE, Data Science minor — Symbiosis Nagpur, 2022–26"
